@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://ceskq2drylfgl"]
+[gd_scene load_steps=9 format=3 uid="uid://ceskq2drylfgl"]
 
 [ext_resource type="Script" path="res://front_wall.gd" id="1_4qhe5"]
 [ext_resource type="Texture2D" uid="uid://fktal02gmy1j" path="res://Assets/House_Placeholder/front_wall.jpg" id="1_gujhv"]
 [ext_resource type="Theme" uid="uid://1iuc40ts1dxy" path="res://themes/arrow_theme.tres" id="2_ma8pg"]
+[ext_resource type="PackedScene" uid="uid://cp5vdc8jtb2vn" path="res://Items/InventoryGUI.tscn" id="3_x088c"]
+[ext_resource type="Texture2D" uid="uid://djkfujp0gi1a5" path="res://Assets/Sprout Lands - Sprites - Basic pack/Objects/Basic_Plants.png" id="4_yjyik"]
+[ext_resource type="Script" path="res://scenes/inventory_menu.gd" id="5_mgw36"]
+[ext_resource type="PackedScene" uid="uid://dhndeq60fk880" path="res://AnimatedSprites/chick.tscn" id="7_4yv1c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p5mlk"]
+radius = 5.23156
 
 [node name="front_wall" type="Node2D"]
 script = ExtResource("1_4qhe5")
@@ -12,28 +19,44 @@ position = Vector2(966, 445)
 scale = Vector2(3.11631, 3.11631)
 texture = ExtResource("1_gujhv")
 
+[node name="Chick" parent="." groups=["chicks"] instance=ExtResource("7_4yv1c")]
+position = Vector2(875, 462)
+scale = Vector2(8.875, 8.875)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(430, 720)
+scale = Vector2(8.79486, 8.79486)
+texture = ExtResource("4_yjyik")
+region_enabled = true
+region_rect = Rect2(82, 17, 12, 13)
+script = ExtResource("5_mgw36")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+position = Vector2(-0.113717, 1.59184)
+shape = SubResource("CircleShape2D_p5mlk")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -980.0
+offset_top = -560.0
+offset_right = -940.0
+offset_bottom = -520.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Control" type="Control" parent="HBoxContainer"]
+[node name="Control" type="Control" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="left_arrow" type="Button" parent="HBoxContainer/Control"]
+[node name="left_arrow" type="Button" parent="CanvasLayer/HBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.5
@@ -46,7 +69,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_ma8pg")
 
-[node name="right_arrow" type="Button" parent="HBoxContainer/Control"]
+[node name="right_arrow" type="Button" parent="CanvasLayer/HBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -62,5 +85,9 @@ grow_vertical = 2
 rotation = -3.1531
 theme = ExtResource("2_ma8pg")
 
-[connection signal="pressed" from="HBoxContainer/Control/left_arrow" to="." method="_on_left_arrow_pressed"]
-[connection signal="pressed" from="HBoxContainer/Control/right_arrow" to="." method="_on_right_arrow_pressed"]
+[node name="InventoryUI" type="CanvasLayer" parent="."]
+
+[node name="InventoryGUI" parent="InventoryUI" instance=ExtResource("3_x088c")]
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Control/left_arrow" to="." method="_on_left_arrow_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Control/right_arrow" to="." method="_on_right_arrow_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://tbv8lw8lg8j"]
+
+[ext_resource type="PackedScene" uid="uid://di8myf2q210hc" path="res://toyol_body.tscn" id="1_hjsjl"]
+
+[node name="neighborhood" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_hjsjl")]
+position = Vector2(840, 492)

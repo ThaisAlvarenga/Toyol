@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp5vdc8jtb2vn"]
+
+[ext_resource type="Script" path="res://Items/inventory.gd" id="1_84v45"]
+[ext_resource type="Texture2D" uid="uid://dog8yno7qkv22" path="res://Assets/Sprout Lands - Sprites - Basic pack/Sprite sheets/Setting menu.png" id="2_iy4s5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xql0r"]
+texture = ExtResource("2_iy4s5")
+region_rect = Rect2(139, 12, 106, 122)
+
+[node name="InventoryGUI" type="Node"]
+process_mode = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_84v45")
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 1488.0
+offset_top = 128.0
+offset_right = 1744.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xql0r")
+
+[node name="Inventory" type="GridContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 1496.0
+offset_top = 144.0
+offset_right = 1736.0
+offset_bottom = 624.0
+columns = 2
