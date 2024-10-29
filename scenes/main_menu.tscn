@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0077k4xjjymi"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_crni8"]
+[ext_resource type="Theme" uid="uid://bavrgm5sp4q30" path="res://themes/mainmenu_theme.tres" id="2_gprj8"]
+[ext_resource type="Texture2D" uid="uid://dpqpl6asgvlyt" path="res://Assets/House_Placeholder/main_menu.png" id="3_6150k"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_crni8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button_Manager" type="Control" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Start" type="Button" parent="CanvasLayer/HBoxContainer/Button_Manager"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = -56.0
+offset_right = 248.5
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_gprj8")
+text = "Start"
+
+[node name="Something Else" type="Button" parent="CanvasLayer/HBoxContainer/Button_Manager"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = 84.0
+offset_right = 249.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_gprj8")
+text = "Something Else"
+
+[node name="Quit" type="Button" parent="CanvasLayer/HBoxContainer/Button_Manager"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = 226.0
+offset_right = 252.0
+offset_bottom = 339.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_gprj8")
+text = "Quit"
+
+[node name="MainMenu" type="Sprite2D" parent="."]
+position = Vector2(972.8, 597.5)
+scale = Vector2(1.0425, 1.0425)
+texture = ExtResource("3_6150k")
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button_Manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button_Manager/Something Else" to="." method="_on_something_else_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button_Manager/Quit" to="." method="_on_quit_pressed"]

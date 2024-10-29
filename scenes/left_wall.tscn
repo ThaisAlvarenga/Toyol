@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://brngbcjeg616x"]
+
+[ext_resource type="Script" path="res://left_wall.gd" id="1_7fi2e"]
+[ext_resource type="Texture2D" uid="uid://da3y04f80ymqu" path="res://Assets/House_Placeholder/left_wall.jpg" id="1_42iwp"]
+[ext_resource type="Theme" uid="uid://1iuc40ts1dxy" path="res://themes/arrow_theme.tres" id="2_l75pg"]
+
+[node name="left_wall" type="Node2D"]
+script = ExtResource("1_7fi2e")
+
+[node name="LeftWall" type="Sprite2D" parent="."]
+position = Vector2(951, 638)
+scale = Vector2(4.16761, 4.16761)
+texture = ExtResource("1_42iwp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="left_arrow" type="Button" parent="HBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 1.0
+offset_left = 65.0
+offset_top = 417.0
+offset_right = 194.0
+offset_bottom = 526.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_l75pg")
+
+[node name="right_arrow" type="Button" parent="HBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1903.0
+offset_top = 588.0
+offset_right = 2032.0
+offset_bottom = 717.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -3.1531
+theme = ExtResource("2_l75pg")
+
+[connection signal="pressed" from="HBoxContainer/Control/left_arrow" to="." method="_on_left_arrow_pressed"]
+[connection signal="pressed" from="HBoxContainer/Control/right_arrow" to="." method="_on_right_arrow_pressed"]
