@@ -1,0 +1,44 @@
+# 10/21 Meeting
+
+- Ok to continue same story, focusing on one fleshed-out house, others with more "placeholder" feel
+- Jack to take over story Bible
+- Research distributed according to role/responsibilities
+- Savannah to help with creative writing/dialogue
+**- Establish timeline. 5.5 weeks to finish this. **
+
+- Thais to start on replicating mechanics from the Cube game. 
+ 1. Arrows to click on to navigate the 2D space.
+ 2. Multiple rooms, down arrow means back. 
+ 3. Grab and drop items. Click on item, it disappears from the environment and appear in the inventory system.
+ 4. Assets to create for UI: Arrows, inventory/bags.
+ 5. Music/Sound design - Thais and sound libraries.
+
+**Story Bible Expectations?**
+ 1.  characters
+ 2.  events, with focus on beginning events 
+ 3.  worldbuilding components
+ 4.  resources, but not **too **research-extensive. 
+ 5.  overview of how the player navigates the narrative and gaming space
+
+**Notes:** <:amoong_us:864747694227718175> 
+
+Just like the cube game, you have four arrows to choose from. Single click on an arrow switches the perspective/where the camera is angled. Easier to code, dealing with a 2D space rather than a 3D one-- indoor spaces will strictly be 2D.
+Outside the room, (LOBBY) still 2D or slider/platformer. Enhance the environment with layers, environmental additions/particles/shaders. 
+Significance of zooming in on the character? - Savannah
+Magical realism for its safety net in authenticity
+Classtime is our meeting and work sessions. If we need more time to discuss, we meet before class, or really whenever possible.
+
+**Character Design:**
+Does the Toyol look like a ghost or a normal baby? 
+- Savannah to create concept art of Toyol, ranging from pure apparitions/ghosts (Cube) to normal but eerie child (Little Miss Fortune) - both pixel art options and non-pixel art
+- Art Style. Cyberpunk, post-apoc, solarpunk, etc etc etc. Which elements do we want to pull from in terms of genre? (Aki from Citizen Sleeper, This War of Mine, etc)
+
+**Houses:**
+- 3 Houses. One house works, 2 are placeholders that need fleshed out. Final one is a linear ending- kill or not kill the mother. 
+- What do we want in the first house? Mapping out the story/game procedure, but focusing primarily on the first house to establish narrative
+- What components of the house are interactive components? How do they tie into the story and exploration of such?
+
+**Plans for Tuesday:**
+Locate visual references - Stories to derive inspirations from, not necessarily to reference or copy.
+Concept art
+Historical events and how to fictionalize them
