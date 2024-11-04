@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://w2pxjy31534l"]
+
+[ext_resource type="Texture2D" uid="uid://bukliuuijok1x" path="res://Assets/Sprout Lands - Sprites - Basic pack/UI_addons/sprout_lands_ui/content/assets/SkipButton.png" id="1_mr38s"]
+
+[node name="WallButton" type="TextureButton"]
+offset_right = 68.0
+offset_bottom = 63.0
+texture_normal = ExtResource("1_mr38s")
+stretch_mode = 0

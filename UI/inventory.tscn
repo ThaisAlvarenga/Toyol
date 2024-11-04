@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2gr2qeylcdxg"]
+
+[ext_resource type="Texture2D" uid="uid://bef816edvcpop" path="res://Assets/Sprout Lands - Sprites - Basic pack/UI_addons/sprout_lands_ui/content/assets/Sprite sheet for Basic Pack.png" id="1_4q6db"]
+[ext_resource type="Script" path="res://UI/inventory.gd" id="1_7l7js"]
+[ext_resource type="PackedScene" uid="uid://cjki7mwfob5bw" path="res://UI/slot.tscn" id="2_c3mq5"]
+
+[node name="Inventory" type="Control"]
+custom_minimum_size = Vector2(210, 517)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 210.0
+offset_bottom = 517.0
+script = ExtResource("1_7l7js")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 210.0
+offset_bottom = 517.0
+texture = ExtResource("1_4q6db")
+region_rect = Rect2(259, 180, 90, 25)
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -66.0
+offset_right = 32.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_c3mq5")]
+layout_mode = 2
+
+[node name="Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_c3mq5")]
+layout_mode = 2
+
+[node name="Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_c3mq5")]
+layout_mode = 2
+
+[node name="Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_c3mq5")]
+layout_mode = 2
+
+[node name="Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_c3mq5")]
+layout_mode = 2
+
+[node name="Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_c3mq5")]
+layout_mode = 2
+
+[node name="Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_c3mq5")]
+layout_mode = 2
+
+[node name="Slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_c3mq5")]
+layout_mode = 2

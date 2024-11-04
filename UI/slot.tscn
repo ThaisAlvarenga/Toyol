@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjki7mwfob5bw"]
+
+[ext_resource type="Texture2D" uid="uid://bef816edvcpop" path="res://Assets/Sprout Lands - Sprites - Basic pack/UI_addons/sprout_lands_ui/content/assets/Sprite sheet for Basic Pack.png" id="1_mbvoe"]
+
+[node name="Slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(90, 90)
+offset_right = 90.0
+offset_bottom = 90.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_mbvoe")
+centered = false
+region_enabled = true
+region_rect = Rect2(153, 105, 30, 30)
