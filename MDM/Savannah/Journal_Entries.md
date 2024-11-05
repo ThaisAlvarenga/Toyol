@@ -14,6 +14,6 @@ Assets that need to be drawn (To-Do List):
 
 
 Refs for later use:
-https://www.aseprite.org/
-https://en.wikipedia.org/wiki/Dudou
-https://shorturl.at/JxguH
+https://www.aseprite.org/ <br>
+https://en.wikipedia.org/wiki/Dudou <br>
+https://shorturl.at/JxguH <br>
