@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://doqf8uaj3ytv7"]
+
+[ext_resource type="Script" path="res://Scenes/1_house_manager.gd" id="1_h2gj8"]
+[ext_resource type="PackedScene" uid="uid://bdyqfba5iol14" path="res://UI/change_room_button.tscn" id="2_42gak"]
+
+[node name="1_House" type="Node2D"]
+script = ExtResource("1_h2gj8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Room Nav" type="Control" parent="CanvasLayer"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="next_room_Button" parent="CanvasLayer/Room Nav" node_paths=PackedStringArray("house_manager") instance=ExtResource("2_42gak")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -80.0
+offset_right = 0.0
+offset_bottom = 80.0
+grow_horizontal = 0
+grow_vertical = 2
+flip_h = true
+house_manager = NodePath("../../..")
+
+[node name="previous_room_Button" parent="CanvasLayer/Room Nav" node_paths=PackedStringArray("house_manager") instance=ExtResource("2_42gak")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -80.0
+offset_right = 146.0
+offset_bottom = 80.0
+grow_vertical = 2
+house_manager = NodePath("../../..")
+load_next_room = false

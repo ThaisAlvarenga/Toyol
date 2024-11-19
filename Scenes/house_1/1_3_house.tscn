@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxn881bhry3ri"]
+
+[ext_resource type="Texture2D" uid="uid://b4usnuufqp6aj" path="res://Assets/Scene_Assets/Sewing_room/sewing_room.png" id="1_ndleh"]
+[ext_resource type="Texture2D" uid="uid://c7x4b3o3unjoq" path="res://Assets/Scene_Assets/Sewing_room/closet.png" id="2_tpv6d"]
+[ext_resource type="Texture2D" uid="uid://bi5ymoxrnpwcp" path="res://Assets/Scene_Assets/Sewing_room/sewing_machines.png" id="3_it214"]
+[ext_resource type="Script" path="res://Scripts/open_close.gd" id="4_kpcsl"]
+[ext_resource type="PackedScene" uid="uid://dtqdjxuar55te" path="res://UI/arrow_button.tscn" id="5_roedk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wdvn"]
+size = Vector2(544, 768)
+
+[node name="1_3_House" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1929.0
+offset_bottom = 1095.0
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_ndleh")
+centered = false
+
+[node name="SewingMachine" type="Sprite2D" parent="."]
+position = Vector2(1400, 537)
+texture = ExtResource("3_it214")
+region_enabled = true
+region_rect = Rect2(1158, 390, 476, 297)
+
+[node name="Nail" type="Sprite2D" parent="."]
+position = Vector2(1610, 862)
+texture = ExtResource("3_it214")
+region_enabled = true
+region_rect = Rect2(1585, 831, 37, 36)
+
+[node name="Closet" type="Sprite2D" parent="."]
+position = Vector2(524, 606)
+texture = ExtResource("2_tpv6d")
+hframes = 2
+script = ExtResource("4_kpcsl")
+
+[node name="Area2D" type="Area2D" parent="Closet"]
+position = Vector2(-1, -81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Closet/Area2D"]
+position = Vector2(6, 77)
+shape = SubResource("RectangleShape2D_2wdvn")
+
+[node name="Left_Button" parent="." instance=ExtResource("5_roedk")]
+visible = false
+offset_left = 70.0
+offset_top = 450.0
+offset_right = 216.0
+offset_bottom = 610.0
+scene_path = "res://Scenes/house_1/1_2_house.tscn"
+
+[node name="Right_Arrow" parent="." instance=ExtResource("5_roedk")]
+visible = false
+offset_left = 1704.0
+offset_top = 450.0
+offset_right = 1850.0
+offset_bottom = 610.0
+flip_h = true
+scene_path = "res://Scenes/house_1/1_4_house.tscn"

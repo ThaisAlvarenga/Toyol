@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://biujvyyyfg0rp"]
+
+[ext_resource type="Texture2D" uid="uid://bf4duyfebgjxl" path="res://Assets/Scene_Assets/Altar_Room/altar.png" id="1_mvwgj"]
+[ext_resource type="PackedScene" uid="uid://dtqdjxuar55te" path="res://UI/arrow_button.tscn" id="2_ppj1r"]
+[ext_resource type="Texture2D" uid="uid://d3etnmikwxp67" path="res://Assets/Scene_Assets/Altar_Room/altar_items.png" id="3_8us5y"]
+[ext_resource type="Texture2D" uid="uid://bhb80gsyvacgp" path="res://Assets/Scene_Assets/Altar_Room/drawer.png" id="4_1ainx"]
+[ext_resource type="Script" path="res://Scripts/portrait.gd" id="4_rxfr1"]
+[ext_resource type="Script" path="res://Scripts/open_close.gd" id="5_tf38i"]
+[ext_resource type="Script" path="res://Scenes/house_1/interactable_item.gd" id="7_e3nwm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udd6t"]
+size = Vector2(338, 380)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kbwcw"]
+size = Vector2(384, 351)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dm8ej"]
+radius = 14.9989
+height = 92.0176
+
+[node name="1_1_House" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1936.0
+offset_bottom = 1104.0
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_mvwgj")
+centered = false
+
+[node name="Left_Button" parent="." instance=ExtResource("2_ppj1r")]
+visible = false
+offset_left = 70.0
+offset_top = 450.0
+offset_right = 216.0
+offset_bottom = 610.0
+scene_path = "res://Scenes/house_1/1_0_house.tscn"
+
+[node name="Right_Arrow" parent="." instance=ExtResource("2_ppj1r")]
+visible = false
+offset_left = 1704.0
+offset_top = 450.0
+offset_right = 1850.0
+offset_bottom = 610.0
+flip_h = true
+scene_path = "res://Scenes/house_1/1_2_house.tscn"
+
+[node name="Portrait" type="Sprite2D" parent="."]
+position = Vector2(1002, 323)
+rotation = 0.218166
+texture = ExtResource("3_8us5y")
+region_enabled = true
+region_rect = Rect2(832, 16, 352, 391)
+script = ExtResource("4_rxfr1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portrait"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_udd6t")
+
+[node name="Drawer" type="Sprite2D" parent="."]
+position = Vector2(985, 834)
+texture = ExtResource("4_1ainx")
+vframes = 2
+script = ExtResource("5_tf38i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer"]
+position = Vector2(6, -20.5)
+shape = SubResource("RectangleShape2D_kbwcw")
+
+[node name="matches" type="Sprite2D" parent="Drawer" node_paths=PackedStringArray("parent_furniture")]
+position = Vector2(17, -129)
+texture = ExtResource("3_8us5y")
+region_enabled = true
+region_rect = Rect2(953, 689, 88, 28)
+script = ExtResource("7_e3nwm")
+parent_furniture = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer/matches"]
+position = Vector2(-1, -1)
+rotation = 1.55858
+shape = SubResource("CapsuleShape2D_dm8ej")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdyqfba5iol14"]
+
+[ext_resource type="Texture2D" uid="uid://6a47l4jkuiu1" path="res://Assets/arrow_normal.PNG" id="1_t5nli"]
+[ext_resource type="Texture2D" uid="uid://cjb1oes2a1x2b" path="res://Assets/arrow_selected.PNG" id="2_pu64y"]
+[ext_resource type="Script" path="res://UI/change_room_button.gd" id="3_ds3i8"]
+
+[node name="change_room_Button" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_t5nli")
+texture_pressed = ExtResource("1_t5nli")
+texture_hover = ExtResource("2_pu64y")
+script = ExtResource("3_ds3i8")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

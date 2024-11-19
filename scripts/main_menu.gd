@@ -1,19 +1,26 @@
 extends Node2D
 
+# In this script the button presses connected
+# are the ones in this same scene (Play button and Quit)
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.main_scene = self
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+# Play Button is Pressed
+func _on_play_button_pressed() -> void:
+	# Go to first house
+	get_tree().change_scene_to_file("res://Scenes/1_house.tscn")
 	
-
-
-func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/front_wall.tscn")
-
-
-func _on_something_else_pressed() -> void:
-	print("Button working")
-
-
-
-func _on_quit_pressed() -> void:
+	
+# Quit Button is Pressed
+func _on_quit_button_pressed() -> void:
+	# quit the game
 	get_tree().quit()

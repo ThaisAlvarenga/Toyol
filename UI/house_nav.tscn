@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://hcvj7q4c4nwg"]
+
+[ext_resource type="PackedScene" uid="uid://bdyqfba5iol14" path="res://UI/change_room_button.tscn" id="1_dygte"]
+
+[node name="House_Nav" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="next_room_Button" parent="." instance=ExtResource("1_dygte")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -80.0
+offset_right = 0.0
+offset_bottom = 80.0
+grow_horizontal = 0
+grow_vertical = 2
+flip_h = true
+
+[node name="previous_room_Button" parent="." instance=ExtResource("1_dygte")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -80.0
+offset_right = 146.0
+offset_bottom = 80.0
+grow_vertical = 2
+load_next_room = false
