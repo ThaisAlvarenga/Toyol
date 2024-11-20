@@ -1,4 +1,4 @@
-A piece of stale, bloodied meat 
+ A piece of stale, bloodied meat 
 <br>
 Key to house 5
 <br>
@@ -39,5 +39,6 @@ Portrait (with two holes on top for two screws, of Japanese emperor)
 Incense sticks 
 <br>
 The Toy (up to you what that is!)  
-<br>
 Child statue (hidden behind the portrait) 
+
+
