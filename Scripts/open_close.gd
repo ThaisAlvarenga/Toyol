@@ -1,6 +1,8 @@
 extends Sprite2D
 class_name OpenCloseFurniture
 
+#signal window_state_changed(is_closed: bool)
+
 # NOTES:
 # in this context, open means that the sprite has two frames:
 # 		in one the sprite is open
@@ -41,8 +43,10 @@ func toggle_open() -> void:
 	self.frame = 1 if is_open else 0
 	# print that closet is either open or closed
 	print("Furniture is now " + ("open" if is_open else "closed"))
+	print("Window: Emitting window_state_changed signal")
 	# Emit a signal when toggled
 	emit_signal("toggled", is_open)
+	#emit_signal("window_state_changed", not is_open)
 
 
 # function to change whether or not toggling is permissible

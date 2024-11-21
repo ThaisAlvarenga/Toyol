@@ -1,10 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxn881bhry3ri"]
+[gd_scene load_steps=12 format=3 uid="uid://cxn881bhry3ri"]
 
 [ext_resource type="Texture2D" uid="uid://b4usnuufqp6aj" path="res://Assets/Scene_Assets/Sewing_room/sewing_room.png" id="1_ndleh"]
 [ext_resource type="Texture2D" uid="uid://c7x4b3o3unjoq" path="res://Assets/Scene_Assets/Sewing_room/closet.png" id="2_tpv6d"]
+[ext_resource type="Script" path="res://Scenes/house_1/item.gd" id="3_djdvv"]
 [ext_resource type="Texture2D" uid="uid://bi5ymoxrnpwcp" path="res://Assets/Scene_Assets/Sewing_room/sewing_machines.png" id="3_it214"]
+[ext_resource type="Script" path="res://Scenes/house_1/nail.gd" id="3_slkyr"]
 [ext_resource type="Script" path="res://Scripts/open_close.gd" id="4_kpcsl"]
 [ext_resource type="PackedScene" uid="uid://dtqdjxuar55te" path="res://UI/arrow_button.tscn" id="5_roedk"]
+[ext_resource type="Texture2D" uid="uid://dpc3di0snvh57" path="res://Assets/Scene_Assets/Sewing_room/pedal_sewing.png" id="6_ujq8d"]
+[ext_resource type="Script" path="res://Scenes/house_1/pedal_sewing.gd" id="7_no2eu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t55en"]
+radius = 23.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wdvn"]
 size = Vector2(544, 768)
@@ -25,11 +32,21 @@ texture = ExtResource("3_it214")
 region_enabled = true
 region_rect = Rect2(1158, 390, 476, 297)
 
-[node name="Nail" type="Sprite2D" parent="."]
-position = Vector2(1610, 862)
+[node name="Nail" type="Node2D" parent="."]
+position = Vector2(1626, 862)
+script = ExtResource("3_djdvv")
+
+[node name="Sprite" type="Sprite2D" parent="Nail"]
 texture = ExtResource("3_it214")
 region_enabled = true
 region_rect = Rect2(1585, 831, 37, 36)
+script = ExtResource("3_slkyr")
+
+[node name="Area2D" type="Area2D" parent="Nail"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nail/Area2D"]
+position = Vector2(-3, 1)
+shape = SubResource("CircleShape2D_t55en")
 
 [node name="Closet" type="Sprite2D" parent="."]
 position = Vector2(524, 606)
@@ -60,3 +77,11 @@ offset_right = 1850.0
 offset_bottom = 610.0
 flip_h = true
 scene_path = "res://Scenes/house_1/1_4_house.tscn"
+
+[node name="PedalSewing" type="Sprite2D" parent="."]
+position = Vector2(1370, 867)
+texture = ExtResource("6_ujq8d")
+vframes = 2
+frame = 1
+script = ExtResource("7_no2eu")
+loop_enabled = true

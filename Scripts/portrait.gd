@@ -2,7 +2,7 @@ extends Sprite2D
 
 # Boolean to determine if sprite can stay at 0 rotation
 # this variable is what we use to set the portrait to the right position
-var can_stay_rotated = false 
+@export var can_stay_rotated = false 
 
 # keeps track of whether sprite has been rotated
 var is_rotated = true

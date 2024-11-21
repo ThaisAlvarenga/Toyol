@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://doqf8uaj3ytv7"]
+[gd_scene load_steps=5 format=3 uid="uid://doqf8uaj3ytv7"]
 
 [ext_resource type="Script" path="res://Scenes/1_house_manager.gd" id="1_h2gj8"]
 [ext_resource type="PackedScene" uid="uid://bdyqfba5iol14" path="res://UI/change_room_button.tscn" id="2_42gak"]
+[ext_resource type="Script" path="res://Scenes/player_manager.gd" id="2_flbvx"]
+[ext_resource type="Script" path="res://Scenes/inventory.gd" id="3_rxabe"]
 
-[node name="1_House" type="Node2D"]
+[node name="1_House" type="Node2D" node_paths=PackedStringArray("player_manager")]
 script = ExtResource("1_h2gj8")
+player_manager = NodePath("Player_Manager")
+
+[node name="Player_Manager" type="Node2D" parent="."]
+script = ExtResource("2_flbvx")
+
+[node name="Inventory" type="Node2D" parent="."]
+script = ExtResource("3_rxabe")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

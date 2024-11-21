@@ -1,17 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://br3d78kmcw6ro"]
+[gd_scene load_steps=10 format=3 uid="uid://br3d78kmcw6ro"]
 
 [ext_resource type="Texture2D" uid="uid://cdq5oug4jumuh" path="res://Assets/Scene_Assets/Entrance/entrance.png" id="1_64ydi"]
+[ext_resource type="Script" path="res://Scenes/house_1/1_0_house.gd" id="1_evvbw"]
 [ext_resource type="PackedScene" uid="uid://dtqdjxuar55te" path="res://UI/arrow_button.tscn" id="2_0v7fr"]
 [ext_resource type="Texture2D" uid="uid://bs7lp7iw2nob0" path="res://Assets/Scene_Assets/Entrance/window.png" id="2_jwrfl"]
 [ext_resource type="Script" path="res://Scripts/open_close.gd" id="3_un1p3"]
+[ext_resource type="Texture2D" uid="uid://dl2n2gjrllc45" path="res://Assets/Scene_Assets/Entrance/wood.png" id="5_70bo7"]
+[ext_resource type="Script" path="res://Scenes/house_1/entrance_wood.gd" id="6_x8157"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnpho"]
+size = Vector2(460, 693)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bgsc"]
+size = Vector2(693, 110)
 
 [node name="1_0_House" type="Node2D"]
+script = ExtResource("1_evvbw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1950.0
 offset_bottom = 1098.0
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 centered = false
 
 [node name="Left_Button" parent="." instance=ExtResource("2_0v7fr")]
@@ -42,3 +53,28 @@ position = Vector2(514, 551)
 texture = ExtResource("1_64ydi")
 region_enabled = true
 region_rect = Rect2(408, 307, 567, 694)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/StaticBody2D"]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_fnpho")
+
+[node name="Wood" type="Sprite2D" parent="." node_paths=PackedStringArray("door", "snap_marker")]
+position = Vector2(1340, 836)
+rotation = 0.0872665
+texture = ExtResource("5_70bo7")
+region_enabled = true
+region_rect = Rect2(338, 584, 690, 114)
+script = ExtResource("6_x8157")
+door = NodePath("../Door/StaticBody2D")
+snap_marker = NodePath("../wood_snap_position")
+
+[node name="Area2D" type="Area2D" parent="Wood"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wood/Area2D"]
+position = Vector2(-0.499878, -1)
+shape = SubResource("RectangleShape2D_1bgsc")
+
+[node name="wood_snap_position" type="Marker2D" parent="."]
+position = Vector2(514, 548)
