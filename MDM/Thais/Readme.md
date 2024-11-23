@@ -1,5 +1,17 @@
 # Thais's MDM Journal Entries
 
+## 22/11/24
+
+Todo list for next week:
+
+- [ ] Import animation assets from Savannah's folder
+- [ ] Finished Kitchen and altar room
+- [ ] Unlock Key to the other house + allow player to exit house
+- [ ] Make final version of inventory
+- [ ] Make a player Manager for the States
+- [ ] Full playthrough test of House 1
+- [ ] Start adding sound effects
+
 ## 11/11/24 -- Letters from Abu Dhabi من أبو ظبي 
 
 My updates: I created a new version of house 1 with the refactored House Manager. It moves across the different rooms of the house. I also drew some place holders (very quickly).
