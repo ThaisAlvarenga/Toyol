@@ -2,11 +2,13 @@ extends Sprite2D
 
 @export var loop_enabled = true  # The bool to control behavior
 var is_animating = true  # To track if we're currently animating
-var animation_speed = 5  # Frames per second for the animation
+var animation_speed = 3  # Frames per second for the animation
 
 func _ready():
 	# Ensure we start on the first frame
 	frame = 0
+	# Set the opacity to half (0.5)
+	# modulate.a = 0.5
 	
 
 func _input(event):
@@ -22,7 +24,7 @@ func _input(event):
 func _process(delta):
 	if loop_enabled and is_animating:
 		# Calculate the new frame based on time
-		var new_frame = int(Time.get_ticks_msec() / (1000.0 / animation_speed)) % 2
+		var new_frame = int(Time.get_ticks_msec() / (2000.0 / animation_speed)) % 2
 		if frame != new_frame:
 			frame = new_frame
 	elif not loop_enabled and is_animating:

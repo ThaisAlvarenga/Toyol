@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ceqqnoww20s8m" path="res://MDM/Savannah/House3Art/pxArtHouse3.png" id="1_rfwbk"]
 [ext_resource type="Texture2D" uid="uid://c812h5pijqnpc" path="res://MDM/Savannah/House5Art/pxArtHouse5.png" id="2_hep5u"]
 [ext_resource type="Texture2D" uid="uid://b61va4cq2t8jd" path="res://Assets/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Actions.png" id="3_suasn"]
-[ext_resource type="Texture2D" uid="uid://du3210qnsyb6o" path="res://Assets/filters/filters_3.png" id="4_4am80"]
+[ext_resource type="Texture2D" uid="uid://ttq0wn7os635" path="res://Assets/filters/filter_6.png" id="4_56opu"]
 [ext_resource type="Script" path="res://filters.gd" id="5_43ah6"]
 
 [node name="Node2D" type="Node2D"]
@@ -30,7 +30,7 @@ region_enabled = true
 region_rect = Rect2(15, 152, 14, 24)
 
 [node name="Filters2" type="Sprite2D" parent="."]
-texture = ExtResource("4_4am80")
+texture = ExtResource("4_56opu")
 centered = false
 hframes = 2
 script = ExtResource("5_43ah6")
