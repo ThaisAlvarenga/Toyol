@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://2t4t848x7v0a"]
+
+[ext_resource type="Texture2D" uid="uid://ceqqnoww20s8m" path="res://MDM/Savannah/House3Art/pxArtHouse3.png" id="1_rfwbk"]
+[ext_resource type="Texture2D" uid="uid://c812h5pijqnpc" path="res://MDM/Savannah/House5Art/pxArtHouse5.png" id="2_hep5u"]
+[ext_resource type="Texture2D" uid="uid://b61va4cq2t8jd" path="res://Assets/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Actions.png" id="3_suasn"]
+[ext_resource type="Texture2D" uid="uid://du3210qnsyb6o" path="res://Assets/filters/filters_3.png" id="4_4am80"]
+[ext_resource type="Script" path="res://filters.gd" id="5_43ah6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1932.0
+offset_bottom = 1098.0
+
+[node name="PxArtHouse3" type="Sprite2D" parent="."]
+position = Vector2(703, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("1_rfwbk")
+
+[node name="PxArtHouse5" type="Sprite2D" parent="."]
+position = Vector2(2386, 542)
+scale = Vector2(2, 2)
+texture = ExtResource("2_hep5u")
+
+[node name="BasicCharakterActions" type="Sprite2D" parent="."]
+position = Vector2(669, 833)
+scale = Vector2(12.3333, 12.3333)
+texture = ExtResource("3_suasn")
+region_enabled = true
+region_rect = Rect2(15, 152, 14, 24)
+
+[node name="Filters2" type="Sprite2D" parent="."]
+texture = ExtResource("4_4am80")
+centered = false
+hframes = 2
+script = ExtResource("5_43ah6")
