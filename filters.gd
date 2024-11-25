@@ -8,7 +8,7 @@ func _ready():
 	# Ensure we start on the first frame
 	frame = 0
 	# Set the opacity to half (0.5)
-	# modulate.a = 0.5
+	modulate.a = 0.5
 	
 
 func _input(event):
