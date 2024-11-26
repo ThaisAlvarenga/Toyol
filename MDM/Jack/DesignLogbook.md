@@ -16,3 +16,11 @@ Based on the concept, we had a pretty productive conversation and came up with l
 One thing that surprised me was Savannah’s suggestion for a better way for our main character to travel through time. She proposed a neighborhood where houses have the same structure but different appearances. Entering these houses would subtly represent staying in the same house during different time periods. This design adds an extra layer of magic to the game, and I absolutely love it.
 
 For more details about what else we discussed, here is the [Link to the notes](BSnotes.pdf)
+
+# 10/15/2024
+Something interesting happened within the team recently. I had some conflicts with a teammate. While the experience was unpleasant, it gave me an opportunity to reflect on how I collaborate with others and, more importantly, on the core argument I want to convey through this game. As I shared in the group chat:
+
+" I do want to insist to include the mom killing the enemy's baby in our game because it's highly related to the argument I want to make through the game.
+War is cruel, and survival becomes the sole priority. Violence, betrayal, cannibalism, and rape were rampant during that period—not only perpetrated by Japanese invaders against Chinese people, but also among the Chinese themselves. It's like the classic dilemma in This War of Mine: being a victim doesn't mean you're free from committing crimes. Killing the invader's baby doesn't justify the invasion. Victims can be extremely aggressive. If they ever get a chance for revenge, they will desperately take it.
+War is complex, and so are the people caught in it."
+
