@@ -20,16 +20,15 @@ Maybe a possible game inspiration:
 
   · Little Misfortune, is creepy at times, cute at times and there are moments where you notice that things are weird 
 
-    Playthrough: https://www.youtube.com/watch?v=RYwra8aymMU  
+Playthrough: https://www.youtube.com/watch?v=RYwra8aymMU  
 
 
 Genre 
 
-    Magical Realism 
+Magical Realism 
 
-      · The Brief Wondrous Life of Oscar Wao 
-
-      · One Hundred Years of Solitude 
+    · The Brief Wondrous Life of Oscar Wao 
+    · One Hundred Years of Solitude 
 
 Historical :  
 
