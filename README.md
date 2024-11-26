@@ -6,7 +6,7 @@
 
 - [Savannah](MDM/Savannah/Journal_Entries.md)
 - [Thais](MDM/Thais)
-- [Jack](MDM/Savannah/DesignLogbook.md)
+- [Jack](MDM/Jack/DesignLogbook.md)
 
 ## Overview
 
