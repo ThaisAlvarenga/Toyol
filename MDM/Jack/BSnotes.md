@@ -27,8 +27,8 @@ Genre
 
 Magical Realism 
 
-    · The Brief Wondrous Life of Oscar Wao 
-    · One Hundred Years of Solitude 
+· The Brief Wondrous Life of Oscar Wao 
+· One Hundred Years of Solitude 
 
 Historical :  
 
