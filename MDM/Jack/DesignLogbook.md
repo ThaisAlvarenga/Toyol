@@ -15,4 +15,4 @@ Based on the concept, we had a pretty productive conversation and came up with l
 
 One thing that surprised me was Savannah’s suggestion for a better way for our main character to travel through time. She proposed a neighborhood where houses have the same structure but different appearances. Entering these houses would subtly represent staying in the same house during different time periods. This design adds an extra layer of magic to the game, and I absolutely love it.
 
-For more details about what else we discussed, here is the [link to the notes](insert link here).
+For more details about what else we discussed, here is the [Link to the notes](MDM/Jack/BSnotes.md)
