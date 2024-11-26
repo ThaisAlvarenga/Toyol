@@ -22,6 +22,7 @@ Maybe a possible game inspiration:
 
     Playthrough: https://www.youtube.com/watch?v=RYwra8aymMU  
 
+
 Genre 
 
     Magical Realism 
@@ -29,6 +30,7 @@ Genre
       · The Brief Wondrous Life of Oscar Wao 
 
       · One Hundred Years of Solitude 
+
 Historical :  
 
   · Opium Wars 
