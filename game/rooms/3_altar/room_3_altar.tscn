@@ -1,0 +1,151 @@
+[gd_scene load_steps=23 format=3 uid="uid://cmw8qtvl2t321"]
+
+[ext_resource type="Script" path="res://game/rooms/3_altar/room_3_altar.gd" id="1_skpj0"]
+[ext_resource type="PackedScene" uid="uid://hebmty84qtlw" path="res://game/rooms/3_altar/props/background/prop_background.tscn" id="2_c5wib"]
+[ext_resource type="Texture2D" uid="uid://ceq5tivmm64f7" path="res://game/rooms/3_altar/props/background/pxArtAltarBG.png" id="3_sfnli"]
+[ext_resource type="PackedScene" uid="uid://bbaq3dhq0b4u1" path="res://game/rooms/3_altar/props/table/prop_table.tscn" id="4_usdhh"]
+[ext_resource type="Texture2D" uid="uid://dlf3flng5pfi7" path="res://game/rooms/3_altar/props/table/pxArtAltar.png" id="5_0o6q5"]
+[ext_resource type="PackedScene" uid="uid://cedy2agigu1i2" path="res://game/rooms/3_altar/props/portrait/prop_portrait.tscn" id="6_7v66d"]
+[ext_resource type="Texture2D" uid="uid://dkq2j0e1ow8n" path="res://game/rooms/3_altar/props/portrait/pxArtPortraitSS.png" id="7_vpa21"]
+[ext_resource type="PackedScene" uid="uid://b1coa4huh0ixf" path="res://game/rooms/3_altar/props/incense/prop_incense.tscn" id="8_gsq24"]
+[ext_resource type="Texture2D" uid="uid://d3chloiwgriio" path="res://game/rooms/3_altar/props/incense/pxArtIncenseSS.png" id="9_qduov"]
+[ext_resource type="PackedScene" uid="uid://cm5m714v0k0ob" path="res://game/rooms/3_altar/hotspots/incense/hotspot_incense.tscn" id="10_to7f2"]
+[ext_resource type="PackedScene" uid="uid://b66yk51vn3ndq" path="res://game/rooms/3_altar/props/empty_bowl/prop_empty_bowl.tscn" id="10_wb2dr"]
+[ext_resource type="Texture2D" uid="uid://bvqd7jbq5qt13" path="res://game/rooms/3_altar/props/empty_bowl/pxArtBowl.png" id="11_d25nb"]
+[ext_resource type="PackedScene" uid="uid://08tblmc1rky8" path="res://game/rooms/3_altar/props/broth_bowl/prop_broth_bowl.tscn" id="12_w2jau"]
+[ext_resource type="Texture2D" uid="uid://dtwlhngtwcst1" path="res://game/rooms/3_altar/props/broth_bowl/pxArtBrothBowl.png" id="13_882ch"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="13_lfuw1"]
+[ext_resource type="PackedScene" uid="uid://78npwj5o1wnl" path="res://game/rooms/3_altar/props/filter/prop_filter.tscn" id="14_o12fv"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="14_xw10g"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="15_hqaai"]
+[ext_resource type="Texture2D" uid="uid://0bk7ldbxxsul" path="res://game/rooms/3_altar/props/toy/pxArtToy.png" id="15_jbico"]
+[ext_resource type="PackedScene" uid="uid://cxc12diklakgr" path="res://game/rooms/3_altar/hotspots/set_bowl/hotspot_set_bowl.tscn" id="15_ogr7r"]
+[ext_resource type="PackedScene" uid="uid://d347agymp47qk" path="res://game/rooms/3_altar/props/toy/prop_toy.tscn" id="16_lysdd"]
+[ext_resource type="Texture2D" uid="uid://dsc7ymk6r4abn" path="res://game/rooms/3_altar/props/filter/pxArtFilter7.png" id="17_xdo15"]
+
+[node name="Room3Altar" type="Node2D"]
+script = ExtResource("1_skpj0")
+script_name = "3Altar"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_c5wib")]
+position = Vector2(960, 538)
+texture = ExtResource("3_sfnli")
+baseline = -546
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Portrait" parent="Props" instance=ExtResource("6_7v66d")]
+position = Vector2(937, 444)
+rotation = -0.23911
+scale = Vector2(0.75, 0.75)
+input_pickable = true
+texture = ExtResource("7_vpa21")
+frames = 2
+clickable = true
+baseline = -230
+walk_to_point = Vector2(0, -55.2586)
+look_at_point = Vector2(6.10352e-05, -61.0898)
+interaction_polygon = PackedVector2Array(-166, -195, -169, 183, 161, 189, 169, -186)
+interaction_polygon_position = Vector2(0, 1)
+
+[node name="Table" parent="Props" instance=ExtResource("4_usdhh")]
+position = Vector2(948, 772)
+scale = Vector2(1.5, 0.8)
+texture = ExtResource("5_0o6q5")
+baseline = -888
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Incense" parent="Props" instance=ExtResource("8_gsq24")]
+position = Vector2(974, 653)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_qduov")
+frames = 2
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="EmptyBowl" parent="Props" instance=ExtResource("10_wb2dr")]
+position = Vector2(756, 700)
+scale = Vector2(0.5, 0.5)
+input_pickable = true
+texture = ExtResource("11_d25nb")
+link_to_item = "EmptyBowl"
+clickable = true
+interaction_polygon = PackedVector2Array(-113, -26, -78, -31, 11, -35, 55, -32, 110, -26, 117, -18, 100, 2, 80, 11, 45, 26, 40, 36, 15, 45, -22, 43, -34, 38, -43, 26, -81, 13, -95, 4, -113, -16)
+
+[node name="BrothBowl" parent="Props" instance=ExtResource("12_w2jau")]
+visible = false
+position = Vector2(755, 699)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_882ch")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Toy" parent="Props" instance=ExtResource("16_lysdd")]
+position = Vector2(1195, 702)
+rotation = -1.76802
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("15_jbico")
+interaction_polygon = PackedVector2Array(52.9408, -60.8054, 112.265, -64.2476, 167.658, -124.563, 164.703, -199.087, 116.158, -236.83, 34.7673, -250.545, -7.88196, -215.726, -43.6686, -189.735, -107.894, -174.525, -85.3339, -134.325, -35.8131, -126.979, -22.0836, -119.137, 9.79285, -74.5259, -104.884, 218.688, -97.0353, 243.201, -62.7137, 250.059)
+
+[node name="Filter" parent="Props" instance=ExtResource("14_o12fv")]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(960, 540)
+texture = ExtResource("17_xdo15")
+frames = 2
+current_frame = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Incense" parent="Hotspots" node_paths=PackedStringArray("incense_prop") instance=ExtResource("10_to7f2")]
+position = Vector2(960, 540)
+incense_prop = NodePath("../../Props/Incense")
+interaction_polygon = PackedVector2Array(155, -43, 152, 23, 125, 17, 95, 9, 87, 57, 123, 81, 133, 91, 226, 93, 228, 78, 254, 66, 256, 18, 252, 7, 213, 22, 212, -38, 187, -50)
+interaction_polygon_position = Vector2(-162, 91)
+
+[node name="SetBowl" parent="Hotspots" node_paths=PackedStringArray("broth_offering") instance=ExtResource("15_ogr7r")]
+position = Vector2(960, 540)
+broth_offering = NodePath("../../Props/BrothBowl")
+interaction_polygon = PackedVector2Array(-126, 46, -124, 85, -98, 94, -52, 98, 52, 91, 48, 21, -43, 14, -123, 25)
+interaction_polygon_position = Vector2(-181, 103)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("13_lfuw1")
+texture_hover = ExtResource("14_xw10g")
+flip_h = true
+script = ExtResource("15_hqaai")
+room_name = "3Entrance"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("13_lfuw1")
+texture_hover = ExtResource("14_xw10g")
+script = ExtResource("15_hqaai")
+room_name = "3Sewing"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

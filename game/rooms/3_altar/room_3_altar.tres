@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c0k8d8syqj2xc"]
+
+[ext_resource type="Script" path="res://game/rooms/3_altar/room_3_altar_state.gd" id="1_txdla"]
+
+[resource]
+resource_name = "3Altar"
+script = ExtResource("1_txdla")
+script_name = "3Altar"
+scene = "res://game/rooms/3_altar/room_3_altar.tscn"
+visited = false
+visited_first_time = false
+visited_times = 0

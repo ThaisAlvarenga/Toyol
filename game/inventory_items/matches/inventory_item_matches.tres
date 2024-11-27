@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://yqss2jmwk1a8"]
+
+[ext_resource type="Script" path="res://game/inventory_items/matches/inventory_item_matches_state.gd" id="1_deqtp"]
+
+[resource]
+resource_name = "Matches"
+script = ExtResource("1_deqtp")
+script_name = "Matches"
+scene = "res://game/inventory_items/matches/inventory_item_matches.tscn"

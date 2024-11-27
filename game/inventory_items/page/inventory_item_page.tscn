@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfepkcrhog880"]
+
+[ext_resource type="Texture2D" uid="uid://1n4wht5m1u37" path="res://game/inventory_items/page/pxArtPaperItem.png" id="1_1jswn"]
+[ext_resource type="Script" path="res://game/inventory_items/page/inventory_item_page.gd" id="1_4bb6q"]
+
+[node name="ItemPage" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_1jswn")
+stretch_mode = 5
+script = ExtResource("1_4bb6q")
+script_name = "Page"
+description = "Page"

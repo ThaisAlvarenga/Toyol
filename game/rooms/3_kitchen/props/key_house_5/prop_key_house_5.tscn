@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnyudbxey3o0a"]
+
+[ext_resource type="Script" path="res://game/rooms/3_kitchen/props/key_house_5/prop_key_house_5.gd" id="1_sdhoq"]
+
+[node name="KeyHouse5" type="Area2D"]
+script = ExtResource("1_sdhoq")
+script_name = "KeyHouse5"
+description = "Key House 5"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

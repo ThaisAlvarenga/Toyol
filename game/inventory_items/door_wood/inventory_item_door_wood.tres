@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://5sfuuff50pvb"]
+
+[ext_resource type="Script" path="res://game/inventory_items/door_wood/inventory_item_door_wood_state.gd" id="1_he6dj"]
+
+[resource]
+resource_name = "DoorWood"
+script = ExtResource("1_he6dj")
+script_name = "DoorWood"
+scene = "res://game/inventory_items/door_wood/inventory_item_door_wood.tscn"

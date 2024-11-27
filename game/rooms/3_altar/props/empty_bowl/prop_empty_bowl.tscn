@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://b66yk51vn3ndq"]
+
+[ext_resource type="Script" path="res://game/rooms/3_altar/props/empty_bowl/prop_empty_bowl.gd" id="1_xbuh8"]
+
+[node name="EmptyBowl" type="Area2D"]
+input_pickable = false
+script = ExtResource("1_xbuh8")
+script_name = "EmptyBowl"
+description = "Empty Bowl"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

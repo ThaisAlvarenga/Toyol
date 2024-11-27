@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1lgbbslfmmyi"]
+
+[ext_resource type="Script" path="res://game/rooms/3_sewing/hotspots/wardrobe/hotspot_wardrobe.gd" id="1_c30ox"]
+
+[node name="Wardrobe" type="Area2D"]
+script = ExtResource("1_c30ox")
+script_name = "Wardrobe"
+description = "Wardrobe"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

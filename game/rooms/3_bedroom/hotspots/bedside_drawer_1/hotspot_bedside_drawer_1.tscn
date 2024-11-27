@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://duiulfp4qq2ah"]
+
+[ext_resource type="Script" path="res://game/rooms/3_bedroom/hotspots/bedside_drawer_1/hotspot_bedside_drawer_1.gd" id="1_paab6"]
+
+[node name="BedsideDrawer1" type="Area2D"]
+script = ExtResource("1_paab6")
+script_name = "BedsideDrawer1"
+description = "Bedside Drawer 1"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

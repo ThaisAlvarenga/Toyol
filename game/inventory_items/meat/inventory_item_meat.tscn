@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdcitavxifmo8"]
+
+[ext_resource type="Texture2D" uid="uid://drqqdi3kpcnr2" path="res://game/inventory_items/meat/pxArtMeatItem.png" id="1_c73fc"]
+[ext_resource type="Script" path="res://game/inventory_items/meat/inventory_item_meat.gd" id="1_j25el"]
+
+[node name="ItemMeat" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_c73fc")
+stretch_mode = 5
+script = ExtResource("1_j25el")
+script_name = "Meat"
+description = "Meat"

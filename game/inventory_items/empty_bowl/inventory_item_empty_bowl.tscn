@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbvbaochd4cvw"]
+
+[ext_resource type="Script" path="res://game/inventory_items/empty_bowl/inventory_item_empty_bowl.gd" id="1_2i038"]
+[ext_resource type="Texture2D" uid="uid://bvqd7jbq5qt13" path="res://game/rooms/3_altar/props/empty_bowl/pxArtBowl.png" id="1_fel4u"]
+
+[node name="ItemEmptyBowl" type="TextureRect"]
+texture_filter = 1
+offset_right = 1024.0
+offset_bottom = 768.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_fel4u")
+stretch_mode = 5
+script = ExtResource("1_2i038")
+script_name = "EmptyBowl"
+description = "Empty Bowl"

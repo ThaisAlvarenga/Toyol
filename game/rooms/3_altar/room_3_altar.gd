@@ -1,0 +1,87 @@
+@tool
+extends PopochiuRoom
+
+const Data := preload('room_3_altar_state.gd')
+
+var state: Data = load("res://game/rooms/3_altar/room_3_altar.tres")
+
+func _process(delta: float) -> void:
+	check_room_completion()
+
+#region Virtual ####################################################################################
+# What happens when Popochiu loads the room. At this point the room is in the
+# tree but it is not visible
+func _on_room_entered() -> void:
+	load_room_state()
+	print_room_state()
+	check_room_completion()
+
+
+# What happens when the room changing transition finishes. At this point the room
+# is visible.
+func _on_room_transition_finished() -> void:
+	# You can use await E.queue([]) to excecute a sequence of instructions
+	pass
+
+
+# What happens before Popochiu unloads the room.
+# At this point, the screen is black, processing is disabled and all characters
+# have been removed from the $Characters node.
+func _on_room_exited() -> void:
+	check_room_completion()
+	save_room_state()
+
+func load_room_state():
+	## get props
+	var portrait = R.get_prop('Portrait')
+	portrait.is_rotated = not state.portrait_fixed
+	portrait.can_stay_rotated = state.portrait_stay_rotated
+	
+	
+	var empty_bowl = R.get_prop("EmptyBowl")
+	empty_bowl.used = state.empty_bowl_used
+	
+	## get hotspots
+	var incense = R.get_hotspot("Incense")
+	incense.lighted = state.incense_lighted
+	
+	var broth_bowl_set = R.get_hotspot('SetBowl')
+
+	## load states from room state
+	#portrait.is_rotated = state.portrait_fixed
+	#empty_bowl_used.used = state.empty_bowl_used
+	#incense_lighted.lighted = state.incense_lighted
+	#broth_bowl_set.placed = state.broth_bowl_set
+	#
+	## update visuals
+	empty_bowl.update_visual()
+	portrait.update_visual()
+	incense.update_visual()
+	broth_bowl_set.update_visual()
+	
+
+
+func save_room_state():
+	state.portrait_fixed = not R.get_prop('Portrait').is_rotated
+	state.portrait_stay_rotated = R.get_prop('Portrait').can_stay_rotated
+	state.empty_bowl_used = R.get_prop('EmptyBowl').used
+	state.incense_lighted = R.get_hotspot("Incense").lighted
+	state.broth_bowl_set = R.get_hotspot('SetBowl').placed
+
+func check_room_completion():
+	pass
+	#if state.portrait_fixed and state.incense_lighted and state.broth_bowl_set:
+		#state.completed = true
+		#print(R.name, "completed!")
+
+		
+
+func print_room_state():
+	print("Room is complete: ", state.completed)
+	#print("Portrait is", state.portrait_fixed)
+	#print("Portrait stay rot ", state.portrait_stay_rotated)
+	#print("EmptyBowl is", state.empty_bowl_used)
+	#print("Incense is",state.incense_lighted )
+	print("Broth bowl is", state.broth_bowl_set)
+
+#endregion

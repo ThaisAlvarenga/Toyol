@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://33xjbmp6el7g"]
+
+[ext_resource type="Texture2D" uid="uid://p4mwxgiovyjl" path="res://game/rooms/3_bedroom/props/bloody_bowl/pxBloodBowlItem.png" id="1_loqai"]
+[ext_resource type="Script" path="res://game/inventory_items/bloody_bowl/inventory_item_bloody_bowl.gd" id="1_oefgp"]
+
+[node name="ItemBloodyBowl" type="TextureRect"]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_loqai")
+stretch_mode = 5
+script = ExtResource("1_oefgp")
+script_name = "BloodyBowl"
+description = "Bloody Bowl"

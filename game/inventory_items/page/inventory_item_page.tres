@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://lkcscvop6dmq"]
+
+[ext_resource type="Script" path="res://game/inventory_items/page/inventory_item_page_state.gd" id="1_5kxut"]
+
+[resource]
+resource_name = "Page"
+script = ExtResource("1_5kxut")
+script_name = "Page"
+scene = "res://game/inventory_items/page/inventory_item_page.tscn"

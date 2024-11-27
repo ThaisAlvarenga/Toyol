@@ -1,0 +1,126 @@
+[gd_scene load_steps=19 format=3 uid="uid://rufb4caj2usj"]
+
+[ext_resource type="Script" path="res://game/rooms/3_kitchen/room_3_kitchen.gd" id="1_5843l"]
+[ext_resource type="PackedScene" uid="uid://o8vr700ov3it" path="res://game/rooms/3_kitchen/props/background/prop_background.tscn" id="2_1xdkh"]
+[ext_resource type="Texture2D" uid="uid://cc8a0bhe42gr4" path="res://game/rooms/3_kitchen/props/background/pxArtHouse3BG.png" id="3_adk6f"]
+[ext_resource type="PackedScene" uid="uid://d2ignv83h6pkl" path="res://game/rooms/3_kitchen/props/kitchen/prop_kitchen.tscn" id="4_do7dg"]
+[ext_resource type="Texture2D" uid="uid://cl04tql02mmwa" path="res://game/rooms/3_kitchen/props/kitchen/pxArtTable.png" id="5_hu8ex"]
+[ext_resource type="PackedScene" uid="uid://cmmefoqfjx5n0" path="res://game/rooms/3_kitchen/props/meat/prop_meat.tscn" id="6_bqo3f"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="6_di6vj"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="7_htbxg"]
+[ext_resource type="Texture2D" uid="uid://bcktma1we007j" path="res://game/rooms/3_kitchen/props/meat/pxArtMeat.png" id="7_ikoo1"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="8_tjdg8"]
+[ext_resource type="PackedScene" uid="uid://b3rgn1a1def4r" path="res://game/rooms/3_kitchen/props/stove/prop_stove.tscn" id="8_yrnwc"]
+[ext_resource type="Texture2D" uid="uid://b24ek75qfbryw" path="res://game/rooms/3_kitchen/props/stove/pxArtOvenSS.png" id="9_ya6j6"]
+[ext_resource type="PackedScene" uid="uid://t2cwh6j43osr" path="res://game/rooms/3_kitchen/hotspots/stove/hotspot_stove.tscn" id="10_lde7b"]
+[ext_resource type="PackedScene" uid="uid://bfaqra1eihfog" path="res://game/rooms/3_kitchen/props/broth_bowl/prop_broth_bowl.tscn" id="10_rc7ir"]
+[ext_resource type="Texture2D" uid="uid://8ujufwhnpuac" path="res://game/rooms/3_kitchen/props/broth_bowl/pxBrothBowl.png" id="11_dl3pt"]
+[ext_resource type="PackedScene" uid="uid://bfi3c8ecppjso" path="res://game/rooms/3_kitchen/hotspots/pot/hotspot_pot.tscn" id="11_jy0qp"]
+[ext_resource type="PackedScene" uid="uid://cnyudbxey3o0a" path="res://game/rooms/3_kitchen/props/key_house_5/prop_key_house_5.tscn" id="12_3pqqb"]
+[ext_resource type="Texture2D" uid="uid://dxqe4nm2yo85f" path="res://game/rooms/3_kitchen/props/key_house_5/PxKey5Item.png" id="13_2v65q"]
+
+[node name="Room3Kitchen" type="Node2D"]
+script = ExtResource("1_5843l")
+script_name = "3Kitchen"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_1xdkh")]
+position = Vector2(960, 540)
+texture = ExtResource("3_adk6f")
+
+[node name="Kitchen" parent="Props" instance=ExtResource("4_do7dg")]
+position = Vector2(1336, 781)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_hu8ex")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Meat" parent="Props" instance=ExtResource("6_bqo3f")]
+position = Vector2(1341, 611)
+rotation = 0.277709
+scale = Vector2(0.3, 0.3)
+input_pickable = true
+texture = ExtResource("7_ikoo1")
+link_to_item = "Meat"
+clickable = true
+interaction_polygon = PackedVector2Array(-200, -93.3334, -270, 60, -276.667, 173.333, -310, 283.333, -203.333, 260, -90, 210, -33.3335, 176.667, 63.333, 120, 246.667, 86.6666, 320, 40, 316.667, -40, 266.667, -90)
+
+[node name="Stove" parent="Props" instance=ExtResource("8_yrnwc")]
+position = Vector2(731, 746)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("9_ya6j6")
+frames = 3
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="BrothBowl" parent="Props" instance=ExtResource("10_rc7ir")]
+visible = false
+position = Vector2(1347, 593)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_dl3pt")
+link_to_item = "BrothBowl"
+interaction_polygon = PackedVector2Array(-244, -36, -184, 50, -106, 98, -56, 114, -24, 130, 32, 130, 100, 100, 164, 66, 236, -8, 246, -42, 220, -70, 132, -102, 50, -114, -148, -104, -234, -56)
+
+[node name="KeyHouse5" parent="Props" instance=ExtResource("12_3pqqb")]
+visible = false
+position = Vector2(909, 943)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_2v65q")
+link_to_item = "Key5"
+description = "Key"
+interaction_polygon = PackedVector2Array(-366.667, -26.6667, -370, 33.3333, -330, 36.6667, -326.667, 150, -180, 150, -176.667, 26.6667, -46.667, 26.6667, -43.3337, 40, 56.6663, 46.6667, 69.9998, 93.3333, 130, 106.667, 163.333, 146.667, 253.333, 146.667, 310, 90, 323.333, 53.3333, 366.666, 36.6667, 376.666, -6.66675, 363.333, -30, 326.666, -43.3333, 306.666, -86.6667, 273.333, -123.333, 226.666, -150, 166.666, -150, 126.666, -103.333, 103.333, -123.333, 73.333, -96.6667, 73.333, -63.3333, 49.9998, -53.3333, -36.667, -40, -103.334, -30, -256.667, -26.6667, -303.334, -30, -346.667, -40)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Stove" parent="Hotspots" node_paths=PackedStringArray("stove_prop") instance=ExtResource("10_lde7b")]
+position = Vector2(960, 540)
+stove_prop = NodePath("../../Props/Stove")
+interaction_polygon = PackedVector2Array(-401, 276, -399, 478, 60, 477, 68, 276)
+interaction_polygon_position = Vector2(27, -52)
+
+[node name="Pot" parent="Hotspots" node_paths=PackedStringArray("stove", "broth_bowl_prop") instance=ExtResource("11_jy0qp")]
+position = Vector2(960, 540)
+stove = NodePath("../Stove")
+broth_bowl_prop = NodePath("../../Props/BrothBowl")
+interaction_polygon = PackedVector2Array(-197, 50, -126, 158, -112, 172, 149, 175, 186, 98, 228, 45, 205, -1, 167, 7, 148, 9, -192, 5)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("6_di6vj")
+texture_hover = ExtResource("7_htbxg")
+flip_h = true
+script = ExtResource("8_tjdg8")
+room_name = "3Sewing"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("6_di6vj")
+texture_hover = ExtResource("7_htbxg")
+script = ExtResource("8_tjdg8")
+room_name = "3Bedroom"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

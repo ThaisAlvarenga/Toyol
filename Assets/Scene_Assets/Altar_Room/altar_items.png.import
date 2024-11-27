@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3etnmikwxp67"
-path="res://.godot/imported/altar_items.png-33c3ca678ad2aa5cad4603145fc127db.ctex"
+path="res://.godot/imported/altar_items.png-33a1326d3b5620034106059fbb0765f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Scene_Assets/Altar_Room/altar_items.png"
-dest_files=["res://.godot/imported/altar_items.png-33c3ca678ad2aa5cad4603145fc127db.ctex"]
+source_file="res://assets/Scene_Assets/Altar_Room/altar_items.png"
+dest_files=["res://.godot/imported/altar_items.png-33a1326d3b5620034106059fbb0765f5.ctex"]
 
 [params]
 

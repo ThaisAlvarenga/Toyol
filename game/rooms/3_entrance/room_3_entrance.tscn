@@ -1,0 +1,119 @@
+[gd_scene load_steps=16 format=3 uid="uid://co1r003l3040v"]
+
+[ext_resource type="Script" path="res://game/rooms/3_entrance/room_3_entrance.gd" id="1_hh6kn"]
+[ext_resource type="PackedScene" uid="uid://bc4qitoxlacjy" path="res://game/rooms/3_entrance/props/background/prop_background.tscn" id="2_jopkq"]
+[ext_resource type="Texture2D" uid="uid://c80ox7t0cwbxt" path="res://game/rooms/3_entrance/props/background/pxArtHouse3BG.png" id="3_26qlr"]
+[ext_resource type="PackedScene" uid="uid://j5vi1ctypb5i" path="res://game/rooms/3_entrance/props/door/prop_door.tscn" id="4_ntc7i"]
+[ext_resource type="Texture2D" uid="uid://ccqx2x0tofj4k" path="res://game/rooms/3_entrance/props/door/pxArtDoor.png" id="5_e242a"]
+[ext_resource type="PackedScene" uid="uid://dvesuao64eomp" path="res://game/rooms/3_entrance/props/window/prop_window.tscn" id="6_f0qpb"]
+[ext_resource type="Texture2D" uid="uid://cu5smoakhogjp" path="res://game/rooms/3_entrance/props/window/pxArtWindowOpenSSFINAL.png" id="7_k0h2f"]
+[ext_resource type="PackedScene" uid="uid://bdijtax2vf4s" path="res://game/rooms/3_entrance/props/wood/prop_wood.tscn" id="8_q03ml"]
+[ext_resource type="Texture2D" uid="uid://undfibvbys6l" path="res://game/rooms/3_entrance/props/wood/pxArtPlank.png" id="9_b5ge0"]
+[ext_resource type="PackedScene" uid="uid://ge4mibfepbvo" path="res://game/rooms/3_entrance/markers/wood_snap_marker/marker_wood_snap_marker.tscn" id="10_4je85"]
+[ext_resource type="PackedScene" uid="uid://ny6shxwwjkvd" path="res://game/rooms/3_entrance/hotspots/window/hotspot_window.tscn" id="10_evh5j"]
+[ext_resource type="PackedScene" uid="uid://d0cu7juhuqule" path="res://game/rooms/3_entrance/hotspots/door/hotspot_door.tscn" id="11_6rad4"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="13_0vihx"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="14_xy5kn"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="15_2wa76"]
+
+[node name="Room3Entrance" type="Node2D"]
+script = ExtResource("1_hh6kn")
+script_name = "3Entrance"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_jopkq")]
+position = Vector2(960, 540)
+texture = ExtResource("3_26qlr")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Door" parent="Props" instance=ExtResource("4_ntc7i")]
+position = Vector2(608, 577)
+input_pickable = false
+texture = ExtResource("5_e242a")
+clickable = false
+interaction_polygon = PackedVector2Array(-3, -226, -3, 78, -62, 93, -65, 143, -3, 152, -3, 452, 432, 455, 426, 161, 478, 148, 479, 86, 432, 82, 433, -224)
+
+[node name="Window" parent="Props" instance=ExtResource("6_f0qpb")]
+position = Vector2(1168, 469)
+scale = Vector2(0.8, 0.8)
+input_pickable = true
+texture = ExtResource("7_k0h2f")
+frames = 2
+current_frame = 1
+clickable = true
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Wood" parent="Props" node_paths=PackedStringArray("snap_marker", "door") instance=ExtResource("8_q03ml")]
+position = Vector2(1271, 939)
+scale = Vector2(0.6, 0.6)
+input_pickable = true
+snap_marker = NodePath("../../Markers/WoodSnapMarker")
+door = NodePath("../../Hotspots/Door")
+texture = ExtResource("9_b5ge0")
+link_to_item = "DoorWood"
+clickable = true
+interaction_polygon = PackedVector2Array(38, 25, 650, 17, 649, 80, 38, 80)
+interaction_polygon_position = Vector2(-342, -45)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Window" parent="Hotspots" node_paths=PackedStringArray("window_sprite") instance=ExtResource("10_evh5j")]
+position = Vector2(1470, 540)
+window_sprite = NodePath("../../Props/Window")
+baseline = -566
+interaction_polygon = PackedVector2Array(-462, 204, -334, 211, -339, 231, -2, 235, -2, 216, 116, 212, 119, -168, -17, -166, -15, -208, -334, -204, -334, -168, -467, -166)
+interaction_polygon_position = Vector2(-125, -81)
+
+[node name="Door" parent="Hotspots" instance=ExtResource("11_6rad4")]
+position = Vector2(960, 540)
+baseline = -566
+walk_to_point = Vector2(-466.469, -7.25085)
+look_at_point = Vector2(-460.426, 15.7101)
+interaction_polygon = PackedVector2Array(-679, -240, -371, -236, -371, 316, -678, 311)
+interaction_polygon_position = Vector2(175, 4)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="WoodSnapMarker" parent="Markers" instance=ExtResource("10_4je85")]
+position = Vector2(609, 593)
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("13_0vihx")
+texture_hover = ExtResource("14_xy5kn")
+flip_h = true
+script = ExtResource("15_2wa76")
+room_name = "3Bedroom"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("13_0vihx")
+texture_hover = ExtResource("14_xy5kn")
+script = ExtResource("15_2wa76")
+room_name = "3Altar"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

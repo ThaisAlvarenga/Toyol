@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccwpitwynxlkf"]
+
+[ext_resource type="Script" path="res://game/inventory_items/key_5/inventory_item_key_5.gd" id="1_1kjov"]
+[ext_resource type="Texture2D" uid="uid://dxqe4nm2yo85f" path="res://game/rooms/3_kitchen/props/key_house_5/PxKey5Item.png" id="1_wiodv"]
+
+[node name="ItemKey5" type="TextureRect"]
+texture_filter = 1
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_wiodv")
+stretch_mode = 5
+script = ExtResource("1_1kjov")
+script_name = "Key5"
+description = "Key"

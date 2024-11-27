@@ -1,0 +1,142 @@
+[gd_scene load_steps=21 format=3 uid="uid://c5v7oi2de0mo3"]
+
+[ext_resource type="Script" path="res://game/rooms/3_bedroom/room_3_bedroom.gd" id="1_4fmko"]
+[ext_resource type="PackedScene" uid="uid://bhl8e70xnf5to" path="res://game/rooms/3_bedroom/props/background/prop_background.tscn" id="2_jpvsw"]
+[ext_resource type="Texture2D" uid="uid://c1b8exgspfm2r" path="res://game/rooms/3_bedroom/props/background/pxArtBedroomBG.png" id="3_8ibgb"]
+[ext_resource type="PackedScene" uid="uid://d4it7aurcktgn" path="res://game/rooms/3_bedroom/props/mom_bed/prop_mom_bed.tscn" id="4_vpmsu"]
+[ext_resource type="Texture2D" uid="uid://bjhnj6cqrqjkh" path="res://game/rooms/3_bedroom/props/mom_bed/pxArtMomSS.png" id="5_t4b7d"]
+[ext_resource type="PackedScene" uid="uid://31peoonsths0" path="res://game/rooms/3_bedroom/props/bedside_table/prop_bedside_table.tscn" id="6_k3pnj"]
+[ext_resource type="Texture2D" uid="uid://cbml27ly5uvmr" path="res://game/rooms/3_bedroom/props/bedside_table/pxArtNightstandSS.png" id="7_qq8rk"]
+[ext_resource type="PackedScene" uid="uid://brisv5shd0f25" path="res://game/rooms/3_bedroom/props/matches/prop_matches.tscn" id="8_4mngr"]
+[ext_resource type="PackedScene" uid="uid://duiulfp4qq2ah" path="res://game/rooms/3_bedroom/hotspots/bedside_drawer_1/hotspot_bedside_drawer_1.tscn" id="8_mbd8p"]
+[ext_resource type="Texture2D" uid="uid://cgeu7rrtth4us" path="res://game/rooms/3_bedroom/props/matches/pxArtMatches.png" id="9_8ui0i"]
+[ext_resource type="PackedScene" uid="uid://dxx5r4jrmtixe" path="res://game/rooms/3_bedroom/props/bloody_bowl/prop_bloody_bowl.tscn" id="10_46cyt"]
+[ext_resource type="PackedScene" uid="uid://cw0jxr1enujc4" path="res://game/rooms/3_bedroom/hotspots/set_bowl/hotspot_set_bowl.tscn" id="11_byyqa"]
+[ext_resource type="Texture2D" uid="uid://p4mwxgiovyjl" path="res://game/rooms/3_bedroom/props/bloody_bowl/pxBloodBowlItem.png" id="11_dai6d"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="11_tte34"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="12_nohq1"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="13_75712"]
+[ext_resource type="Texture2D" uid="uid://cvlydulhqdpua" path="res://game/rooms/3_bedroom/props/page/pxArtPaper.png" id="13_yjpj5"]
+[ext_resource type="PackedScene" uid="uid://budqx7upow5ng" path="res://game/rooms/3_bedroom/props/light_map/prop_light_map.tscn" id="14_slnfv"]
+[ext_resource type="PackedScene" uid="uid://wgjhqq3sx014" path="res://game/rooms/3_bedroom/props/page/prop_page.tscn" id="14_wdavd"]
+[ext_resource type="Texture2D" uid="uid://ckkicgsc0a303" path="res://game/rooms/3_bedroom/props/light_map/pxArtBedroomGlow.png" id="15_gr0xi"]
+
+[node name="Room3Bedroom" type="Node2D"]
+script = ExtResource("1_4fmko")
+script_name = "3Bedroom"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_jpvsw")]
+position = Vector2(960, 540)
+texture = ExtResource("3_8ibgb")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="MomBed" parent="Props" instance=ExtResource("4_vpmsu")]
+position = Vector2(648, 774)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_t4b7d")
+frames = 2
+current_frame = 1
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="BedsideTable" parent="Props" instance=ExtResource("6_k3pnj")]
+position = Vector2(1364, 803)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_qq8rk")
+frames = 2
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="BloodyBowl" parent="Props" instance=ExtResource("10_46cyt")]
+visible = false
+position = Vector2(461, 997)
+scale = Vector2(0.35, 0.35)
+input_pickable = true
+texture = ExtResource("11_dai6d")
+link_to_item = "BloodyBowl"
+clickable = true
+interaction_polygon = PackedVector2Array(-225.714, -40, -200, 2.85718, -111.429, 45.7144, -85.7144, 54.2856, -60, 82.8572, 62.8571, 88.5715, 105.714, 54.2856, 182.857, 25.7144, 240, -28.5715, 191.429, -60, -177.143, -65.7144)
+
+[node name="Page" parent="Props" instance=ExtResource("14_wdavd")]
+visible = false
+position = Vector2(1404, 892)
+rotation = 0.217722
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_yjpj5")
+link_to_item = "Page"
+interaction_polygon = PackedVector2Array(-205, -85, -195, -15, -130, 255, 305, 125, 300, 100, 235, 55, 150, -25, 110, -70, 80, -135)
+
+[node name="Matches" parent="Props" instance=ExtResource("8_4mngr")]
+visible = false
+top_level = true
+position = Vector2(1339, 723)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("9_8ui0i")
+link_to_item = "Matches"
+baseline = -759
+interaction_polygon = PackedVector2Array(26.667, -93.333, 13.333, 6.66699, -80, 33.3335, -173.333, 40, -206.667, 60, -306.667, 66.667, -386.667, 86.667, -433.333, 166.667, -420, 186.667, -326.667, 186.667, -300, 200, -173.333, 186.667, 166.667, 126.667, 200, 93.3335, 286.667, 66.667, 300, 6.66699, 273.333, -26.6665, 253.333, -53.333, 253.333, -106.667, 53.333, -113.333)
+
+[node name="LightMap" parent="Props" instance=ExtResource("14_slnfv")]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(960, 540)
+texture = ExtResource("15_gr0xi")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="BedsideDrawer1" parent="Hotspots" node_paths=PackedStringArray("bedside_table", "inside_object_1", "inside_object_2") instance=ExtResource("8_mbd8p")]
+position = Vector2(960, 540)
+bedside_table = NodePath("../../Props/BedsideTable")
+inside_object_1 = NodePath("../../Props/Matches")
+inside_object_2 = NodePath("../../Props/Page")
+interaction_polygon = PackedVector2Array(510, 135, 512, 459, 740, 462, 752, 138)
+interaction_polygon_position = Vector2(-223, -28)
+metadata/_edit_group_ = true
+
+[node name="SetBowl" parent="Hotspots" instance=ExtResource("11_byyqa")]
+position = Vector2(960, 540)
+description = "Set"
+interaction_polygon = PackedVector2Array(-452, 216, -459, 354, -445, 397, -270, 403, -130, 397, -59, 337, -68, 233, -135, 194, -260, 187)
+interaction_polygon_position = Vector2(-216, 114)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("11_tte34")
+texture_hover = ExtResource("12_nohq1")
+flip_h = true
+script = ExtResource("13_75712")
+room_name = "3Kitchen"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("11_tte34")
+texture_hover = ExtResource("12_nohq1")
+script = ExtResource("13_75712")
+room_name = "3Entrance"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cb6gs6l18bnqa"]
+
+[ext_resource type="Script" path="res://game/inventory_items/nail/inventory_item_nail_state.gd" id="1_jsvcu"]
+
+[resource]
+resource_name = "Nail"
+script = ExtResource("1_jsvcu")
+script_name = "Nail"
+scene = "res://game/inventory_items/nail/inventory_item_nail.tscn"

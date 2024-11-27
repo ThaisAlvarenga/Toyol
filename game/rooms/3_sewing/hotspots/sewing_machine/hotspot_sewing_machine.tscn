@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cntqbpxp53q3x"]
+
+[ext_resource type="Script" path="res://game/rooms/3_sewing/hotspots/sewing_machine/hotspot_sewing_machine.gd" id="1_tmvyp"]
+
+[node name="SewingMachine" type="Area2D"]
+script = ExtResource("1_tmvyp")
+script_name = "SewingMachine"
+description = "Sewing Machine"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
