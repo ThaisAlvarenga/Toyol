@@ -59,8 +59,8 @@ interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="BrothBowl" parent="Props" instance=ExtResource("10_rc7ir")]
 visible = false
-position = Vector2(1347, 593)
-scale = Vector2(0.5, 0.5)
+position = Vector2(1343, 628)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("11_dl3pt")
 link_to_item = "BrothBowl"
 interaction_polygon = PackedVector2Array(-244, -36, -184, 50, -106, 98, -56, 114, -24, 130, 32, 130, 100, 100, 164, 66, 236, -8, 246, -42, 220, -70, 132, -102, 50, -114, -148, -104, -234, -56)

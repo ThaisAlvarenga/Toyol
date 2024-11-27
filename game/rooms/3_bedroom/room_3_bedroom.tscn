@@ -17,9 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="12_nohq1"]
 [ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="13_75712"]
 [ext_resource type="Texture2D" uid="uid://cvlydulhqdpua" path="res://game/rooms/3_bedroom/props/page/pxArtPaper.png" id="13_yjpj5"]
-[ext_resource type="PackedScene" uid="uid://budqx7upow5ng" path="res://game/rooms/3_bedroom/props/light_map/prop_light_map.tscn" id="14_slnfv"]
 [ext_resource type="PackedScene" uid="uid://wgjhqq3sx014" path="res://game/rooms/3_bedroom/props/page/prop_page.tscn" id="14_wdavd"]
-[ext_resource type="Texture2D" uid="uid://ckkicgsc0a303" path="res://game/rooms/3_bedroom/props/light_map/pxArtBedroomGlow.png" id="15_gr0xi"]
+[ext_resource type="Texture2D" uid="uid://ckkicgsc0a303" path="res://game/rooms/3_bedroom/props/pxArtBedroomGlow.png" id="15_gr0xi"]
+[ext_resource type="PackedScene" uid="uid://xbc5mt1ohlft" path="res://game/rooms/3_bedroom/props/window_light/prop_window_light.tscn" id="16_figss"]
 
 [node name="Room3Bedroom" type="Node2D"]
 script = ExtResource("1_4fmko")
@@ -81,8 +81,9 @@ link_to_item = "Matches"
 baseline = -759
 interaction_polygon = PackedVector2Array(26.667, -93.333, 13.333, 6.66699, -80, 33.3335, -173.333, 40, -206.667, 60, -306.667, 66.667, -386.667, 86.667, -433.333, 166.667, -420, 186.667, -326.667, 186.667, -300, 200, -173.333, 186.667, 166.667, 126.667, 200, 93.3335, 286.667, 66.667, 300, 6.66699, 273.333, -26.6665, 253.333, -53.333, 253.333, -106.667, 53.333, -113.333)
 
-[node name="LightMap" parent="Props" instance=ExtResource("14_slnfv")]
-modulate = Color(1, 1, 1, 0.5)
+[node name="WindowLight" parent="Props" instance=ExtResource("16_figss")]
+modulate = Color(1, 1, 0.00392157, 0.545098)
+self_modulate = Color(0.929412, 0.976471, 0.00784314, 0.101961)
 position = Vector2(960, 540)
 texture = ExtResource("15_gr0xi")
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

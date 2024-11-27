@@ -96,7 +96,6 @@ modulate = Color(1, 1, 1, 0.5)
 position = Vector2(960, 540)
 texture = ExtResource("17_xdo15")
 frames = 2
-current_frame = 1
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
