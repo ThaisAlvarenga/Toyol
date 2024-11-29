@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cqydtxbw3crdr"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bkm01dngq0og0"]
 
 [ext_resource type="Script" path="res://game/characters/player/character_player_state.gd" id="1_kr2ej"]
 

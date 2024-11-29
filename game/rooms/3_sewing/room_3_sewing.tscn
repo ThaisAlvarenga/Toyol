@@ -41,8 +41,9 @@ link_to_item = "Nail"
 baseline = -521
 interaction_polygon = PackedVector2Array(-310, 16, -232, 0, -164, 0, 96, -31, 171, -42, 217, -69, 251, -67, 269, -41, 267, 12, 256, 33, 233, 36, 186, 13, -195, 46, -261, 55, -299, 48, -319, 32)
 
-[node name="Wardrobe" parent="Props" instance=ExtResource("6_fggtr")]
+[node name="Wardrobe" parent="Props" node_paths=PackedStringArray("wardrobe_hotspot") instance=ExtResource("6_fggtr")]
 position = Vector2(705, 552)
+wardrobe_hotspot = NodePath("../../Hotspots/Wardrobe")
 texture = ExtResource("7_ri33s")
 frames = 5
 current_frame = 2

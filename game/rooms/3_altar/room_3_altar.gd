@@ -17,6 +17,7 @@ func _on_room_entered() -> void:
 	check_room_completion()
 
 
+
 # What happens when the room changing transition finishes. At this point the room
 # is visible.
 func _on_room_transition_finished() -> void:
@@ -33,26 +34,24 @@ func _on_room_exited() -> void:
 
 func load_room_state():
 	## get props
+	
+	#var toy = R.get_prop('Toy')
 	var portrait = R.get_prop('Portrait')
-	portrait.is_rotated = not state.portrait_fixed
-	portrait.can_stay_rotated = state.portrait_stay_rotated
-	
-	
 	var empty_bowl = R.get_prop("EmptyBowl")
-	empty_bowl.used = state.empty_bowl_used
 	
 	## get hotspots
 	var incense = R.get_hotspot("Incense")
-	incense.lighted = state.incense_lighted
 	
 	var broth_bowl_set = R.get_hotspot('SetBowl')
+	
 
 	## load states from room state
-	#portrait.is_rotated = state.portrait_fixed
-	#empty_bowl_used.used = state.empty_bowl_used
-	#incense_lighted.lighted = state.incense_lighted
-	#broth_bowl_set.placed = state.broth_bowl_set
-	#
+	portrait.is_rotated = not state.portrait_fixed
+	portrait.can_stay_rotated = state.portrait_stay_rotated
+	incense.lighted = state.incense_lighted
+	empty_bowl.used = state.empty_bowl_used
+	broth_bowl_set.placed = state.broth_bowl_set
+	
 	## update visuals
 	empty_bowl.update_visual()
 	portrait.update_visual()
@@ -67,21 +66,26 @@ func save_room_state():
 	state.empty_bowl_used = R.get_prop('EmptyBowl').used
 	state.incense_lighted = R.get_hotspot("Incense").lighted
 	state.broth_bowl_set = R.get_hotspot('SetBowl').placed
+	
+	check_room_completion()
 
 func check_room_completion():
-	pass
-	#if state.portrait_fixed and state.incense_lighted and state.broth_bowl_set:
-		#state.completed = true
-		#print(R.name, "completed!")
+	if state.portrait_fixed and state.incense_lighted and state.broth_bowl_set:
+		state.completed = true
+		#C.Player.state.altar_5_completed = true
+		print(self.script_name, "completed!")
+		#print(C.name, ": ",C.player.altar_5_completed )
+		
 
 		
 
 func print_room_state():
+	print("\nALTAR ROOM \n")
 	print("Room is complete: ", state.completed)
-	#print("Portrait is", state.portrait_fixed)
-	#print("Portrait stay rot ", state.portrait_stay_rotated)
-	#print("EmptyBowl is", state.empty_bowl_used)
-	#print("Incense is",state.incense_lighted )
+	print("Portrait is", state.portrait_fixed)
+	print("Portrait stay rot ", state.portrait_stay_rotated)
+	print("EmptyBowl is", state.empty_bowl_used)
+	print("Incense is",state.incense_lighted )
 	print("Broth bowl is", state.broth_bowl_set)
 
 #endregion

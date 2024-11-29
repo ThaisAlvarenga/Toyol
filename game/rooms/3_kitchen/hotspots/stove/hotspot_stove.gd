@@ -11,6 +11,7 @@ var stove_used : bool = false
 
 
 #region Virtual ####################################################################################
+
 # When the node is clicked
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() with your code.
@@ -62,10 +63,16 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		#stove_prop.change_frame(2)
 		I.Page.remove()
 		print("Page burned")
+		R.get_3Kitchen().state.page_burned = true
 		
 	
 	else: E.command_fallback()
 
+func update_visual():
+	if stove_on:
+		stove_prop.change_frame(1)
+	else:
+		stove_prop.change_frame(0)
 
 #endregion
 

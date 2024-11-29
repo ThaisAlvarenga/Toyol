@@ -5,6 +5,7 @@ extends PopochiuProp
 # the function until the sequence of events finishes.
 var animation_speed = 3 
 var is_toyol : bool = true
+@export var wardrobe_hotspot : PopochiuHotspot 
 
 func _process(delta: float) -> void:
 	if is_toyol:
@@ -13,6 +14,10 @@ func _process(delta: float) -> void:
 		if current_frame != new_frame:
 			#print("Changing frame to", new_frame)
 			change_frame(new_frame)
+	elif not is_toyol and wardrobe_hotspot.isOpen:
+		change_frame(3)
+	
+	else: change_frame(4)
 
 #region Virtual ####################################################################################
 # When the node is clicked

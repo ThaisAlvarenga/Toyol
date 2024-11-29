@@ -10,7 +10,15 @@ var state: Data = load("res://game/rooms/3_sewing/room_3_sewing.tres")
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
-	pass
+	print("\nSewing Room \n")
+	if R.get_3Altar().state.completed:
+		print("Altar room is completed")
+		var wardrobe = R.get_prop('Wardrobe')
+		wardrobe.is_toyol = false
+	
+	if R.get_3Altar().state.portrait_fixed:
+		R.get_prop("Nail").hide()
+		
 
 
 # What happens when the room changing transition finishes. At this point the room

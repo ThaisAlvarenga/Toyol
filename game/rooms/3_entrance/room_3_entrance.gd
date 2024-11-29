@@ -44,13 +44,14 @@ func load_room_state():
 func save_room_state():
 	state.door_closed = R.get_hotspot('Door').is_closed
 	state.window_closed = R.get_hotspot('Window').isClosed
+	
+	check_room_completion()
 
 
 func check_room_completion():
 	if state.door_closed and state.window_closed:
 		state.completed = true
-		print("Room completed!")
-
+		print(self.script_name, "completed!")
 
 # check look of room if it is complete
 func change_room_look():

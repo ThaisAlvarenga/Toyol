@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cmw8qtvl2t321"]
+[gd_scene load_steps=24 format=3 uid="uid://cmw8qtvl2t321"]
 
 [ext_resource type="Script" path="res://game/rooms/3_altar/room_3_altar.gd" id="1_skpj0"]
 [ext_resource type="PackedScene" uid="uid://hebmty84qtlw" path="res://game/rooms/3_altar/props/background/prop_background.tscn" id="2_c5wib"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://cxc12diklakgr" path="res://game/rooms/3_altar/hotspots/set_bowl/hotspot_set_bowl.tscn" id="15_ogr7r"]
 [ext_resource type="PackedScene" uid="uid://d347agymp47qk" path="res://game/rooms/3_altar/props/toy/prop_toy.tscn" id="16_lysdd"]
 [ext_resource type="Texture2D" uid="uid://dsc7ymk6r4abn" path="res://game/rooms/3_altar/props/filter/pxArtFilter7.png" id="17_xdo15"]
+[ext_resource type="PackedScene" uid="uid://hbmniytx342e" path="res://game/characters/player/character_player.tscn" id="20_k7qck"]
 
 [node name="Room3Altar" type="Node2D"]
 script = ExtResource("1_skpj0")
@@ -96,6 +97,7 @@ modulate = Color(1, 1, 1, 0.5)
 position = Vector2(960, 540)
 texture = ExtResource("17_xdo15")
 frames = 2
+current_frame = 1
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
@@ -117,6 +119,9 @@ interaction_polygon_position = Vector2(-181, 103)
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="CharacterPlayer *" parent="Characters" instance=ExtResource("20_k7qck")]
+position = Vector2(960, 540)
 
 [node name="RightBtn" type="TextureButton" parent="."]
 anchors_preset = 4

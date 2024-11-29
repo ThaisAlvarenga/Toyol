@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvtaiwk2k5e6l"]
+[gd_scene load_steps=2 format=3 uid="uid://hbmniytx342e"]
 
 [ext_resource type="Script" path="res://game/characters/player/character_player.gd" id="1_2mby3"]
 
@@ -8,9 +8,10 @@ popochiu_placeholder = null
 script_name = "Player"
 description = "Player"
 cursor = 8
-interaction_polygon = PackedVector2Array()
+interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="ScalingPolygon" type="CollisionPolygon2D" parent="."]
