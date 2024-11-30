@@ -15,6 +15,7 @@ func _on_room_entered() -> void:
 	load_room_state()
 	print_room_state()
 	check_room_completion()
+	
 
 
 
@@ -73,11 +74,12 @@ func check_room_completion():
 	if state.portrait_fixed and state.incense_lighted and state.broth_bowl_set:
 		state.completed = true
 		#C.Player.state.altar_5_completed = true
-		print(self.script_name, "completed!")
+		print("\n",self.script_name, "completed!")
 		#print(C.name, ": ",C.player.altar_5_completed )
 		
 
-		
+func set_room_completed(_state : bool):
+	state.completed = _state
 
 func print_room_state():
 	print("\nALTAR ROOM \n")

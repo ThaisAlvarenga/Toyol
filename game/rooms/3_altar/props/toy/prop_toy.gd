@@ -4,17 +4,23 @@ extends PopochiuProp
 # Use await E.queue([]) if you want to pause the excecution of
 # the function until the sequence of events finishes.
 
+@export var incense_hotspot : PopochiuHotspot
+@export var setBowl_hotspot : PopochiuHotspot
+
+func _process(delta: float) -> void:
+	if incense_hotspot.lighted and get_tree().current_scene.state.portrait_fixed and setBowl_hotspot.placed:
+		clickable = true
+	else:
+		clickable = false
+
 
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
-	# Replace the call to E.command_fallback() to implement your code.
-	E.command_fallback()
-	# For example, you can make the player character walk to this prop, gaze at it, and then say
-	# something:
-#	await C.player.walk_to_clicked()
-#	await C.player.face_clicked()
-#	await C.player.say("Not picking that up!")
+	#A.sfx_toy_pelletdrum.play()
+	get_tree().current_scene.set_room_completed(true)
+	get_tree().current_scene.check_room_completion()
+	
 
 
 func _on_double_click() -> void:

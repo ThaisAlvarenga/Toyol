@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1jvntrvobsce"]
+
+[ext_resource type="Script" path="res://game/rooms/3_exit/hotspots/door/hotspot_door.gd" id="1_prfs2"]
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_prfs2")
+script_name = "Door"
+description = "Door"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

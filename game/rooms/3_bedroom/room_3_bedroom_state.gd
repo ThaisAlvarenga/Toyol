@@ -4,7 +4,7 @@ extends PopochiuRoomData
 # but you can use the save_custom and load_custom methods to implement your
 # own.
 # script_name and scene variables from the inherited class will not be saved.
-
+var bloody_bowl_active = false
 
 #region Virtual ####################################################################################
 # Use this to save custom data for this PopochiuRoom when saving the game.

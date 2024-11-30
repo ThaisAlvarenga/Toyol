@@ -9,6 +9,7 @@ var state: Data = load("res://game/inventory_items/matches/inventory_item_matche
 # When the item is clicked in the inventory
 func _on_click() -> void:
 	# Replace the call to E.command_fallback() to implement your code.
+	#A.sfx_match.play()
 	E.command_fallback()
 
 

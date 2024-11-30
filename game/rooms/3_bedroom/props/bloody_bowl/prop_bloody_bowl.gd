@@ -52,8 +52,7 @@ func _on_linked_item_removed() -> void:
 # the inventory (i.e. when the player throws the object out of the inventory).
 func _on_linked_item_discarded() -> void:
 	pass
-
-
+	
 #endregion
 
 #region Public #####################################################################################

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b4eekp1slk0a1"]
+[gd_scene load_steps=19 format=3 uid="uid://b4eekp1slk0a1"]
 
 [ext_resource type="Script" path="res://game/rooms/3_sewing/room_3_sewing.gd" id="1_bs7o1"]
 [ext_resource type="PackedScene" uid="uid://rjggxyyjrxor" path="res://game/rooms/3_sewing/props/background/prop_background.tscn" id="2_rpv0v"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://c1lgbbslfmmyi" path="res://game/rooms/3_sewing/hotspots/wardrobe/hotspot_wardrobe.tscn" id="8_ri82l"]
 [ext_resource type="Texture2D" uid="uid://coytie281faxt" path="res://game/rooms/3_sewing/props/sewing_machine_1/pxArtSewingMachineSS.png" id="9_0veu6"]
 [ext_resource type="PackedScene" uid="uid://bp4o3d57in0fp" path="res://game/rooms/3_sewing/props/sewing_machine_1/prop_sewing_machine_1.tscn" id="10_or153"]
+[ext_resource type="PackedScene" uid="uid://dp72ept6v60dn" path="res://game/rooms/3_sewing/props/filter/prop_filter.tscn" id="12_ftrtk"]
+[ext_resource type="Texture2D" uid="uid://d6eql7uwi0h3" path="res://game/rooms/3_sewing/props/filter/pxArtFilter.png" id="13_krq7q"]
 [ext_resource type="PackedScene" uid="uid://cntqbpxp53q3x" path="res://game/rooms/3_sewing/hotspots/sewing_machine/hotspot_sewing_machine.tscn" id="13_kux7a"]
 [ext_resource type="PackedScene" uid="uid://b1q31gsqusfrp" path="res://game/rooms/3_sewing/props/sweater/prop_sweater.tscn" id="14_k57lf"]
 [ext_resource type="Texture2D" uid="uid://d3h4umdigfonl" path="res://game/rooms/3_sewing/props/sweater/sweater.png" id="15_ufer8"]
@@ -46,7 +48,7 @@ position = Vector2(705, 552)
 wardrobe_hotspot = NodePath("../../Hotspots/Wardrobe")
 texture = ExtResource("7_ri33s")
 frames = 5
-current_frame = 2
+current_frame = 1
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="SewingMachine1" parent="Props" instance=ExtResource("10_or153")]
@@ -60,6 +62,14 @@ visible = false
 position = Vector2(536, 475)
 texture = ExtResource("15_ufer8")
 interaction_polygon = PackedVector2Array(-14, -200, -14, -187, -24, -176, -34, 49, 9, 204, 23, 184, 35, 26, 23, -52, 31, -150, 9, -176, 12, -189, 11, -201)
+
+[node name="Filter" parent="Props" instance=ExtResource("12_ftrtk")]
+modulate = Color(1, 1, 1, 0.5)
+top_level = true
+position = Vector2(960, 540)
+texture = ExtResource("13_krq7q")
+frames = 2
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
 

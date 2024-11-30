@@ -59,6 +59,8 @@ func _on_linked_item_discarded() -> void:
 func update_visual():
 	if used:
 		hide()
+	#else:
+		#show()
 	
 #endregion
 

@@ -4,6 +4,7 @@ extends PopochiuHotspot
 # Use await E.queue([]) if you want to pause the excecution of
 # the function until the sequence of events finishes.
 
+var bloody_bowl_set:bool = false
 
 #region Virtual ####################################################################################
 # When the node is clicked
@@ -44,11 +45,24 @@ func _on_middle_click() -> void:
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	if _item == I.EmptyBowl:
 		I.EmptyBowl.remove()
+		# show bloody bowl
 		var bloodybowl = R.get_prop("BloodyBowl")
+		bloody_bowl_set = true
 		bloodybowl.show()
 		print("empty bowl set")
-		# show bloody bowl
+		
 
+
+func update_visual():
+	var bloodybowl = R.get_prop("BloodyBowl")
+	if bloody_bowl_set and !R.get_3Kitchen().state.broth_bowl_made:
+		bloodybowl.show()
+		print("show bloody bowl")
+		
+	elif bloody_bowl_set and R.get_3Kitchen().state.broth_bowl_made:
+		print("broth made with blood")
+		bloodybowl.hide()
+		
 
 #endregion
 

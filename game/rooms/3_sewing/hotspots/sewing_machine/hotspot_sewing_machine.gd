@@ -24,11 +24,13 @@ func _process(delta: float) -> void:
 
 # When the node is clicked
 func _on_click() -> void:
+
 	check_stuck()
 	toggle_sewing()
 	# if stuck, only do stuck animation
 	if isStuck:
 		stuck_animation()
+		
 
 
 func _on_double_click() -> void:

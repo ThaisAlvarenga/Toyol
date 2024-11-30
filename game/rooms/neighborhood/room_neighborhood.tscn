@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://df6tk52sl31xt"]
+
+[ext_resource type="Script" path="res://game/rooms/neighborhood/room_neighborhood.gd" id="1_x5y1a"]
+[ext_resource type="PackedScene" uid="uid://yepcqtxawpvd" path="res://game/rooms/neighborhood/props/background/prop_background.tscn" id="2_0wy8i"]
+[ext_resource type="Texture2D" uid="uid://dy7oxvy30ucjs" path="res://game/rooms/neighborhood/props/background/pxArtNeighborhood.png" id="3_vc1d0"]
+
+[node name="RoomNeighborhood" type="Node2D"]
+script = ExtResource("1_x5y1a")
+script_name = "Neighborhood"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_0wy8i")]
+position = Vector2(1766, 540)
+texture = ExtResource("3_vc1d0")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]

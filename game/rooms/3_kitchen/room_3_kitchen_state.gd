@@ -8,6 +8,11 @@ var completed : bool = false
 var stove_on : bool = false
 var page_burned : bool = false
 
+
+var meat_added = false
+var blood_added = false
+var broth_bowl_made: bool = false
+
 #region Virtual ####################################################################################
 # Use this to save custom data for this PopochiuRoom when saving the game.
 # The Dictionary must contain only JSON supported types: bool, int, float, String.

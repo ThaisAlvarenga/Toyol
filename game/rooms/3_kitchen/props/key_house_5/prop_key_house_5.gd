@@ -3,12 +3,21 @@ extends PopochiuProp
 # You can use E.queue([]) to trigger a sequence of events.
 # Use await E.queue([]) if you want to pause the excecution of
 # the function until the sequence of events finishes.
+@export var btnRight : TextureButton
+@export var btnLeft : TextureButton
 
 
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
+	I.clean_inventory()
+
 	I.Key5.add()
+	btnLeft.hide()
+	btnRight.hide()
+	await get_tree().create_timer(2.0).timeout
+	R.goto_room("3Exit")
+	# can trigger something for final cutscene
 
 func _on_double_click() -> void:
 	# Replace the call to E.command_fallback() with your code.

@@ -5,13 +5,15 @@ extends PopochiuHotspot
 # the function until the sequence of events finishes.
 @export var stove : PopochiuHotspot
 @export var broth_bowl_prop : PopochiuProp
+@export var meat : PopochiuProp
 
 var meat_added = false
 var blood_added = false
-
+var broth_bowl_made: bool = false
 
 func _process(delta: float) -> void:
-	checkBrothState()
+	pass
+	#checkBrothState()
 
 #region Virtual ####################################################################################
 # When the node is clicked
@@ -54,17 +56,32 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		if _item == I.Meat:
 			I.Meat.remove()
 			meat_added = true
+			checkBrothState()
 	
 		elif _item == I.BloodyBowl:
 			I.BloodyBowl.remove()
 			blood_added = true
+			checkBrothState()
 		
 	else: E.command_fallback()
 
 func checkBrothState():
 	if meat_added && blood_added && stove.stove_on && !I.BrothBowl.in_inventory:
+		broth_bowl_made = true
 		if !broth_bowl_prop.visible:
-			broth_bowl_prop.show()
+			update_visual()
+
+func update_visual():
+	if broth_bowl_made and !R.get_3Altar().state.broth_bowl_set:
+		broth_bowl_prop.show()
+		meat.hide()
+	
+	elif broth_bowl_made and R.get_3Altar().state.broth_bowl_set:
+		broth_bowl_prop.hide()
+		meat.hide()
+	
+	if meat_added:
+		meat.hide()
 
 #endregion
 

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://erom81r60tt8"]
+
+[ext_resource type="Script" path="res://game/rooms/neighborhood/room_neighborhood_state.gd" id="1_i8x3j"]
+
+[resource]
+resource_name = "Neighborhood"
+script = ExtResource("1_i8x3j")
+script_name = "Neighborhood"
+scene = "res://game/rooms/neighborhood/room_neighborhood.tscn"
+visited = false
+visited_first_time = false
+visited_times = 0

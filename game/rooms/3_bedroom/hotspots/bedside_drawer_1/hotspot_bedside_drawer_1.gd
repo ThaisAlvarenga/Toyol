@@ -82,6 +82,10 @@ func show_object(object : PopochiuProp):
 		print(object.name," is in inventory")
 	#else if item has not been collected, show
 	else: object.show()
+	
+	if R.get_3Kitchen().state.page_burned:
+		hide_object(inside_object_2)
+		print("page burned can't show")
 		
 func hide_object(object : PopochiuProp):
 	object.hide()

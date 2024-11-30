@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c5v7oi2de0mo3"]
+[gd_scene load_steps=23 format=3 uid="uid://c5v7oi2de0mo3"]
 
 [ext_resource type="Script" path="res://game/rooms/3_bedroom/room_3_bedroom.gd" id="1_4fmko"]
 [ext_resource type="PackedScene" uid="uid://bhl8e70xnf5to" path="res://game/rooms/3_bedroom/props/background/prop_background.tscn" id="2_jpvsw"]
@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://wgjhqq3sx014" path="res://game/rooms/3_bedroom/props/page/prop_page.tscn" id="14_wdavd"]
 [ext_resource type="Texture2D" uid="uid://ckkicgsc0a303" path="res://game/rooms/3_bedroom/props/pxArtBedroomGlow.png" id="15_gr0xi"]
 [ext_resource type="PackedScene" uid="uid://xbc5mt1ohlft" path="res://game/rooms/3_bedroom/props/window_light/prop_window_light.tscn" id="16_figss"]
+[ext_resource type="PackedScene" uid="uid://bdyalkmxtqe2d" path="res://game/rooms/3_bedroom/props/filter/prop_filter.tscn" id="16_ubo63"]
+[ext_resource type="Texture2D" uid="uid://d3b2uswtfhcef" path="res://game/rooms/3_bedroom/props/filter/pxArtFilter.png" id="17_n3tqo"]
 
 [node name="Room3Bedroom" type="Node2D"]
 script = ExtResource("1_4fmko")
@@ -42,7 +44,6 @@ position = Vector2(648, 774)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_t4b7d")
 frames = 2
-current_frame = 1
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="BedsideTable" parent="Props" instance=ExtResource("6_k3pnj")]
@@ -86,6 +87,14 @@ modulate = Color(1, 1, 0.00392157, 0.545098)
 self_modulate = Color(0.929412, 0.976471, 0.00784314, 0.101961)
 position = Vector2(960, 540)
 texture = ExtResource("15_gr0xi")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Filter" parent="Props" instance=ExtResource("16_ubo63")]
+modulate = Color(1, 1, 1, 0.5)
+top_level = true
+position = Vector2(960, 540)
+texture = ExtResource("17_n3tqo")
+frames = 2
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
