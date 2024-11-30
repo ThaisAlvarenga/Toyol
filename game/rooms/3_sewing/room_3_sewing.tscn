@@ -48,7 +48,6 @@ position = Vector2(705, 552)
 wardrobe_hotspot = NodePath("../../Hotspots/Wardrobe")
 texture = ExtResource("7_ri33s")
 frames = 5
-current_frame = 1
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="SewingMachine1" parent="Props" instance=ExtResource("10_or153")]

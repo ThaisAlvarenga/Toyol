@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://52qpcgrwxf1u"]
+
+[ext_resource type="Script" path="res://game/rooms/main_menu/room_main_menu.gd" id="1_7gu42"]
+[ext_resource type="PackedScene" uid="uid://qwwlcpgbv0hp" path="res://game/rooms/main_menu/props/background/prop_background.tscn" id="2_o1sxm"]
+[ext_resource type="Texture2D" uid="uid://b80u6xlyse56u" path="res://game/rooms/main_menu/props/background/pxArtMenuArt.png" id="3_cjg5h"]
+[ext_resource type="Theme" uid="uid://btoac7ybly525" path="res://game/gui/resources/gui_theme.tres" id="4_lob15"]
+[ext_resource type="PackedScene" uid="uid://himjp81idl41" path="res://game/rooms/main_menu/props/filter/prop_filter.tscn" id="4_tilqm"]
+[ext_resource type="Texture2D" uid="uid://bu61tn4a0eq7n" path="res://game/rooms/main_menu/props/filter/pxArtFilter.png" id="5_0cnk6"]
+[ext_resource type="Script" path="res://game/rooms/main_menu/quit_btn.gd" id="5_gtddw"]
+[ext_resource type="Script" path="res://game/rooms/main_menu/start_btn.gd" id="5_t4r7d"]
+
+[node name="RoomMainMenu" type="Node2D"]
+script = ExtResource("1_7gu42")
+script_name = "MainMenu"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_o1sxm")]
+position = Vector2(960, 540)
+texture = ExtResource("3_cjg5h")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Filter" parent="Props" instance=ExtResource("4_tilqm")]
+top_level = true
+position = Vector2(960, 540)
+texture = ExtResource("5_0cnk6")
+frames = 2
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Start_btn" type="Button" parent="."]
+offset_left = 1319.0
+offset_top = 788.0
+offset_right = 1739.0
+offset_bottom = 876.0
+theme = ExtResource("4_lob15")
+text = "START GAME"
+script = ExtResource("5_t4r7d")
+
+[node name="Quit_btn" type="Button" parent="."]
+offset_left = 1319.0
+offset_top = 886.0
+offset_right = 1738.0
+offset_bottom = 974.0
+theme = ExtResource("4_lob15")
+text = "QUIT"
+script = ExtResource("5_gtddw")
+
+[connection signal="pressed" from="Start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="Quit_btn" to="." method="_on_quit_btn_pressed"]

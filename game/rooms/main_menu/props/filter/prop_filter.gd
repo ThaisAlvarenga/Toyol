@@ -17,7 +17,6 @@ func _process(delta: float) -> void:
 		#print("Changing frame to", new_frame)
 		change_frame(new_frame)
 
-
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:

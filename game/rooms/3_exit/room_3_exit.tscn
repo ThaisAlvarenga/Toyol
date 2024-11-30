@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlvkengulr6ct"]
+[gd_scene load_steps=8 format=3 uid="uid://dlvkengulr6ct"]
 
 [ext_resource type="Script" path="res://game/rooms/3_exit/room_3_exit.gd" id="1_cy0nn"]
 [ext_resource type="PackedScene" uid="uid://7ybtkxocyr0a" path="res://game/rooms/3_exit/props/background/prop_background.tscn" id="2_vd3r5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ewuhmlmpaxs" path="res://game/rooms/3_exit/props/filter/prop_filter.tscn" id="4_60mar"]
 [ext_resource type="Texture2D" uid="uid://xbuynjhktwpk" path="res://game/rooms/3_exit/props/filter/pxArtFilter.png" id="5_tbttv"]
 [ext_resource type="PackedScene" uid="uid://b1jvntrvobsce" path="res://game/rooms/3_exit/hotspots/door/hotspot_door.tscn" id="6_ot3bn"]
+[ext_resource type="PackedScene" uid="uid://ditvq1c31yv8l" path="res://game/rooms/3_exit/hotspots/window/hotspot_window.tscn" id="7_s6u0o"]
 
 [node name="Room3Exit" type="Node2D"]
 script = ExtResource("1_cy0nn")
@@ -36,6 +37,11 @@ interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 [node name="Door" parent="Hotspots" instance=ExtResource("6_ot3bn")]
 position = Vector2(960, 540)
 interaction_polygon = PackedVector2Array(-460, -192, -235, -194, -236, 311, -463, 318)
+
+[node name="Window" parent="Hotspots" instance=ExtResource("7_s6u0o")]
+position = Vector2(960, 540)
+baseline = -569
+interaction_polygon = PackedVector2Array(65, 49, 2, -35, 31, -114, 161, -221, 218, -239, 262, -240, 332, -223, 413, -188, 457, -142, 453, -13, 444, 53, 333, 91, 272, 116, 208, 125, 108, 94, 65, 58)
 
 [node name="Regions" type="Node2D" parent="."]
 

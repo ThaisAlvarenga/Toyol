@@ -9,6 +9,7 @@ const PR3Sewing := preload("res://game/rooms/3_sewing/room_3_sewing.gd")
 const PR3Bedroom := preload("res://game/rooms/3_bedroom/room_3_bedroom.gd")
 const PR3Exit := preload("res://game/rooms/3_exit/room_3_exit.gd")
 const PRNeighborhood := preload("res://game/rooms/neighborhood/room_neighborhood.gd")
+const PRMainMenu := preload("res://game/rooms/main_menu/room_main_menu.gd")
 # ---- classes
 
 # nodes ----
@@ -19,6 +20,7 @@ var R3Sewing: PR3Sewing : get = get_3Sewing
 var R3Bedroom: PR3Bedroom : get = get_3Bedroom
 var R3Exit: PR3Exit : get = get_3Exit
 var Neighborhood: PRNeighborhood : get = get_Neighborhood
+var MainMenu: PRMainMenu : get = get_MainMenu
 # ---- nodes
 
 # functions ----
@@ -29,5 +31,6 @@ func get_3Sewing() -> PR3Sewing: return get_runtime_room("3Sewing")
 func get_3Bedroom() -> PR3Bedroom: return get_runtime_room("3Bedroom")
 func get_3Exit() -> PR3Exit: return get_runtime_room("3Exit")
 func get_Neighborhood() -> PRNeighborhood: return get_runtime_room("Neighborhood")
+func get_MainMenu() -> PRMainMenu: return get_runtime_room("MainMenu")
 # ---- functions
 

@@ -4,19 +4,6 @@ extends PopochiuProp
 # Use await E.queue([]) if you want to pause the excecution of
 # the function until the sequence of events finishes.
 
-var animation_speed = 3  # Frames per second for the animation
-
-func _ready():
-	# Set the opacity to half (0.5)
-	modulate.a = 0.5
-
-func _process(delta: float) -> void:
-	#print("Animating: current_frame =", current_frame)
-	var new_frame = int(Time.get_ticks_msec() / (1000.0 / animation_speed)) % 2
-	if current_frame != new_frame:
-		#print("Changing frame to", new_frame)
-		change_frame(new_frame)
-
 
 #region Virtual ####################################################################################
 # When the node is clicked
