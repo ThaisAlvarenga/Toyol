@@ -109,7 +109,7 @@ func set_can_stay_rotated(value: bool) -> void:
 		return_to_initial_rotation()
 	
 	# ---- CHANGE FRAME TO 1
-	else: change_frame(0)
+	else: change_frame(1)
 	
 func update_visual():
 	if can_stay_rotated and !is_rotated:
