@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://cdavho3ypiq3e"]
+
+[ext_resource type="AudioStream" uid="uid://dx1681pvsaudo" path="res://game/rooms/3_bedroom/hotspots/set_bowl/sfx_set_bowl_down.wav" id="1_dx2vg"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_7jolk"]
+
+[resource]
+resource_name = "sfx_set_bowl_down"
+script = ExtResource("2_7jolk")
+audio = ExtResource("1_dx2vg")
+loop = false
+is_2d = false
+can_play_simultaneous = true
+pitch = 0.0
+volume = 0.0
+rnd_pitch = Vector2(0, 0)
+rnd_volume = Vector2(0, 0)
+max_distance = 2000
+bus = "Master"

@@ -89,10 +89,12 @@ interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 position = Vector2(1195, 702)
 rotation = -1.76802
 scale = Vector2(0.4, 0.4)
+input_pickable = true
 incense_hotspot = NodePath("../../Hotspots/Incense")
 setBowl_hotspot = NodePath("../../Hotspots/SetBowl")
 texture = ExtResource("15_jbico")
-interaction_polygon = PackedVector2Array(52.9408, -60.8054, 112.265, -64.2476, 167.658, -124.563, 164.703, -199.087, 116.158, -236.83, 34.7673, -250.545, -7.88196, -215.726, -43.6686, -189.735, -107.894, -174.525, -85.3339, -134.325, -35.8131, -126.979, -22.0836, -119.137, 9.79285, -74.5259, -104.884, 218.688, -97.0353, 243.201, -62.7137, 250.059)
+clickable = true
+interaction_polygon = PackedVector2Array(88.741, -10.311, 112.265, -64.2476, 167.658, -124.563, 164.703, -199.087, 116.158, -236.83, 34.7673, -250.545, -7.88196, -215.726, -43.6686, -189.735, -107.894, -174.525, -85.3339, -134.325, -35.8131, -126.979, -22.0836, -119.137, -30.4089, -64.7129, -104.884, 218.688, -97.0353, 243.201, -62.7137, 250.059)
 
 [node name="Filter" parent="Props" instance=ExtResource("14_o12fv")]
 modulate = Color(1, 1, 1, 0.5)
@@ -100,7 +102,6 @@ top_level = true
 position = Vector2(960, 540)
 texture = ExtResource("17_xdo15")
 frames = 2
-current_frame = 1
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://c22j2xbkeffw6"]
+
+[ext_resource type="AudioStream" uid="uid://cbdmnv4nkolpq" path="res://game/rooms/3_kitchen/props/key_house_5/sfx_key_pickUp.wav" id="1_ladib"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_5hrlb"]
+
+[resource]
+resource_name = "sfx_pickup"
+script = ExtResource("2_5hrlb")
+audio = ExtResource("1_ladib")
+loop = false
+is_2d = false
+can_play_simultaneous = true
+pitch = 0.0
+volume = 0.0
+rnd_pitch = Vector2(0, 0)
+rnd_volume = Vector2(0, 0)
+max_distance = 2000
+bus = "Master"

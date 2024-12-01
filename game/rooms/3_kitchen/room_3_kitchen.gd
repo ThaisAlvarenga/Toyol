@@ -5,6 +5,10 @@ const Data := preload('room_3_kitchen_state.gd')
 
 var state: Data = load("res://game/rooms/3_kitchen/room_3_kitchen.tres")
 
+func _process(delta: float) -> void:
+	if Globals.house_5:
+		A.sfx_stovefire.stop()
+		print("stop stove sound")
 
 #region Virtual ####################################################################################
 # What happens when Popochiu loads the room. At this point the room is in the
@@ -18,6 +22,19 @@ func _on_room_entered() -> void:
 	
 	if Globals.house_5:
 		show_key_house_5()
+		
+	A.sfx_stovefire.stop()
+	
+	# PLay stove sound if it is on and has not been used
+	if get_hotspot("Stove").stove_on and !get_hotspot("Stove").stove_used:
+		
+		if not A.sfx_stovefire.is_playing():
+			A.sfx_stovefire.play()
+			print("stove sfx is NOT playing")
+		elif A.sfx_stovefire.is_playing():
+			A.sfx_stovefire.stop()
+			A.sfx_stovefire.play()
+	else: A.sfx_stovefire.stop()
 
 
 # What happens when the room changing transition finishes. At this point the room
@@ -32,6 +49,8 @@ func _on_room_transition_finished() -> void:
 # have been removed from the $Characters node.
 func _on_room_exited() -> void:
 	save_room_state()
+	A.sfx_stovefire.stop()
+		
 	Globals.check_house3_completion()
 	
 func save_room_state():

@@ -10,7 +10,8 @@ var isOpen: bool = false
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
-	# A.sfx_wardrobe_nightstand_open.play(1)
+	A.sfx_closet_wardrobe.play()
+	await get_tree().create_timer(.2).timeout
 	isOpen = !isOpen
 	toggle_open_close()
 

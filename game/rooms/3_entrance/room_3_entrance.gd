@@ -8,12 +8,20 @@ var state: Data = load("res://game/rooms/3_entrance/room_3_entrance.tres")
 #region Virtual ####################################################################################
 func _process(delta: float) -> void:
 	check_room_completion()
+	if state.completed:
+		A.sfx_knockingdoor.stop()
 
 # What happens when Popochiu loads the room. At this point the room is in the
 # tree but it is not visible
 func _on_room_entered() -> void:
+	check_room_completion()
 	load_room_state()
 	print_room_state()
+	
+	if not get_hotspot("Door").is_closed:
+		# play door knocking
+		A.sfx_knockingdoor.play()
+	else: A.sfx_knockingdoor.stop()
 
 
 # What happens when the room changing transition finishes. At this point the room
@@ -27,7 +35,12 @@ func _on_room_transition_finished() -> void:
 # At this point, the screen is black, processing is disabled and all characters
 # have been removed from the $Characters node.
 func _on_room_exited() -> void:
+	#A.sfx_knockingdoor.stop()
 	save_room_state()
+	check_room_completion()
+	
+	if state.completed:
+		A.sfx_knockingdoor.stop()
 	
 
 func load_room_state():

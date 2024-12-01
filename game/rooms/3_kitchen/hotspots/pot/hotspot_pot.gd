@@ -54,11 +54,13 @@ func _on_middle_click() -> void:
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	if stove.stove_on:
 		if _item == I.Meat:
+			A.sfx_drop_on_liquid.play()
 			I.Meat.remove()
 			meat_added = true
 			checkBrothState()
 	
 		elif _item == I.BloodyBowl:
+			A.sfx_drop_on_liquid.play()
 			I.BloodyBowl.remove()
 			blood_added = true
 			checkBrothState()

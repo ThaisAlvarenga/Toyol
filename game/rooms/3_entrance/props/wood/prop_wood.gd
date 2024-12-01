@@ -16,7 +16,7 @@ var position_set : bool = false
 
 # When the node is clicked
 func _on_click() -> void:
-	# Replace the call to E.command_fallback() to implement your code.
+	A.sfx_wood_pickup.play()
 	I.DoorWood.add()
 	# For example, you can make the player character walk to this prop, gaze at it, and then say
 	# something:

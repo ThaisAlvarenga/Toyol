@@ -44,6 +44,7 @@ func _on_middle_click() -> void:
 # When the node is clicked and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	if _item == I.BrothBowl:
+		A.sfx_set_brothbowl.play()
 		I.BrothBowl.remove()
 		broth_offering.show()
 		placed = true

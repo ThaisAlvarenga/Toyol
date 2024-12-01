@@ -8,6 +8,7 @@ extends PopochiuProp
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
+	A.sfx_meat_pickup.play()
 	I.Meat.add()
 
 

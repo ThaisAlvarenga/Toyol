@@ -10,6 +10,7 @@ var used : bool = false
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
+	A.sfx_emptybowl_pickup.play()
 	I.EmptyBowl.add()
 	used = true
 

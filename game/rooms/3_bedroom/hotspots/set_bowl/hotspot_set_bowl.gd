@@ -44,6 +44,7 @@ func _on_middle_click() -> void:
 # When the node is clicked and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	if _item == I.EmptyBowl:
+		A.sfx_set_bowl_down.play()
 		I.EmptyBowl.remove()
 		# show bloody bowl
 		var bloodybowl = R.get_prop("BloodyBowl")
@@ -61,6 +62,9 @@ func update_visual():
 		
 	elif bloody_bowl_set and R.get_3Kitchen().state.broth_bowl_made:
 		print("broth made with blood")
+		bloodybowl.hide()
+		
+	if I.is_item_in_inventory("BloodyBowl"):
 		bloodybowl.hide()
 		
 

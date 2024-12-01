@@ -39,10 +39,10 @@ func load_room_state():
 	#var toy = R.get_prop('Toy')
 	var portrait = R.get_prop('Portrait')
 	var empty_bowl = R.get_prop("EmptyBowl")
+	var toy = R.get_prop("Toy")
 	
 	## get hotspots
 	var incense = R.get_hotspot("Incense")
-	
 	var broth_bowl_set = R.get_hotspot('SetBowl')
 	
 
@@ -52,6 +52,8 @@ func load_room_state():
 	incense.lighted = state.incense_lighted
 	empty_bowl.used = state.empty_bowl_used
 	broth_bowl_set.placed = state.broth_bowl_set
+	toy.toy_played = state.toy_played
+	
 	
 	## update visuals
 	empty_bowl.update_visual()
@@ -65,13 +67,14 @@ func save_room_state():
 	state.portrait_fixed = not R.get_prop('Portrait').is_rotated
 	state.portrait_stay_rotated = R.get_prop('Portrait').can_stay_rotated
 	state.empty_bowl_used = R.get_prop('EmptyBowl').used
+	state.toy_played = R.get_prop("Toy").toy_played
 	state.incense_lighted = R.get_hotspot("Incense").lighted
 	state.broth_bowl_set = R.get_hotspot('SetBowl').placed
 	
 	check_room_completion()
 
 func check_room_completion():
-	if state.portrait_fixed and state.incense_lighted and state.broth_bowl_set:
+	if state.portrait_fixed and state.incense_lighted and state.broth_bowl_set and state.toy_played:
 		state.completed = true
 		#C.Player.state.altar_5_completed = true
 		print("\n",self.script_name, "completed!")
@@ -89,5 +92,6 @@ func print_room_state():
 	print("EmptyBowl is", state.empty_bowl_used)
 	print("Incense is",state.incense_lighted )
 	print("Broth bowl is", state.broth_bowl_set)
+	print("Toy played is", state.toy_played)
 
 #endregion

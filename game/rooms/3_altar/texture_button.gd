@@ -13,5 +13,6 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
+	A.click.play()
 	E.goto_room(room_name)
 	R.store_states()

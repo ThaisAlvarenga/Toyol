@@ -27,10 +27,11 @@ func _on_click() -> void:
 
 	check_stuck()
 	toggle_sewing()
+	toggle_sound()
 	# if stuck, only do stuck animation
 	if isStuck:
+		A.sfx_stuck_sewing.play()
 		stuck_animation()
-		
 
 
 func _on_double_click() -> void:
@@ -75,6 +76,7 @@ func check_stuck():
 
 func animate():
 	if not isStuck and is_sewing:
+		
 		# Calculate the new frame based on time
 		var new_frame = int(Time.get_ticks_msec() / (1000.0 / animation_speed)) % 2
 		if sewing_machine_prop.current_frame != new_frame:
@@ -88,8 +90,26 @@ func animate():
 
 func toggle_sewing():
 	is_sewing = !is_sewing
+		
 	print("sewing" if is_sewing && not isStuck else "sewing off")
+	
 
+func toggle_sound():
+	
+	if is_sewing and not isStuck :
+		if not A.sfx_can_sew.is_playing():
+			# play sewing sound
+			A.sfx_can_sew.play(true)
+			print("sewing sound ON")
+		else:
+			A.sfx_can_sew.stop()
+			#reset to beginning
+			#A.sfx_stovefire.queue_play(false)
+			print("reseting sound")
+			
+	else: 
+		A.sfx_can_sew.stop()
+		print("sewing sound OFF")
 
 func stuck_animation():
 	if sewing_machine_prop.current_frame == 0:

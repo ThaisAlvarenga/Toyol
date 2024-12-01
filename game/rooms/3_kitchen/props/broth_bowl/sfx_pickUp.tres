@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://ds6y8ba56ptte"]
+
+[ext_resource type="AudioStream" uid="uid://q21sssyx3227" path="res://game/rooms/3_kitchen/props/broth_bowl/sfx_broth_pickUp.wav" id="1_f32le"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_64rxp"]
+
+[resource]
+resource_name = "sfx_pickup"
+script = ExtResource("2_64rxp")
+audio = ExtResource("1_f32le")
+loop = false
+is_2d = false
+can_play_simultaneous = true
+pitch = 0.0
+volume = 0.0
+rnd_pitch = Vector2(0, 0)
+rnd_volume = Vector2(0, 0)
+max_distance = 2000
+bus = "Master"

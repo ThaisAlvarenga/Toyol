@@ -10,7 +10,7 @@ var is_rotated : bool = true
 var initial_rotation : float
 
 # Duration of the animation rotation in seconds
-var animation_duration = 1.5
+var animation_duration = 0.5
 
 
 #region Virtual ####################################################################################
@@ -18,6 +18,8 @@ var animation_duration = 1.5
 func _on_click() -> void:
 	initial_rotation = rotation
 	toggle_rotation()
+	if not can_stay_rotated:
+		A.sfx_portrait.play()
 
 
 func _on_double_click() -> void:
@@ -45,8 +47,9 @@ func _on_middle_click() -> void:
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	# Replace the call to E.command_fallback() to implement your code.
 	if _item == I.Nail:
-		#A.sfx_screw.play()
+		A.sfx_screw.play()
 		set_can_stay_rotated(true)
+		animation_duration = 1.5
 		toggle_rotation()
 		I.Nail.remove()
 	else: E.command_fallback()

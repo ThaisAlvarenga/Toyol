@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c3n15dce3ohvh"
-path="res://.godot/imported/sfx_toy_pelletDrum.wav-50181f0a1812ae2c5f53fa8cae1e1997.sample"
+path="res://.godot/imported/sfx_Toy_pelletDrum.wav-34e4daa908a45747be1724cb483cc3dd.sample"
 
 [deps]
 
-source_file="res://assets/sfx/sfx_toy_pelletDrum.wav"
-dest_files=["res://.godot/imported/sfx_toy_pelletDrum.wav-50181f0a1812ae2c5f53fa8cae1e1997.sample"]
+source_file="res://assets/sfx/sfx_Toy_pelletDrum.wav"
+dest_files=["res://.godot/imported/sfx_Toy_pelletDrum.wav-34e4daa908a45747be1724cb483cc3dd.sample"]
 
 [params]
 

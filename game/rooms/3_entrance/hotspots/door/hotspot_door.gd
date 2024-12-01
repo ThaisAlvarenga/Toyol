@@ -39,6 +39,7 @@ func _on_middle_click() -> void:
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	# Check if object interacted with is correct item
 	if _item == I.DoorWood:
+		A.sfx_doorlocked.play()
 		# remove item from inventory
 		I.DoorWood.remove()
 		# assign variable to room prop

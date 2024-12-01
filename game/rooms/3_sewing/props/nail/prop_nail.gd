@@ -8,6 +8,7 @@ var on_sewing_machine:bool = true
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
+	A.sfx_nail_pickup.play()
 	I.Nail.add()
 	on_sewing_machine = false
 

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://cs4m0dwalpmxf"]
+
+[ext_resource type="AudioStream" uid="uid://bi0v1qp2s5sv8" path="res://game/rooms/3_kitchen/hotspots/stove/sfx_stoveFire.mp3" id="1_s3h7l"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_lh6g5"]
+
+[resource]
+resource_name = "sfx_stovefire"
+script = ExtResource("2_lh6g5")
+audio = ExtResource("1_s3h7l")
+loop = false
+is_2d = false
+can_play_simultaneous = true
+pitch = 0.0
+volume = 0.0
+rnd_pitch = Vector2(0, 0)
+rnd_volume = Vector2(0, 0)
+max_distance = 2000
+bus = "Master"

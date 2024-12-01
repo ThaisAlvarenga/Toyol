@@ -104,6 +104,7 @@ position = Vector2(960, 540)
 bedside_table = NodePath("../../Props/BedsideTable")
 inside_object_1 = NodePath("../../Props/Matches")
 inside_object_2 = NodePath("../../Props/Page")
+description = "Nightstand"
 interaction_polygon = PackedVector2Array(510, 135, 512, 459, 740, 462, 752, 138)
 interaction_polygon_position = Vector2(-223, -28)
 metadata/_edit_group_ = true

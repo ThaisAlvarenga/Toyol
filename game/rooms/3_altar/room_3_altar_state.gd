@@ -11,6 +11,7 @@ var portrait_stay_rotated : bool = false
 var incense_lighted : bool = false
 var empty_bowl_used : bool = false
 var broth_bowl_set : bool = false
+var toy_played : bool = false
 
 #region Virtual ####################################################################################
 # Use this to save custom data for this PopochiuRoom when saving the game.

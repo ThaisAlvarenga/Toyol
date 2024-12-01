@@ -7,19 +7,28 @@ extends PopochiuProp
 @export var incense_hotspot : PopochiuHotspot
 @export var setBowl_hotspot : PopochiuHotspot
 
+var toy_played : bool = false
+var can_clickable : bool = false
+
 func _process(delta: float) -> void:
-	if incense_hotspot.lighted and get_tree().current_scene.state.portrait_fixed and setBowl_hotspot.placed:
-		clickable = true
-	else:
-		clickable = false
+	if incense_hotspot.lighted and not R.get_prop("Portrait").is_rotated and setBowl_hotspot.placed:
+		can_clickable = true
+		print("Toy is clickable")
 
 
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
-	#A.sfx_toy_pelletdrum.play()
-	get_tree().current_scene.set_room_completed(true)
-	get_tree().current_scene.check_room_completion()
+	if can_clickable:
+		toy_played = true
+		print("Toy Clicked")
+		get_tree().current_scene.set_room_completed(true)
+		if not A.sfx_toy_pelletdrum.is_playing():
+			A.sfx_toy_pelletdrum.play()
+			clickable = false
+			
+		get_tree().current_scene.set_room_completed(true)
+		get_tree().current_scene.check_room_completion()
 	
 
 

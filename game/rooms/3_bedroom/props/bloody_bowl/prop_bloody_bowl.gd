@@ -8,6 +8,7 @@ extends PopochiuProp
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
+	A.sfx_bloodybowl_pickup.play()
 	I.BloodyBowl.add()
 
 

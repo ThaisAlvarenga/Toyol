@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://bn0fl5gsrpucu"]
+
+[ext_resource type="AudioStream" uid="uid://u8d8831q4jcb" path="res://game/rooms/3_bedroom/props/page/sfx_page_pickUp.wav" id="1_m5u6a"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_7sgbu"]
+
+[resource]
+resource_name = "sfx_page_pickup"
+script = ExtResource("2_7sgbu")
+audio = ExtResource("1_m5u6a")
+loop = false
+is_2d = false
+can_play_simultaneous = true
+pitch = 0.0
+volume = 0.0
+rnd_pitch = Vector2(0, 0)
+rnd_volume = Vector2(0, 0)
+max_distance = 2000
+bus = "Master"

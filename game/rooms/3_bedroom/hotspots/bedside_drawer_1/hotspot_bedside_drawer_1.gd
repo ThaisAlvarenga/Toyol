@@ -56,6 +56,8 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 
 
 func toggleOpen():
+	A.sfx_nightstand_open.play()
+	get_tree().create_timer(3).timeout
 	isOpen = !isOpen
 	
 	# if drawer is open

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://bu7s4ro43ulow"]
+
+[ext_resource type="AudioStream" uid="uid://c07mfuefuvvx7" path="res://game/inventory_items/matches/sfx_match.wav" id="1_hnbd0"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_4bv7g"]
+
+[resource]
+resource_name = "sfx_match"
+script = ExtResource("2_4bv7g")
+audio = ExtResource("1_hnbd0")
+loop = false
+is_2d = false
+can_play_simultaneous = true
+pitch = 0.0
+volume = 0.0
+rnd_pitch = Vector2(0, 0)
+rnd_volume = Vector2(0, 0)
+max_distance = 2000
+bus = "Master"

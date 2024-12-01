@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://ct8qnattrfwng"]
+
+[ext_resource type="AudioStream" uid="uid://dnl4gkn6scuyr" path="res://game/rooms/3_altar/props/empty_bowl/sfx_emptybowl_pickUp.wav" id="1_6ne3p"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_44qpd"]
+
+[resource]
+resource_name = "sfx_emptybowl_pickup"
+script = ExtResource("2_44qpd")
+audio = ExtResource("1_6ne3p")
+loop = false
+is_2d = false
+can_play_simultaneous = true
+pitch = 0.0
+volume = 0.0
+rnd_pitch = Vector2(0, 0)
+rnd_volume = Vector2(0, 0)
+max_distance = 2000
+bus = "Master"

@@ -8,6 +8,7 @@ extends PopochiuProp
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
+	A.sfx_page_pickup.play()
 	I.Page.add()
 
 func _on_double_click() -> void:

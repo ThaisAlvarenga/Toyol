@@ -31,8 +31,10 @@ func _on_room_exited() -> void:
 
 
 func _on_quit_btn_pressed() -> void:
+	A.click.play()
 	get_tree().quit()
 
 
 func _on_start_btn_pressed() -> void:
+	A.click.play()
 	R.goto_room("3Altar")

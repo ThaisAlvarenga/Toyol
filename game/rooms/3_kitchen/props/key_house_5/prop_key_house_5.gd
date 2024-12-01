@@ -10,6 +10,8 @@ extends PopochiuProp
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
+	A.sfx_key_pickup.play()
+	A.sfx_stovefire.stop()
 	I.clean_inventory()
 
 	I.Key5.add()

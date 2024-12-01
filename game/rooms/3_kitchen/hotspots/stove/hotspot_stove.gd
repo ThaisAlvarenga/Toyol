@@ -53,6 +53,10 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		# --- CHANGE TO 1 WITH NEW ASSET
 		stove_prop.change_frame(1)
 		
+		if not A.sfx_stovefire.is_playing():
+			A.sfx_stovefire.play()
+			
+		
 		#if I.Matches.state.uses <= 0:
 			#I.Matches.remove()
 		

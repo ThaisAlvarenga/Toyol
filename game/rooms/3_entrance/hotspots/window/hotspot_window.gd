@@ -12,6 +12,8 @@ var isClosed: bool = false
 # When the node is clicked
 func _on_click() -> void:
 	isClosed = !isClosed
+	A.sfx_window.play()
+	get_tree().create_timer(2.0).timeout
 	toggle_open_close()
 	# Access the room script and call check_room_completion
 	get_tree().current_scene.check_room_completion()
