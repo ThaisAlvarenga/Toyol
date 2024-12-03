@@ -50,7 +50,7 @@ func enterHouse():
 	# play enter sound
 	A.sfx_enterhouse.play()
 	await  get_tree().create_timer(1).timeout
-	E.goto_room(room_name)
+	E.goto_room("5Altar")
 	R.store_states()
 
 #endregion

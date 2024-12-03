@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://4usyaul05yl4" path="res://game/rooms/neighborhood/props/missing_poster/poster.png" id="7_oi8re"]
 [ext_resource type="PackedScene" uid="uid://by4hq53vmfyr4" path="res://game/rooms/neighborhood/hotspots/door_1_house/hotspot_door_1_house.tscn" id="8_kkcje"]
 [ext_resource type="PackedScene" uid="uid://be2udlncu88ca" path="res://game/rooms/neighborhood/hotspots/door_3_house/hotspot_door_3_house.tscn" id="9_2wyl2"]
+[ext_resource type="PackedScene" uid="uid://dppqivt4oksdd" path="res://game/rooms/neighborhood/props/foreground/prop_foreground.tscn" id="9_aun7g"]
 [ext_resource type="PackedScene" uid="uid://bd1xueq25pwfd" path="res://game/rooms/neighborhood/hotspots/door_5_house/hotspot_door_5_house.tscn" id="10_12ggd"]
-[ext_resource type="PackedScene" uid="uid://cq0s4tg5lf278" path="res://game/characters/toyol/character_toyol.tscn" id="12_8vor8"]
-[ext_resource type="Script" path="res://addons/popochiu/engine/objects/popochiu_main_camera.gd" id="13_r5x42"]
+[ext_resource type="Texture2D" uid="uid://cbf76tiiox5pm" path="res://game/rooms/neighborhood/props/foreground/pxArtNeighborhoodForeground.png" id="10_ohei3"]
 
 [node name="RoomNeighborhood" type="Node2D"]
 script = ExtResource("1_x5y1a")
@@ -30,13 +30,14 @@ popochiu_placeholder = null
 [node name="Props" type="Node2D" parent="."]
 
 [node name="Background" parent="Props" instance=ExtResource("2_0wy8i")]
-position = Vector2(928, 540)
+position = Vector2(1537, 529)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_xvtiq")
 baseline = -573
 interaction_polygon = PackedVector2Array(-531, -132, -530, -37, -530, 30, -515, 114, -515, 214, -520, 271, -514, 307, -417, 279, -356, 281, -280, 283, -208, 269, -223, 16, -221, -31, -213, -119, -201, -176, -233, -190, -254, -175, -301, -180, -399, -170, -459, -149, -489, -131, -506, -144)
 
 [node name="Billboard" parent="Props" node_paths=PackedStringArray("missingPoster") instance=ExtResource("4_crte1")]
-position = Vector2(3, 821)
+position = Vector2(709, 734)
 scale = Vector2(0.5, 0.5)
 missingPoster = NodePath("../MissingPoster")
 texture = ExtResource("5_k0mqh")
@@ -45,37 +46,39 @@ interaction_polygon = PackedVector2Array(-271.429, -178.571, -268.571, -101.429,
 [node name="MissingPoster" parent="Props" instance=ExtResource("6_qmlo1")]
 visible = false
 top_level = true
-position = Vector2(583, 502)
+position = Vector2(982, 502)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("7_oi8re")
 interaction_polygon = PackedVector2Array(-127.692, -151.539, -128.462, -90.7693, -128.462, -41.5385, -120, 22.3076, -116.923, 96.9231, -120.769, 148.462, -115.385, 180.769, -43.8462, 164.615, 22.3076, 164.615, 58.4615, 176.923, 122.308, 160, 120, 81.5384, 108.461, -10.7693, 112.308, -59.2308, 113.077, -115.385, 113.077, -146.923, 123.846, -187.692, 97.6923, -186.923, 67.6923, -183.846, 21.5384, -174.615, -14.6154, -176.923, -59.2308, -167.692, -87.6924, -149.231, -106.154, -161.539)
+
+[node name="Foreground" parent="Props" instance=ExtResource("9_aun7g")]
+position = Vector2(1442, 2)
+scale = Vector2(2, 2)
+texture = ExtResource("10_ohei3")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
 
 [node name="Door1House" parent="Hotspots" instance=ExtResource("8_kkcje")]
 position = Vector2(960, 540)
 interaction_polygon = PackedVector2Array(-2404, 138, -2404, 420, -2175, 423, -2172, 136)
+interaction_polygon_position = Vector2(2300, -171)
 
 [node name="Door3House" parent="Hotspots" instance=ExtResource("9_2wyl2")]
 position = Vector2(960, 540)
 room_name = "3Exit"
 description = "Enter House"
 interaction_polygon = PackedVector2Array(-167, 441, -167, 154, 105, 158, 98, 448)
-interaction_polygon_position = Vector2(0, -14)
+interaction_polygon_position = Vector2(-529, -193)
 
 [node name="Door5House" parent="Hotspots" instance=ExtResource("10_12ggd")]
 position = Vector2(960, 540)
 room_name = "5Altar"
 interaction_polygon = PackedVector2Array(2085, 440, 2082, 137, 2361, 138, 2367, 439)
+interaction_polygon_position = Vector2(-1640, -182)
 
 [node name="Regions" type="Node2D" parent="."]
 
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
-
-[node name="CharacterToyol *" parent="Characters" instance=ExtResource("12_8vor8")]
-position = Vector2(960, 540)
-
-[node name="PopochiuMainCamera" type="Camera2D" parent="."]
-script = ExtResource("13_r5x42")

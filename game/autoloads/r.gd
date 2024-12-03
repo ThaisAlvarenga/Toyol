@@ -20,6 +20,7 @@ const PR1Bedroom := preload("res://game/rooms/1_bedroom/room_1_bedroom.gd")
 const PR1Entrance := preload("res://game/rooms/1_entrance/room_1_entrance.gd")
 const PR1Kitchen := preload("res://game/rooms/1_kitchen/room_1_kitchen.gd")
 const PR1Sewing := preload("res://game/rooms/1_sewing/room_1_sewing.gd")
+const PRCutscene1 := preload("res://game/rooms/cutscene_1/room_cutscene_1.gd")
 # ---- classes
 
 # nodes ----
@@ -41,6 +42,7 @@ var R1Bedroom: PR1Bedroom : get = get_1Bedroom
 var R1Entrance: PR1Entrance : get = get_1Entrance
 var R1Kitchen: PR1Kitchen : get = get_1Kitchen
 var R1Sewing: PR1Sewing : get = get_1Sewing
+var Cutscene1: PRCutscene1 : get = get_Cutscene1
 # ---- nodes
 
 # functions ----
@@ -62,5 +64,6 @@ func get_1Bedroom() -> PR1Bedroom: return get_runtime_room("1Bedroom")
 func get_1Entrance() -> PR1Entrance: return get_runtime_room("1Entrance")
 func get_1Kitchen() -> PR1Kitchen: return get_runtime_room("1Kitchen")
 func get_1Sewing() -> PR1Sewing: return get_runtime_room("1Sewing")
+func get_Cutscene1() -> PRCutscene1: return get_runtime_room("Cutscene1")
 # ---- functions
 

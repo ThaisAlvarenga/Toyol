@@ -5,6 +5,7 @@ extends PopochiuHotspot
 # the function until the sequence of events finishes.
 
 @export var wardrobe_prop:PopochiuProp
+@export var sweater : PopochiuProp
 var isOpen: bool = false
 
 #region Virtual ####################################################################################
@@ -52,9 +53,14 @@ func toggle_open_close():
 	if isOpen:
 		wardrobe_prop.is_toyol = false
 		wardrobe_prop.change_frame(3)
+		if Globals.house_1:
+			sweater.show()
+		else:
+			sweater.hide()
 		
 	else:
 		wardrobe_prop.is_toyol = true
+		sweater.hide()
 		#wardrobe_prop.change_frame(0)
 
 #endregion

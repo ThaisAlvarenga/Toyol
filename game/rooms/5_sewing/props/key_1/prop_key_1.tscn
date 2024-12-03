@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6x3hmp5l20n8"]
+
+[ext_resource type="Script" path="res://game/rooms/5_sewing/props/key_1/prop_key_1.gd" id="1_k6cnn"]
+
+[node name="Key1" type="Area2D"]
+input_pickable = false
+script = ExtResource("1_k6cnn")
+script_name = "Key1"
+description = "Key 1"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

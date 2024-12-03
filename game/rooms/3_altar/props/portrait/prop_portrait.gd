@@ -3,11 +3,13 @@ extends PopochiuProp
 # You can use E.queue([]) to trigger a sequence of events.
 # Use await E.queue([]) if you want to pause the excecution of
 # the function until the sequence of events finishes.
+@export var book : PopochiuProp
 @export var can_stay_rotated : bool = false 
 
 # keeps track of whether sprite has been rotated
 var is_rotated : bool = true
 var initial_rotation : float
+
 
 # Duration of the animation rotation in seconds
 var animation_duration = 0.5
@@ -54,8 +56,13 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		I.Nail.remove()
 	else: E.command_fallback()
 	
-	get_tree().current_scene.check_room_completion()
+	if _item == I.Screwdriver:
+		I.Screwdriver.remove()
+		hide()
+		book.show()
 	
+	get_tree().current_scene.check_room_completion()
+
 
 
 # When an inventory item linked to this Prop (link_to_item) is removed from

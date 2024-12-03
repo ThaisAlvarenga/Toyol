@@ -8,7 +8,7 @@ extends PopochiuHotspot
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
-	R.goto_room('Neighborhood')
+	R.goto_room('Cutscene1')
 
 
 func _on_double_click() -> void:

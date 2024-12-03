@@ -13,11 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://c1lgbbslfmmyi" path="res://game/rooms/3_sewing/hotspots/wardrobe/hotspot_wardrobe.tscn" id="8_ri82l"]
 [ext_resource type="Texture2D" uid="uid://coytie281faxt" path="res://game/rooms/3_sewing/props/sewing_machine_1/pxArtSewingMachineSS.png" id="9_0veu6"]
 [ext_resource type="PackedScene" uid="uid://bp4o3d57in0fp" path="res://game/rooms/3_sewing/props/sewing_machine_1/prop_sewing_machine_1.tscn" id="10_or153"]
+[ext_resource type="Texture2D" uid="uid://6b0ogbem6swe" path="res://game/rooms/3_sewing/props/sweater/pxArtSweaterCloset5.png" id="11_t624t"]
 [ext_resource type="PackedScene" uid="uid://dp72ept6v60dn" path="res://game/rooms/3_sewing/props/filter/prop_filter.tscn" id="12_ftrtk"]
 [ext_resource type="Texture2D" uid="uid://d6eql7uwi0h3" path="res://game/rooms/3_sewing/props/filter/pxArtFilter.png" id="13_krq7q"]
 [ext_resource type="PackedScene" uid="uid://cntqbpxp53q3x" path="res://game/rooms/3_sewing/hotspots/sewing_machine/hotspot_sewing_machine.tscn" id="13_kux7a"]
 [ext_resource type="PackedScene" uid="uid://b1q31gsqusfrp" path="res://game/rooms/3_sewing/props/sweater/prop_sweater.tscn" id="14_k57lf"]
-[ext_resource type="Texture2D" uid="uid://d3h4umdigfonl" path="res://game/rooms/3_sewing/props/sweater/sweater.png" id="15_ufer8"]
 
 [node name="Room3Sewing" type="Node2D"]
 script = ExtResource("1_bs7o1")
@@ -58,8 +58,9 @@ interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Sweater" parent="Props" instance=ExtResource("14_k57lf")]
 visible = false
-position = Vector2(536, 475)
-texture = ExtResource("15_ufer8")
+position = Vector2(714, 507)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_t624t")
 interaction_polygon = PackedVector2Array(-14, -200, -14, -187, -24, -176, -34, 49, 9, 204, 23, 184, 35, 26, 23, -52, 31, -150, 9, -176, 12, -189, 11, -201)
 
 [node name="Filter" parent="Props" instance=ExtResource("12_ftrtk")]
@@ -72,9 +73,10 @@ interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
 
-[node name="Wardrobe" parent="Hotspots" node_paths=PackedStringArray("wardrobe_prop") instance=ExtResource("8_ri82l")]
+[node name="Wardrobe" parent="Hotspots" node_paths=PackedStringArray("wardrobe_prop", "sweater") instance=ExtResource("8_ri82l")]
 position = Vector2(960, 540)
 wardrobe_prop = NodePath("../../Props/Wardrobe")
+sweater = NodePath("../../Props/Sweater")
 interaction_polygon = PackedVector2Array(-490, -330, -454, -300, -394, -304, -322, -368, -254, -413, -186, -371, -125, -328, -106, -304, -46, -305, -13, -326, -6, -347, 3, -327, 3, -267, -31, -225, -56, -201, -56, 275, -25, 308, -31, 329, -457, 327, -473, 299, -473, 278, -450, 260, -451, 197, -450, -191, -475, -229, -500, -255, -512, -279)
 interaction_polygon_position = Vector2(-2, 60)
 

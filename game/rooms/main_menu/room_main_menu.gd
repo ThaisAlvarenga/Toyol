@@ -11,6 +11,7 @@ var state: Data = load("res://game/rooms/main_menu/room_main_menu.tres")
 # tree but it is not visible
 func _on_room_entered() -> void:
 	G.gui.hide()
+	A.mx_bkg.play()
 
 
 # What happens when the room changing transition finishes. At this point the room

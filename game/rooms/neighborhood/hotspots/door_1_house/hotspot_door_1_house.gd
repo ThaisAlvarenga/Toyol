@@ -42,7 +42,7 @@ func _on_middle_click() -> void:
 
 # When the node is clicked and there is an inventory item selected
 func _on_item_used(_item: PopochiuInventoryItem) -> void:
-	if _item == I.Key5:
+	if _item == I.Key1:
 		enterHouse()
 
 
@@ -50,8 +50,10 @@ func enterHouse():
 	# play enter sound
 	A.sfx_enterhouse.play()
 	await  get_tree().create_timer(1).timeout
-	E.goto_room(room_name)
+	E.goto_room("1Altar")
 	R.store_states()
+	Globals.house_1 = true
+	Globals.house_5 = true
 
 
 #endregion

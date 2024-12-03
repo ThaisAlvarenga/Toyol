@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccl1cju5a3pok"]
+[gd_scene load_steps=15 format=3 uid="uid://ccl1cju5a3pok"]
 
 [ext_resource type="Script" path="res://game/rooms/5_sewing/room_5_sewing.gd" id="1_05wml"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="2_unxt6"]
+[ext_resource type="PackedScene" uid="uid://qk2fhjc1b7n1" path="res://game/rooms/5_sewing/props/background/prop_background.tscn" id="2_ygad6"]
+[ext_resource type="Texture2D" uid="uid://c4735ojyqlcc" path="res://game/rooms/1_sewing/props/background/pxArtHouse3BG.png" id="3_jvr0n"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="3_to6ib"]
+[ext_resource type="PackedScene" uid="uid://cpbwtnn8s148c" path="res://game/rooms/3_sewing/props/wardrobe/prop_wardrobe.tscn" id="4_3vm02"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="4_qjd7a"]
+[ext_resource type="Texture2D" uid="uid://ctm2l35ybxt4i" path="res://game/rooms/3_sewing/props/wardrobe/pxWardrobeSS.png" id="5_581ls"]
+[ext_resource type="PackedScene" uid="uid://bp4o3d57in0fp" path="res://game/rooms/3_sewing/props/sewing_machine_1/prop_sewing_machine_1.tscn" id="6_bi0pt"]
+[ext_resource type="Texture2D" uid="uid://coytie281faxt" path="res://game/rooms/3_sewing/props/sewing_machine_1/pxArtSewingMachineSS.png" id="7_1k12c"]
+[ext_resource type="PackedScene" uid="uid://cfcepnrswwwb0" path="res://game/rooms/5_sewing/props/overlay/prop_overlay.tscn" id="8_pjr88"]
+[ext_resource type="Texture2D" uid="uid://fxxgsl252jup" path="res://game/rooms/1_sewing/props/overlay/house5Overlay.png" id="9_h3gba"]
+[ext_resource type="PackedScene" uid="uid://c6x3hmp5l20n8" path="res://game/rooms/5_sewing/props/key_1/prop_key_1.tscn" id="10_s4h1r"]
+[ext_resource type="Texture2D" uid="uid://ce1s4tec3sm0u" path="res://game/inventory_items/key_1/key1.png" id="11_tukw4"]
 
 [node name="Room5Sewing" type="Node2D"]
 script = ExtResource("1_05wml")
@@ -13,6 +26,40 @@ popochiu_placeholder = null
 
 [node name="Props" type="Node2D" parent="."]
 
+[node name="Background" parent="Props" instance=ExtResource("2_ygad6")]
+position = Vector2(960, 540)
+texture = ExtResource("3_jvr0n")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Wardrobe" parent="Props" node_paths=PackedStringArray("wardrobe_hotspot") instance=ExtResource("4_3vm02")]
+position = Vector2(716, 580)
+wardrobe_hotspot = NodePath("")
+texture = ExtResource("5_581ls")
+frames = 5
+current_frame = 2
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="SewingMachine1" parent="Props" instance=ExtResource("6_bi0pt")]
+position = Vector2(1270, 662)
+texture = ExtResource("7_1k12c")
+frames = 2
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Key1" parent="Props" instance=ExtResource("10_s4h1r")]
+position = Vector2(871, 1013)
+scale = Vector2(0.3, 0.3)
+input_pickable = true
+texture = ExtResource("11_tukw4")
+link_to_item = "Key1"
+description = "Key"
+clickable = true
+interaction_polygon = PackedVector2Array(-386.667, 30, -370, -110, -250, -110, -30, -106.667, 173.333, -100, 413.333, -80, 430, 126.667, 163.333, 126.667, -90, 110, -276.667, 100, -343.333, 100)
+
+[node name="Overlay" parent="Props" instance=ExtResource("8_pjr88")]
+position = Vector2(960, 540)
+texture = ExtResource("9_h3gba")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
 [node name="Hotspots" type="Node2D" parent="."]
 
 [node name="Regions" type="Node2D" parent="."]
@@ -20,3 +67,34 @@ popochiu_placeholder = null
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("2_unxt6")
+texture_hover = ExtResource("3_to6ib")
+flip_h = true
+script = ExtResource("4_qjd7a")
+room_name = "5Altar"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("2_unxt6")
+texture_hover = ExtResource("3_to6ib")
+script = ExtResource("4_qjd7a")
+room_name = "5Kitchen"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

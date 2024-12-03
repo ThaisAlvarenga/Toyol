@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://mrjlluyu2k6x"]
+
+[ext_resource type="Script" path="res://game/rooms/cutscene_1/room_cutscene_1.gd" id="1_v7guy"]
+[ext_resource type="PackedScene" uid="uid://rfpv7d7iwkiu" path="res://game/rooms/cutscene_1/props/cutscene/prop_cutscene.tscn" id="2_1h0ux"]
+[ext_resource type="Texture2D" uid="uid://cwhp56e5fsrer" path="res://game/rooms/cutscene_1/props/cutscene/cutscene.png" id="3_04sli"]
+[ext_resource type="Theme" uid="uid://btoac7ybly525" path="res://game/gui/resources/gui_theme.tres" id="4_1lmd2"]
+[ext_resource type="Script" path="res://game/rooms/main_menu/start_btn.gd" id="5_f7302"]
+
+[node name="RoomCutscene1" type="Node2D"]
+script = ExtResource("1_v7guy")
+script_name = "Cutscene1"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Cutscene" parent="Props" instance=ExtResource("2_1h0ux")]
+position = Vector2(960, 540)
+texture = ExtResource("3_04sli")
+frames = 3
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Start_btn2" type="Button" parent="."]
+offset_left = 1043.0
+offset_top = 857.0
+offset_right = 1685.0
+offset_bottom = 945.0
+scale = Vector2(1.2, 1.2)
+theme = ExtResource("4_1lmd2")
+text = "INTO THE WILDERNESS"
+script = ExtResource("5_f7302")
+
+[node name="Start_btn" type="Button" parent="."]
+top_level = true
+offset_left = 404.0
+offset_top = 511.0
+offset_right = 824.0
+offset_bottom = 599.0
+scale = Vector2(1.2, 1.2)
+theme = ExtResource("4_1lmd2")
+text = "MAIN MENU"
+script = ExtResource("5_f7302")
+
+[connection signal="pressed" from="Start_btn2" to="." method="_on_start_btn_2_pressed"]
+[connection signal="pressed" from="Start_btn" to="." method="_on_start_btn_pressed"]
