@@ -84,6 +84,9 @@ func update_visual():
 	
 	if meat_added:
 		meat.hide()
+	
+	if I.is_item_in_inventory("BrothBowl"):
+		broth_bowl_prop.hide()
 
 #endregion
 

@@ -8,8 +8,8 @@ extends PopochiuProp
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
-	A.sfx_broth_pickup.play()
-	I.BrothBowl.add()
+	if visible:
+		hide()
 
 
 func _on_double_click() -> void:
@@ -53,7 +53,6 @@ func _on_linked_item_removed() -> void:
 # the inventory (i.e. when the player throws the object out of the inventory).
 func _on_linked_item_discarded() -> void:
 	pass
-
 
 
 #endregion

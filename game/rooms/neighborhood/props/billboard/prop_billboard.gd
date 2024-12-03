@@ -3,13 +3,15 @@ extends PopochiuProp
 # You can use E.queue([]) to trigger a sequence of events.
 # Use await E.queue([]) if you want to pause the excecution of
 # the function until the sequence of events finishes.
-
+@export var missingPoster : PopochiuProp
 
 #region Virtual ####################################################################################
 # When the node is clicked
 func _on_click() -> void:
-	A.sfx_broth_pickup.play()
-	I.BrothBowl.add()
+	if missingPoster.visible:
+		missingPoster.hide()
+	else:
+		missingPoster.show()
 
 
 func _on_double_click() -> void:
@@ -53,7 +55,6 @@ func _on_linked_item_removed() -> void:
 # the inventory (i.e. when the player throws the object out of the inventory).
 func _on_linked_item_discarded() -> void:
 	pass
-
 
 
 #endregion

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb1fm4kv7w077"]
+
+[ext_resource type="Script" path="res://game/rooms/neighborhood/props/billboard/prop_billboard.gd" id="1_7kmyy"]
+
+[node name="Billboard" type="Area2D"]
+script = ExtResource("1_7kmyy")
+script_name = "Billboard"
+description = "Billboard"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

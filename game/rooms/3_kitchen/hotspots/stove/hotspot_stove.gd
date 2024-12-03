@@ -64,6 +64,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 	elif _item == I.Page && stove_on:
 		#stove_prop.change_frame(2)
 		I.Page.remove()
+		
 		print("Page burned")
 		R.get_3Kitchen().state.page_burned = true
 		

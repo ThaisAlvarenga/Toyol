@@ -13,6 +13,10 @@ func _on_click() -> void:
 	A.sfx_key_pickup.play()
 	A.sfx_stovefire.stop()
 	I.clean_inventory()
+	
+	if A.sfx_stovefire.is_playing():
+		A.sfx_stovefire.stop()
+	#A.stop()
 
 	I.Key5.add()
 	btnLeft.hide()

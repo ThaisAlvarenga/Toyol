@@ -107,6 +107,7 @@ func queue_add(animate := true) -> Callable:
 ##     await I.Key.add()
 ## [/codeblock]
 func add(animate := true) -> void:
+	A.sfx_pickup.play()
 	if I.is_full():
 		PopochiuUtils.print_error("Couldn't add %s. Inventory is full." % script_name)
 		

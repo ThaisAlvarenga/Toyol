@@ -8,6 +8,7 @@ var state: Data = load("res://game/rooms/3_kitchen/room_3_kitchen.tres")
 func _process(delta: float) -> void:
 	if Globals.house_5:
 		A.sfx_stovefire.stop()
+		A.sfx_stovefire.stop()
 		print("stop stove sound")
 
 #region Virtual ####################################################################################
@@ -24,6 +25,7 @@ func _on_room_entered() -> void:
 		show_key_house_5()
 		
 	A.sfx_stovefire.stop()
+	A.sfx_stovefire.stop()
 	
 	# PLay stove sound if it is on and has not been used
 	if get_hotspot("Stove").stove_on and !get_hotspot("Stove").stove_used:
@@ -34,6 +36,8 @@ func _on_room_entered() -> void:
 		elif A.sfx_stovefire.is_playing():
 			A.sfx_stovefire.stop()
 			A.sfx_stovefire.play()
+			print("playing stove sfx")
+	
 	else: A.sfx_stovefire.stop()
 
 
@@ -49,6 +53,7 @@ func _on_room_transition_finished() -> void:
 # have been removed from the $Characters node.
 func _on_room_exited() -> void:
 	save_room_state()
+	A.sfx_stovefire.stop()
 	A.sfx_stovefire.stop()
 		
 	Globals.check_house3_completion()
