@@ -28,4 +28,5 @@ var click: AudioCueSound = load("res://game/gui/click.tres")
 var keypress: AudioCueSound = load("res://game/gui/keypress.tres")
 var sfx_pickup: AudioCueSound = load("res://game/rooms/3_kitchen/props/meat/sfx_pickUp.tres")
 var sfx_portrait: AudioCueSound = load("res://game/rooms/3_altar/props/portrait/sfx_portrait.tres")
+var sfx_burning: AudioCueSound = load("res://game/rooms/3_kitchen/hotspots/stove/sfx_burning.tres")
 # ---- cues
