@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://52qpcgrwxf1u"]
+[gd_scene load_steps=11 format=3 uid="uid://52qpcgrwxf1u"]
 
 [ext_resource type="Script" path="res://game/rooms/main_menu/room_main_menu.gd" id="1_7gu42"]
 [ext_resource type="PackedScene" uid="uid://qwwlcpgbv0hp" path="res://game/rooms/main_menu/props/background/prop_background.tscn" id="2_o1sxm"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://himjp81idl41" path="res://game/rooms/main_menu/props/filter/prop_filter.tscn" id="4_tilqm"]
 [ext_resource type="Texture2D" uid="uid://bu61tn4a0eq7n" path="res://game/rooms/main_menu/props/filter/pxArtFilter.png" id="5_0cnk6"]
 [ext_resource type="Script" path="res://game/rooms/main_menu/quit_btn.gd" id="5_gtddw"]
+[ext_resource type="Texture2D" uid="uid://bvcna1ga1qbyc" path="res://game/rooms/main_menu/props/holoborne_logo/HBLogo2.png" id="5_k5rxw"]
 [ext_resource type="Script" path="res://game/rooms/main_menu/start_btn.gd" id="5_t4r7d"]
+[ext_resource type="PackedScene" uid="uid://cw0ys0dwupo1" path="res://game/rooms/main_menu/props/holoborne_logo/prop_holoborne_logo.tscn" id="6_ctuwe"]
 
 [node name="RoomMainMenu" type="Node2D"]
 script = ExtResource("1_7gu42")
@@ -24,6 +26,28 @@ popochiu_placeholder = null
 position = Vector2(960, 540)
 texture = ExtResource("3_cjg5h")
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="HoloborneLogo" parent="Props" instance=ExtResource("6_ctuwe")]
+position = Vector2(1811, 122)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_k5rxw")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Props/HoloborneLogo"]
+offset_left = -5090.0
+offset_top = 2830.0
+offset_right = 2873.0
+offset_bottom = 4330.0
+scale = Vector2(0.7, 0.7)
+theme = ExtResource("4_lob15")
+theme_override_colors/default_color = Color(0.678431, 0.686275, 0.592157, 1)
+theme_override_font_sizes/bold_italics_font_size = 400
+theme_override_font_sizes/normal_font_size = 300
+theme_override_font_sizes/bold_font_size = 300
+bbcode_enabled = true
+text = " Art Direction                       [b]Savannah Mosley[/b]
+ Gamer Design                    [b] Jack Hao[/b]
+Game Programming          [b]Thaís Alvarenga[/b]"
 
 [node name="Filter" parent="Props" instance=ExtResource("4_tilqm")]
 modulate = Color(1, 1, 1, 0.5)
@@ -42,19 +66,20 @@ interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="Start_btn" type="Button" parent="."]
-offset_left = 1319.0
-offset_top = 788.0
-offset_right = 1739.0
-offset_bottom = 876.0
+offset_left = 404.0
+offset_top = 511.0
+offset_right = 824.0
+offset_bottom = 599.0
+scale = Vector2(1.2, 1.2)
 theme = ExtResource("4_lob15")
 text = "START GAME"
 script = ExtResource("5_t4r7d")
 
 [node name="Quit_btn" type="Button" parent="."]
-offset_left = 1319.0
-offset_top = 886.0
-offset_right = 1738.0
-offset_bottom = 974.0
+offset_left = 1243.0
+offset_top = 730.0
+offset_right = 1532.0
+offset_bottom = 818.0
 theme = ExtResource("4_lob15")
 text = "QUIT"
 script = ExtResource("5_gtddw")
