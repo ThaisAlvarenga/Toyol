@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://df6tk52sl31xt"]
+[gd_scene load_steps=14 format=3 uid="uid://df6tk52sl31xt"]
 
 [ext_resource type="Script" path="res://game/rooms/neighborhood/room_neighborhood.gd" id="1_x5y1a"]
 [ext_resource type="PackedScene" uid="uid://yepcqtxawpvd" path="res://game/rooms/neighborhood/props/background/prop_background.tscn" id="2_0wy8i"]
+[ext_resource type="PackedScene" uid="uid://dw3be6eybvo6u" path="res://game/rooms/neighborhood/walkable_areas/ground/walkable_area_ground.tscn" id="3_s8y3k"]
 [ext_resource type="Texture2D" uid="uid://cwa61aoipfboa" path="res://game/rooms/neighborhood/props/background/neightborhoodBackground.png" id="3_xvtiq"]
 [ext_resource type="PackedScene" uid="uid://bb1fm4kv7w077" path="res://game/rooms/neighborhood/props/billboard/prop_billboard.tscn" id="4_crte1"]
 [ext_resource type="Texture2D" uid="uid://bml2yfcfyjisq" path="res://game/rooms/neighborhood/props/billboard/pxArtBountyBoardPosters.png" id="5_k0mqh"]
@@ -11,15 +12,20 @@
 [ext_resource type="PackedScene" uid="uid://be2udlncu88ca" path="res://game/rooms/neighborhood/hotspots/door_3_house/hotspot_door_3_house.tscn" id="9_2wyl2"]
 [ext_resource type="PackedScene" uid="uid://bd1xueq25pwfd" path="res://game/rooms/neighborhood/hotspots/door_5_house/hotspot_door_5_house.tscn" id="10_12ggd"]
 [ext_resource type="PackedScene" uid="uid://cq0s4tg5lf278" path="res://game/characters/toyol/character_toyol.tscn" id="12_8vor8"]
+[ext_resource type="Script" path="res://addons/popochiu/engine/objects/popochiu_main_camera.gd" id="13_r5x42"]
 
 [node name="RoomNeighborhood" type="Node2D"]
 script = ExtResource("1_x5y1a")
 script_name = "Neighborhood"
 width = 1920
 height = 1080
+limit_left = -2155.0
+limit_right = 4000.0
 popochiu_placeholder = null
 
 [node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Ground" parent="WalkableAreas" instance=ExtResource("3_s8y3k")]
 
 [node name="Props" type="Node2D" parent="."]
 
@@ -30,7 +36,7 @@ baseline = -573
 interaction_polygon = PackedVector2Array(-531, -132, -530, -37, -530, 30, -515, 114, -515, 214, -520, 271, -514, 307, -417, 279, -356, 281, -280, 283, -208, 269, -223, 16, -221, -31, -213, -119, -201, -176, -233, -190, -254, -175, -301, -180, -399, -170, -459, -149, -489, -131, -506, -144)
 
 [node name="Billboard" parent="Props" node_paths=PackedStringArray("missingPoster") instance=ExtResource("4_crte1")]
-position = Vector2(307, 893)
+position = Vector2(3, 821)
 scale = Vector2(0.5, 0.5)
 missingPoster = NodePath("../MissingPoster")
 texture = ExtResource("5_k0mqh")
@@ -55,6 +61,7 @@ position = Vector2(960, 540)
 room_name = "3Exit"
 description = "Enter House"
 interaction_polygon = PackedVector2Array(-167, 441, -167, 154, 105, 158, 98, 448)
+interaction_polygon_position = Vector2(0, -14)
 
 [node name="Door5House" parent="Hotspots" instance=ExtResource("10_12ggd")]
 position = Vector2(960, 540)
@@ -68,4 +75,7 @@ interaction_polygon = PackedVector2Array(2085, 440, 2082, 137, 2361, 138, 2367, 
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="CharacterToyol *" parent="Characters" instance=ExtResource("12_8vor8")]
-position = Vector2(960, 854)
+position = Vector2(960, 540)
+
+[node name="PopochiuMainCamera" type="Camera2D" parent="."]
+script = ExtResource("13_r5x42")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw3be6eybvo6u"]
+
+[ext_resource type="Script" path="res://game/rooms/neighborhood/walkable_areas/ground/walkable_area_ground.gd" id="1_av86i"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_yk1hw"]
+vertices = PackedVector2Array(-737, 539, -741, 429, -201, 461, 691, 532, 176, 456, 687, 420, 10, 10, -10, 10, -10, -10, 10, -10)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4), PackedInt32Array(5, 3, 4), PackedInt32Array(6, 7, 8, 9)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10), PackedVector2Array(-741, 429, -737, 539, 691, 532, 687, 420, 176, 456, -201, 461)])
+agent_radius = 0.0
+
+[node name="Ground" type="Node2D"]
+position = Vector2(960, 540)
+script = ExtResource("1_av86i")
+script_name = "Ground"
+description = "Ground"
+interaction_polygon = [PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10), PackedVector2Array(-741, 429, -737, 539, 691, 532, 687, 420, 176, 456, -201, 461)]
+
+[node name="Perimeter" type="NavigationRegion2D" parent="."]
+visible = false
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_yk1hw")
