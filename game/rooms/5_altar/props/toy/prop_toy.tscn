@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://d7myrqcmvolt"]
+
+[ext_resource type="Script" path="res://game/rooms/5_altar/props/toy/prop_toy.gd" id="1_fgasg"]
+
+[node name="Toy" type="Area2D"]
+script = ExtResource("1_fgasg")
+script_name = "Toy"
+description = "Toy"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

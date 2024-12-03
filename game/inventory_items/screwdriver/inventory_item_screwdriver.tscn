@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnk4k0nbay8x8"]
+
+[ext_resource type="Texture2D" uid="uid://dnno1yvb3akis" path="res://game/inventory_items/screwdriver/pxArtScrewdriver.png" id="1_gga7c"]
+[ext_resource type="Script" path="res://game/inventory_items/screwdriver/inventory_item_screwdriver.gd" id="1_y0waw"]
+
+[node name="ItemScrewdriver" type="TextureRect"]
+texture_filter = 1
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_gga7c")
+stretch_mode = 5
+script = ExtResource("1_y0waw")
+script_name = "Screwdriver"
+description = "Screwdriver"

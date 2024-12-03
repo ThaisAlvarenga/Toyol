@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl12bqoetun4n"]
+
+[ext_resource type="Texture2D" uid="uid://bsg2qj2oli8lv" path="res://game/inventory_items/lighter/pxArtLighter.png" id="1_6xuwf"]
+[ext_resource type="Script" path="res://game/inventory_items/lighter/inventory_item_lighter.gd" id="1_mxr6w"]
+
+[node name="ItemLighter" type="TextureRect"]
+texture_filter = 1
+scale = Vector2(0.2, 0.2)
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_6xuwf")
+stretch_mode = 5
+script = ExtResource("1_mxr6w")
+script_name = "Lighter"
+description = "Lighter"

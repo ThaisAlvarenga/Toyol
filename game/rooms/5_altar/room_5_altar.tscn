@@ -1,0 +1,116 @@
+[gd_scene load_steps=19 format=3 uid="uid://btpxkol48xede"]
+
+[ext_resource type="Script" path="res://game/rooms/5_altar/room_5_altar.gd" id="1_l75py"]
+[ext_resource type="PackedScene" uid="uid://dffic3k3uyh58" path="res://game/rooms/5_altar/props/background/prop_background.tscn" id="2_jfxsk"]
+[ext_resource type="Texture2D" uid="uid://btrac016t4x6d" path="res://game/rooms/5_altar/props/background/pxArtAltarBG.png" id="3_1wbrn"]
+[ext_resource type="PackedScene" uid="uid://d3tvn0k221ro4" path="res://game/rooms/5_altar/props/portrait/prop_portrait.tscn" id="4_0a1d2"]
+[ext_resource type="Texture2D" uid="uid://cp3mxpl6s117w" path="res://game/rooms/5_altar/props/portrait/pxArtModernArt.png" id="5_67rym"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="6_ks4yk"]
+[ext_resource type="PackedScene" uid="uid://lyvlvq5xun37" path="res://game/rooms/5_altar/props/overlay/prop_overlay.tscn" id="6_thyki"]
+[ext_resource type="PackedScene" uid="uid://bjusxsoxih0wf" path="res://game/rooms/5_altar/props/filter/prop_filter.tscn" id="7_825tw"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="7_cuaf8"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="8_6o1p7"]
+[ext_resource type="PackedScene" uid="uid://wjwek5np8k24" path="res://game/rooms/5_altar/props/table/prop_table.tscn" id="8_j7wbk"]
+[ext_resource type="Texture2D" uid="uid://b0ckuuyqj5g5n" path="res://game/rooms/5_altar/props/table/pxArtAltar.png" id="9_km24i"]
+[ext_resource type="PackedScene" uid="uid://d7myrqcmvolt" path="res://game/rooms/5_altar/props/toy/prop_toy.tscn" id="10_wo8wl"]
+[ext_resource type="Texture2D" uid="uid://dvv5hcssj28g8" path="res://game/rooms/5_altar/props/toy/pxArtToy.png" id="11_nmm2b"]
+[ext_resource type="PackedScene" uid="uid://bx8wpcmcwrsjp" path="res://game/rooms/5_altar/props/incense/prop_incense.tscn" id="11_wdp5x"]
+[ext_resource type="Texture2D" uid="uid://dopmohgwumvbe" path="res://game/rooms/5_altar/props/incense/pxArtIncenseSS.png" id="12_0tjv1"]
+[ext_resource type="Texture2D" uid="uid://doq6mvr8xgk8m" path="res://game/rooms/5_altar/props/overlay/house5Overlay.png" id="14_euopt"]
+[ext_resource type="PackedScene" uid="uid://gt771npcsmk4" path="res://game/rooms/5_altar/hotspots/incense/hotspot_incense.tscn" id="14_l4m0r"]
+
+[node name="Room5Altar" type="Node2D"]
+script = ExtResource("1_l75py")
+script_name = "5Altar"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_jfxsk")]
+position = Vector2(960, 540)
+texture = ExtResource("3_1wbrn")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Portrait" parent="Props" instance=ExtResource("4_0a1d2")]
+position = Vector2(945, 444)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_67rym")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Filter" parent="Props" instance=ExtResource("7_825tw")]
+position = Vector2(960, 540)
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Table" parent="Props" instance=ExtResource("8_j7wbk")]
+position = Vector2(948, 772)
+scale = Vector2(1.5, 0.8)
+texture = ExtResource("9_km24i")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Toy" parent="Props" instance=ExtResource("10_wo8wl")]
+top_level = true
+position = Vector2(1187, 688)
+rotation = -1.76802
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_nmm2b")
+interaction_polygon = PackedVector2Array(-28.9639, -212.291, 36.7268, -260.351, 103.898, -252.028, 152.439, -239.779, 179.412, -196.147, 172.071, -121.132, 182.864, -85.8328, 219.639, -65.7373, 184.351, 8.79297, 78.9502, 76.9614, 56.8799, 34.3101, 27.9556, 51.4753, -25.9517, 193.669, -73.9873, 268.201, -102.918, 247.124, -112.729, 219.669, -48.0398, 49.0371, -12.2642, -40.6924, -13.7402, -71.5803, -37.2805, -106.877, -66.209, -115.207, -60.3196, -80.8877, -66.6899, -61.7654, -86.3022, -65.6843, -111.806, -116.67, -110.345, -175.015, -85.8345, -195.611, -42.1968, -184.342)
+
+[node name="Incense" parent="Props" instance=ExtResource("11_wdp5x")]
+position = Vector2(940, 652)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_0tjv1")
+frames = 2
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Overlay" parent="Props" instance=ExtResource("6_thyki")]
+top_level = true
+position = Vector2(960, 540)
+texture = ExtResource("14_euopt")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Incense" parent="Hotspots" instance=ExtResource("14_l4m0r")]
+position = Vector2(960, 540)
+interaction_polygon = PackedVector2Array(-81, 183, -91, 165, -101, 140, -101, 110, -99, 88, -68, 93, -55, 92, -51, 68, -51, 47, -47, 29, -19, 27, 11, 28, 9, 88, 9, 103, 26, 98, 46, 95, 69, 97, 68, 128, 62, 161, 51, 177, 33, 186)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("6_ks4yk")
+texture_hover = ExtResource("7_cuaf8")
+flip_h = true
+script = ExtResource("8_6o1p7")
+room_name = "5Entrance"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("6_ks4yk")
+texture_hover = ExtResource("7_cuaf8")
+script = ExtResource("8_6o1p7")
+room_name = "5Sewing"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

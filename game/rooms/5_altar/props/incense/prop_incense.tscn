@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx8wpcmcwrsjp"]
+
+[ext_resource type="Script" path="res://game/rooms/5_altar/props/incense/prop_incense.gd" id="1_2h5tv"]
+
+[node name="Incense" type="Area2D"]
+script = ExtResource("1_2h5tv")
+script_name = "Incense"
+description = "Incense"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

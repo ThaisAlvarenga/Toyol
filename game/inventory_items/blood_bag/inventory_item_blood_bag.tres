@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c3cu8e28ytyaf"]
+
+[ext_resource type="Script" path="res://game/inventory_items/blood_bag/inventory_item_blood_bag_state.gd" id="1_e7cq7"]
+
+[resource]
+resource_name = "BloodBag"
+script = ExtResource("1_e7cq7")
+script_name = "BloodBag"
+scene = "res://game/inventory_items/blood_bag/inventory_item_blood_bag.tscn"

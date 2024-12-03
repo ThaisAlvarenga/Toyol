@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dia5vq0cm0j3q"]
+
+[ext_resource type="Script" path="res://game/rooms/5_bedroom/props/blood_bag/prop_blood_bag.gd" id="1_hufvr"]
+
+[node name="BloodBag" type="Area2D"]
+script = ExtResource("1_hufvr")
+script_name = "BloodBag"
+description = "Blood Bag"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://tit6mcq2swed"]
+
+[ext_resource type="Script" path="res://game/rooms/5_bedroom/room_5_bedroom_state.gd" id="1_el72v"]
+
+[resource]
+resource_name = "5Bedroom"
+script = ExtResource("1_el72v")
+script_name = "5Bedroom"
+scene = "res://game/rooms/5_bedroom/room_5_bedroom.tscn"
+visited = false
+visited_first_time = false
+visited_times = 0

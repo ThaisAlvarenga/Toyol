@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://be2udlncu88ca"]
+
+[ext_resource type="Script" path="res://game/rooms/neighborhood/hotspots/door_3_house/hotspot_door_3_house.gd" id="1_fkvga"]
+
+[node name="Door3House" type="Area2D"]
+script = ExtResource("1_fkvga")
+script_name = "Door3House"
+description = "Door 3 House"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

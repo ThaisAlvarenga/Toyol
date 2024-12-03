@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://yq66ratisxxv"]
+
+[ext_resource type="Script" path="res://game/rooms/1_kitchen/room_1_kitchen_state.gd" id="1_27xl3"]
+
+[resource]
+resource_name = "1Kitchen"
+script = ExtResource("1_27xl3")
+script_name = "1Kitchen"
+scene = "res://game/rooms/1_kitchen/room_1_kitchen.tscn"
+visited = false
+visited_first_time = false
+visited_times = 0

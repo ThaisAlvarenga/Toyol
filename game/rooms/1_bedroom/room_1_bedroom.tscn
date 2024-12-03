@@ -1,0 +1,117 @@
+[gd_scene load_steps=18 format=3 uid="uid://core23ojgd2jn"]
+
+[ext_resource type="Script" path="res://game/rooms/1_bedroom/room_1_bedroom.gd" id="1_ro1yc"]
+[ext_resource type="PackedScene" uid="uid://bs5w10sowp3b5" path="res://game/rooms/1_bedroom/props/background/prop_background.tscn" id="2_c6c15"]
+[ext_resource type="PackedScene" uid="uid://cfjmraugd5jef" path="res://game/rooms/1_bedroom/props/overlay/prop_overlay.tscn" id="3_60cv5"]
+[ext_resource type="Texture2D" uid="uid://b21x16484ss8n" path="res://game/rooms/1_bedroom/props/background/pxArtBedroomBG.png" id="3_v7ohd"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="5_78i8f"]
+[ext_resource type="PackedScene" uid="uid://dntaax4wffpmj" path="res://game/rooms/1_bedroom/props/bedside_table/prop_bedside_table.tscn" id="5_qxyv7"]
+[ext_resource type="Texture2D" uid="uid://gdexgwttpjog" path="res://game/rooms/1_bedroom/props/bedside_table/pxArtNightstandSS.png" id="6_g8lfd"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="6_xbg5u"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="7_k622w"]
+[ext_resource type="PackedScene" uid="uid://bmxjn7bgqtor8" path="res://game/rooms/1_bedroom/props/cradle/prop_cradle.tscn" id="7_lb6ba"]
+[ext_resource type="Texture2D" uid="uid://c6sx0nbrm02o4" path="res://game/rooms/1_bedroom/props/cradle/pxArtStroller.png" id="8_ysac8"]
+[ext_resource type="PackedScene" uid="uid://j38gms8tn20w" path="res://game/rooms/1_bedroom/props/screwdriver/prop_screwdriver.tscn" id="9_scdiu"]
+[ext_resource type="PackedScene" uid="uid://dn1iw4w7uvfl0" path="res://game/rooms/1_bedroom/hotspots/bedside_table/hotspot_bedside_table.tscn" id="9_yo6ek"]
+[ext_resource type="Texture2D" uid="uid://coaevaeoh3clo" path="res://game/rooms/1_bedroom/props/screwdriver/pxArtScrewdriver.png" id="10_52a1d"]
+[ext_resource type="PackedScene" uid="uid://dwwwksywepmoh" path="res://game/rooms/1_bedroom/props/matches/prop_matches.tscn" id="11_nratk"]
+[ext_resource type="Texture2D" uid="uid://bulmtc7m4ljp7" path="res://game/rooms/1_bedroom/props/matches/pxArtMatches.png" id="12_88v25"]
+[ext_resource type="Texture2D" uid="uid://db6tkqjd6pcnj" path="res://game/rooms/1_bedroom/props/overlay/house1Overlay.png" id="13_mun5g"]
+
+[node name="Room1Bedroom" type="Node2D"]
+script = ExtResource("1_ro1yc")
+script_name = "1Bedroom"
+width = 1920
+height = 1080
+popochiu_placeholder = null
+
+[node name="WalkableAreas" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Background" parent="Props" instance=ExtResource("2_c6c15")]
+position = Vector2(960, 540)
+texture = ExtResource("3_v7ohd")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="BedsideTable" parent="Props" instance=ExtResource("5_qxyv7")]
+position = Vector2(496, 834)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_g8lfd")
+frames = 2
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Cradle" parent="Props" instance=ExtResource("7_lb6ba")]
+position = Vector2(1228, 750)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("8_ysac8")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Matches" parent="Props" instance=ExtResource("11_nratk")]
+visible = false
+top_level = true
+position = Vector2(527, 753)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("12_88v25")
+link_to_item = "Matches"
+interaction_polygon = PackedVector2Array(-433.333, 133.333, -320, 46.6665, -46.6667, -26.667, 26.6667, -120, 260, -126.667, 253.333, -46.667, 306.667, 26.6665, 293.333, 60, 166.667, 73.333, 160, 126.667, -306.667, 213.333, -426.667, 180)
+
+[node name="Screwdriver" parent="Props" instance=ExtResource("9_scdiu")]
+visible = false
+position = Vector2(497, 929)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("10_52a1d")
+link_to_item = "Screwdriver"
+interaction_polygon = PackedVector2Array(-280, -32.5, -275, -80, -247.5, -97.5, -195, -90, 62.5, 0, 70, 15, 287.5, 87.5, 287.5, 107.5, 242.5, 110, 57.5, 57.5, -2.5, 65)
+
+[node name="Overlay" parent="Props" instance=ExtResource("3_60cv5")]
+position = Vector2(960, 540)
+texture = ExtResource("13_mun5g")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Hotspots" type="Node2D" parent="."]
+
+[node name="BedsideTable" parent="Hotspots" node_paths=PackedStringArray("bedside_table", "inside_object_1", "inside_object_2") instance=ExtResource("9_yo6ek")]
+top_level = true
+position = Vector2(960, 540)
+bedside_table = NodePath("../../Props/BedsideTable")
+inside_object_1 = NodePath("../../Props/Matches")
+inside_object_2 = NodePath("../../Props/Screwdriver")
+interaction_polygon = PackedVector2Array(-584, 431, -587, 132, -340, 134, -348, 430, -369, 436, -369, 464, -391, 464, -392, 439, -531, 441, -531, 462, -552, 464, -556, 442)
+
+[node name="Regions" type="Node2D" parent="."]
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("5_78i8f")
+texture_hover = ExtResource("6_xbg5u")
+flip_h = true
+script = ExtResource("7_k622w")
+room_name = "1Kitchen"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("5_78i8f")
+texture_hover = ExtResource("6_xbg5u")
+script = ExtResource("7_k622w")
+room_name = "1Entrance"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

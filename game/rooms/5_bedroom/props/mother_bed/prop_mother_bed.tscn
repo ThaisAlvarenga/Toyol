@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhbeetm5j184m"]
+
+[ext_resource type="Script" path="res://game/rooms/5_bedroom/props/mother_bed/prop_mother_bed.gd" id="1_slufh"]
+
+[node name="MotherBed" type="Area2D"]
+input_pickable = false
+script = ExtResource("1_slufh")
+script_name = "MotherBed"
+description = "Mother Bed"
+clickable = false
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

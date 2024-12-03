@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://myokjco8i4y7"]
+
+[ext_resource type="Script" path="res://game/rooms/5_bedroom/hotspots/bedside_table/hotspot_bedside_table.gd" id="1_dh6pn"]
+
+[node name="BedsideTable" type="Area2D"]
+script = ExtResource("1_dh6pn")
+script_name = "BedsideTable"
+description = "Bedside Table"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

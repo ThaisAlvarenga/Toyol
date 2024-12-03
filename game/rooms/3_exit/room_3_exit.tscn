@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlvkengulr6ct"]
+[gd_scene load_steps=11 format=3 uid="uid://dlvkengulr6ct"]
 
 [ext_resource type="Script" path="res://game/rooms/3_exit/room_3_exit.gd" id="1_cy0nn"]
 [ext_resource type="PackedScene" uid="uid://7ybtkxocyr0a" path="res://game/rooms/3_exit/props/background/prop_background.tscn" id="2_vd3r5"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://xbuynjhktwpk" path="res://game/rooms/3_exit/props/filter/pxArtFilter.png" id="5_tbttv"]
 [ext_resource type="PackedScene" uid="uid://b1jvntrvobsce" path="res://game/rooms/3_exit/hotspots/door/hotspot_door.tscn" id="6_ot3bn"]
 [ext_resource type="PackedScene" uid="uid://ditvq1c31yv8l" path="res://game/rooms/3_exit/hotspots/window/hotspot_window.tscn" id="7_s6u0o"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="8_nj057"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="9_4jg45"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="10_e35jv"]
 
 [node name="Room3Exit" type="Node2D"]
 script = ExtResource("1_cy0nn")
@@ -29,7 +32,6 @@ modulate = Color(1, 1, 1, 0.5)
 position = Vector2(960, 540)
 texture = ExtResource("5_tbttv")
 frames = 2
-current_frame = 1
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
@@ -48,3 +50,34 @@ interaction_polygon = PackedVector2Array(65, 49, 2, -35, 31, -114, 161, -221, 21
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("8_nj057")
+texture_hover = ExtResource("9_4jg45")
+flip_h = true
+script = ExtResource("10_e35jv")
+room_name = "3Bedroom"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("8_nj057")
+texture_hover = ExtResource("9_4jg45")
+script = ExtResource("10_e35jv")
+room_name = "3Altar"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4kwomept3juj"]
+
+[ext_resource type="Script" path="res://game/inventory_items/blood_bag/inventory_item_blood_bag.gd" id="1_528pq"]
+[ext_resource type="Texture2D" uid="uid://bbn6u4vlkcmhf" path="res://game/inventory_items/blood_bag/pxArtBloodBag.png" id="1_n2qam"]
+
+[node name="ItemBloodBag" type="TextureRect"]
+texture_filter = 1
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_n2qam")
+stretch_mode = 5
+script = ExtResource("1_528pq")
+script_name = "BloodBag"
+description = "Blood Bag"

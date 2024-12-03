@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://qpg7suyq7ex6"]
+
+[ext_resource type="Script" path="res://game/inventory_items/lighter/inventory_item_lighter_state.gd" id="1_0ig30"]
+
+[resource]
+resource_name = "Lighter"
+script = ExtResource("1_0ig30")
+script_name = "Lighter"
+scene = "res://game/inventory_items/lighter/inventory_item_lighter.tscn"

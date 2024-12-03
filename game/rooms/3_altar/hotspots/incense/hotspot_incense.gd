@@ -53,7 +53,7 @@ func _on_item_used(_item: PopochiuInventoryItem) -> void:
 		clickable = false
 		lighted = true
 		
-		get_tree().current_scene.check_room_completion()
+		#get_tree().current_scene.check_room_completion()
 	
 	
 func update_visual():
