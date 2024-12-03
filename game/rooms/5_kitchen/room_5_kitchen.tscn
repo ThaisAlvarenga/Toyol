@@ -1,8 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpho8fkf5x8nf"]
+[gd_scene load_steps=24 format=3 uid="uid://dpho8fkf5x8nf"]
 
 [ext_resource type="Script" path="res://game/rooms/5_kitchen/room_5_kitchen.gd" id="1_iboeo"]
 [ext_resource type="PackedScene" uid="uid://diteg1diarch7" path="res://game/rooms/5_kitchen/props/background/prop_background.tscn" id="2_egjs4"]
 [ext_resource type="Texture2D" uid="uid://cgvuv8dpwmhwy" path="res://game/rooms/5_kitchen/props/background/pxArtHouse3BG.png" id="3_lqa6t"]
+[ext_resource type="PackedScene" uid="uid://dcvcswkxgu3gi" path="res://game/rooms/5_kitchen/props/table/prop_table.tscn" id="4_dfxcg"]
+[ext_resource type="Texture2D" uid="uid://dkveen2s6von0" path="res://game/rooms/5_kitchen/props/table/pxArtTable.png" id="5_ayl7h"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="6_6ypjl"]
+[ext_resource type="PackedScene" uid="uid://dhuhxyav8aa8g" path="res://game/rooms/5_kitchen/props/stove/prop_stove.tscn" id="6_47uc1"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="7_43lom"]
+[ext_resource type="Texture2D" uid="uid://wn5e7c1hcnrx" path="res://game/rooms/5_kitchen/props/stove/pxArtH5OvenSS.png" id="7_nybg2"]
+[ext_resource type="PackedScene" uid="uid://dh00b542ogklu" path="res://game/rooms/5_kitchen/props/pan/prop_pan.tscn" id="8_5jpsf"]
+[ext_resource type="PackedScene" uid="uid://bujqdcsaq43k7" path="res://game/rooms/5_kitchen/hotspots/stove/hotspot_stove.tscn" id="8_qo7gv"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="8_ujikp"]
+[ext_resource type="Texture2D" uid="uid://51ipn40no3n2" path="res://game/rooms/5_kitchen/props/pan/pxArtPan.png" id="9_0r3ue"]
+[ext_resource type="PackedScene" uid="uid://bhuaf3dc4xai3" path="res://game/rooms/5_kitchen/props/pan_2/prop_pan_2.tscn" id="10_3bfp6"]
+[ext_resource type="Texture2D" uid="uid://d1cwb174uvy1y" path="res://game/rooms/5_kitchen/props/pan_2/pxArtPan.png" id="11_g8a0r"]
+[ext_resource type="PackedScene" uid="uid://nihl1usu05v8" path="res://game/rooms/5_kitchen/hotspots/pan/hotspot_pan.tscn" id="11_ma1b1"]
+[ext_resource type="PackedScene" uid="uid://6w3qrnjo5lpk" path="res://game/rooms/5_kitchen/markers/pan_position/marker_pan_position.tscn" id="12_06ers"]
+[ext_resource type="PackedScene" uid="uid://bd23noeq45ow7" path="res://game/rooms/5_kitchen/props/rotten_meat/prop_rotten_meat.tscn" id="12_pf5s0"]
+[ext_resource type="Texture2D" uid="uid://7tq3wajwlvu6" path="res://game/rooms/5_kitchen/props/rotten_meat/pxArtRottingMeat.png" id="13_vkr3k"]
+[ext_resource type="PackedScene" uid="uid://ci21cxpqqjrbs" path="res://game/rooms/5_kitchen/props/broth_bowl/prop_broth_bowl.tscn" id="14_363ba"]
+[ext_resource type="Texture2D" uid="uid://dbgexm5q272n7" path="res://game/rooms/5_kitchen/props/broth_bowl/pxArtMeatStew.png" id="15_a78a5"]
+[ext_resource type="PackedScene" uid="uid://dey6txfsnnyjr" path="res://game/rooms/5_kitchen/props/overlay/prop_overlay.tscn" id="16_02gqv"]
+[ext_resource type="Texture2D" uid="uid://orp8p2j4tgj4" path="res://game/rooms/5_kitchen/props/overlay/house5Overlay.png" id="17_88gk7"]
 
 [node name="Room5Kitchen" type="Node2D"]
 script = ExtResource("1_iboeo")
@@ -20,10 +40,110 @@ position = Vector2(960, 540)
 texture = ExtResource("3_lqa6t")
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
+[node name="Table" parent="Props" instance=ExtResource("4_dfxcg")]
+position = Vector2(1258, 780)
+scale = Vector2(1, 0.7)
+texture = ExtResource("5_ayl7h")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Stove" parent="Props" instance=ExtResource("6_47uc1")]
+position = Vector2(669, 635)
+texture = ExtResource("7_nybg2")
+frames = 2
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Pan" parent="Props" instance=ExtResource("8_5jpsf")]
+position = Vector2(1380, 611)
+scale = Vector2(0.6, 0.6)
+input_pickable = true
+texture = ExtResource("9_0r3ue")
+link_to_item = "Pan"
+clickable = true
+interaction_polygon = PackedVector2Array(-278.333, -68.3333, -273.333, -45, -173.333, -26.6667, -70, 1.66669, -10, 61.6667, 176.667, 69.9999, 218.333, 53.3333, 248.333, 3.33331, 285, -13.3333, 276.667, -21.6667, 118.333, -25, -41.6667, -20, -63.3335, -20, -171.667, -63.3333, -228.333, -68.3333)
+
+[node name="Pan2" parent="Props" instance=ExtResource("10_3bfp6")]
+visible = false
+top_level = true
+position = Vector2(721, 445)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_g8a0r")
+link_to_item = "Pan"
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="RottenMeat" parent="Props" instance=ExtResource("12_pf5s0")]
+position = Vector2(1100, 613)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("13_vkr3k")
+link_to_item = "RottenMeat"
+interaction_polygon = PackedVector2Array(-282.5, 52.5, -257.5, -35, -200, -65, -147.5, -67.5, -137.5, -107.5, -80, -107.5, -47.5, -110, -12.5, -145, 92.5, -122.5, 155, -75, 157.5, -32.5, 180, -10, 205, 0, 250, 2.5, 270, 10, 285, 37.5, 290, 87.5, 240, 102.5, 185, 97.5, 135, 115, 87.5, 115, 30, 130, -55, 140, -130, 117.5, -162.5, 122.5, -242.5, 120, -285, 70)
+
+[node name="BrothBowl" parent="Props" instance=ExtResource("14_363ba")]
+visible = false
+position = Vector2(1256, 619)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("15_a78a5")
+link_to_item = "BrothBowl"
+interaction_polygon = PackedVector2Array(-146.667, 73.3333, -213.333, 20, -236.667, -43.3333, -203.333, -86.6666, -40, -120, 156.667, -103.333, 250, -80, 246.667, 3.33325, 166.667, 80, 103.333, 113.333, 23.3335, 133.333, -63.3335, 130)
+
+[node name="Overlay" parent="Props" instance=ExtResource("16_02gqv")]
+top_level = true
+position = Vector2(960, 540)
+texture = ExtResource("17_88gk7")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
 [node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Stove" parent="Hotspots" node_paths=PackedStringArray("stove_prop") instance=ExtResource("8_qo7gv")]
+position = Vector2(960, 540)
+stove_prop = NodePath("../../Props/Stove")
+interaction_polygon = PackedVector2Array(-476, 380, -476, 6, -102, 6, -101, 378, -144, 375, -200, 322, -365, 320, -438, 383)
+
+[node name="Pan" parent="Hotspots" node_paths=PackedStringArray("stove", "rotten_meat", "broth_bowl_prop", "Pan1", "Pan2") instance=ExtResource("11_ma1b1")]
+position = Vector2(960, 540)
+stove = NodePath("../Stove")
+rotten_meat = NodePath("../../Props/RottenMeat")
+broth_bowl_prop = NodePath("../../Props/BrothBowl")
+Pan1 = NodePath("../../Props/Pan")
+Pan2 = NodePath("../../Props/Pan2")
+description = "Set"
+interaction_polygon = PackedVector2Array(-297, -144, -273, -59, -100, -57, -83, -140)
 
 [node name="Regions" type="Node2D" parent="."]
 
 [node name="Markers" type="Node2D" parent="."]
 
+[node name="PanPosition" parent="Markers" instance=ExtResource("12_06ers")]
+position = Vector2(703, 473)
+
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("6_6ypjl")
+texture_hover = ExtResource("7_43lom")
+flip_h = true
+script = ExtResource("8_ujikp")
+room_name = "5Sewing"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("6_6ypjl")
+texture_hover = ExtResource("7_43lom")
+script = ExtResource("8_ujikp")
+room_name = "5Bedroom"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

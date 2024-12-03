@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c3lamhj7jw760"]
+
+[ext_resource type="Script" path="res://game/inventory_items/fresh_meat/inventory_item_fresh_meat_state.gd" id="1_e08af"]
+
+[resource]
+resource_name = "FreshMeat"
+script = ExtResource("1_e08af")
+script_name = "FreshMeat"
+scene = "res://game/inventory_items/fresh_meat/inventory_item_fresh_meat.tscn"

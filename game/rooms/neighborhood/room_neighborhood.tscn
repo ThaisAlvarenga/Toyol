@@ -4,13 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://yepcqtxawpvd" path="res://game/rooms/neighborhood/props/background/prop_background.tscn" id="2_0wy8i"]
 [ext_resource type="Texture2D" uid="uid://cwa61aoipfboa" path="res://game/rooms/neighborhood/props/background/neightborhoodBackground.png" id="3_xvtiq"]
 [ext_resource type="PackedScene" uid="uid://bb1fm4kv7w077" path="res://game/rooms/neighborhood/props/billboard/prop_billboard.tscn" id="4_crte1"]
-[ext_resource type="Texture2D" uid="uid://ch1qqp2s784ah" path="res://MDM/Savannah/Neighborhood Art/pxArtNeighborhoodForeground.png" id="4_ugvgq"]
 [ext_resource type="Texture2D" uid="uid://bml2yfcfyjisq" path="res://game/rooms/neighborhood/props/billboard/pxArtBountyBoardPosters.png" id="5_k0mqh"]
 [ext_resource type="PackedScene" uid="uid://djprfexv8fjng" path="res://game/rooms/neighborhood/props/missing_poster/prop_missing_poster.tscn" id="6_qmlo1"]
 [ext_resource type="Texture2D" uid="uid://4usyaul05yl4" path="res://game/rooms/neighborhood/props/missing_poster/poster.png" id="7_oi8re"]
 [ext_resource type="PackedScene" uid="uid://by4hq53vmfyr4" path="res://game/rooms/neighborhood/hotspots/door_1_house/hotspot_door_1_house.tscn" id="8_kkcje"]
 [ext_resource type="PackedScene" uid="uid://be2udlncu88ca" path="res://game/rooms/neighborhood/hotspots/door_3_house/hotspot_door_3_house.tscn" id="9_2wyl2"]
 [ext_resource type="PackedScene" uid="uid://bd1xueq25pwfd" path="res://game/rooms/neighborhood/hotspots/door_5_house/hotspot_door_5_house.tscn" id="10_12ggd"]
+[ext_resource type="PackedScene" uid="uid://cq0s4tg5lf278" path="res://game/characters/toyol/character_toyol.tscn" id="12_8vor8"]
 
 [node name="RoomNeighborhood" type="Node2D"]
 script = ExtResource("1_x5y1a")
@@ -26,6 +26,7 @@ popochiu_placeholder = null
 [node name="Background" parent="Props" instance=ExtResource("2_0wy8i")]
 position = Vector2(928, 540)
 texture = ExtResource("3_xvtiq")
+baseline = -573
 interaction_polygon = PackedVector2Array(-531, -132, -530, -37, -530, 30, -515, 114, -515, 214, -520, 271, -514, 307, -417, 279, -356, 281, -280, 283, -208, 269, -223, 16, -221, -31, -213, -119, -201, -176, -233, -190, -254, -175, -301, -180, -399, -170, -459, -149, -489, -131, -506, -144)
 
 [node name="Billboard" parent="Props" node_paths=PackedStringArray("missingPoster") instance=ExtResource("4_crte1")]
@@ -66,12 +67,5 @@ interaction_polygon = PackedVector2Array(2085, 440, 2082, 137, 2361, 138, 2367, 
 
 [node name="Characters" type="Node2D" parent="."]
 
-[node name="MyParallax" type="Node2D" parent="."]
-
-[node name="Parallax2D" type="Parallax2D" parent="MyParallax"]
-scroll_scale = Vector2(0.6, 0.6)
-repeat_size = Vector2(3840, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="MyParallax/Parallax2D"]
-texture = ExtResource("4_ugvgq")
-offset = Vector2(0, 540)
+[node name="CharacterToyol *" parent="Characters" instance=ExtResource("12_8vor8")]
+position = Vector2(960, 854)

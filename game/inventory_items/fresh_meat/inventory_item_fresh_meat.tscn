@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpq8hvces1sq6"]
+
+[ext_resource type="Texture2D" uid="uid://c517flobyfs5m" path="res://game/inventory_items/fresh_meat/pxArtCleanMeat.png" id="1_cuj4c"]
+[ext_resource type="Script" path="res://game/inventory_items/fresh_meat/inventory_item_fresh_meat.gd" id="1_pkqxl"]
+
+[node name="ItemFreshMeat" type="TextureRect"]
+texture_filter = 1
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_cuj4c")
+stretch_mode = 5
+script = ExtResource("1_pkqxl")
+script_name = "FreshMeat"
+description = "Fresh Meat"

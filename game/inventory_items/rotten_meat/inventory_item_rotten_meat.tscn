@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://btmxqhqaf6hqx"]
+
+[ext_resource type="Script" path="res://game/inventory_items/rotten_meat/inventory_item_rotten_meat.gd" id="1_u470b"]
+[ext_resource type="Texture2D" uid="uid://bm5wx7c2evs2v" path="res://game/inventory_items/rotten_meat/pxArtRottingMeat.png" id="1_ubs7w"]
+
+[node name="ItemRottenMeat" type="TextureRect"]
+texture_filter = 1
+scale = Vector2(0.3, 0.3)
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_ubs7w")
+stretch_mode = 5
+script = ExtResource("1_u470b")
+script_name = "RottenMeat"
+description = "Rotten Meat"

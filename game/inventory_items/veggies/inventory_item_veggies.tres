@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ceqexirobca55"]
+
+[ext_resource type="Script" path="res://game/inventory_items/veggies/inventory_item_veggies_state.gd" id="1_2kkx4"]
+
+[resource]
+resource_name = "Veggies"
+script = ExtResource("1_2kkx4")
+script_name = "Veggies"
+scene = "res://game/inventory_items/veggies/inventory_item_veggies.tscn"

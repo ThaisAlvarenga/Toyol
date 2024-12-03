@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd23noeq45ow7"]
+
+[ext_resource type="Script" path="res://game/rooms/5_kitchen/props/rotten_meat/prop_rotten_meat.gd" id="1_mps18"]
+
+[node name="RottenMeat" type="Area2D"]
+script = ExtResource("1_mps18")
+script_name = "RottenMeat"
+description = "Rotten Meat"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

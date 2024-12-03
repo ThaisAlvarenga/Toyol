@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ebde7hvhpciq"]
+
+[ext_resource type="Script" path="res://game/inventory_items/rotten_meat/inventory_item_rotten_meat_state.gd" id="1_xogj8"]
+
+[resource]
+resource_name = "RottenMeat"
+script = ExtResource("1_xogj8")
+script_name = "RottenMeat"
+scene = "res://game/inventory_items/rotten_meat/inventory_item_rotten_meat.tscn"

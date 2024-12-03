@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://hbmniytx342e"]
+[gd_scene load_steps=3 format=3 uid="uid://cq0s4tg5lf278"]
 
-[ext_resource type="Script" path="res://game/characters/player/character_player.gd" id="1_2mby3"]
-[ext_resource type="Texture2D" uid="uid://m0v3adslonks" path="res://game/characters/player/pxArtChildSS.png" id="2_sqadu"]
+[ext_resource type="Script" path="res://game/characters/toyol/character_toyol.gd" id="1_lilnm"]
+[ext_resource type="Texture2D" uid="uid://d0cdoriec6y0e" path="res://game/characters/toyol/pxArtChildRight.png" id="2_n5ymc"]
 
-[node name="CharacterPlayer" type="Area2D"]
-script = ExtResource("1_2mby3")
+[node name="CharacterToyol" type="Area2D"]
+input_pickable = false
+script = ExtResource("1_lilnm")
+flips_when = 2
 popochiu_placeholder = null
-script_name = "Player"
-description = "Player"
+script_name = "Toyol"
+description = "Toyol"
+clickable = false
 cursor = 8
 interaction_polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
@@ -22,6 +25,5 @@ polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(12, -276)
-texture = ExtResource("2_sqadu")
-hframes = 4
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_n5ymc")

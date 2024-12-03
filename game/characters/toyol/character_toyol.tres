@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://n1ja1hmtqla2"]
+
+[ext_resource type="Script" path="res://game/characters/toyol/character_toyol_state.gd" id="1_1e5dw"]
+
+[resource]
+resource_name = "Toyol"
+script = ExtResource("1_1e5dw")
+script_name = "Toyol"
+scene = "res://game/characters/toyol/character_toyol.tscn"

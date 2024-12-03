@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh2arpiic682j"]
+[gd_scene load_steps=20 format=3 uid="uid://dh2arpiic682j"]
 
 [ext_resource type="Script" path="res://game/rooms/1_kitchen/room_1_kitchen.gd" id="1_xocjx"]
 [ext_resource type="PackedScene" uid="uid://mnmrenht202x" path="res://game/rooms/1_kitchen/props/background/prop_background.tscn" id="2_0shwv"]
 [ext_resource type="Texture2D" uid="uid://6yh467cyxus3" path="res://game/rooms/1_kitchen/props/background/pxArtHouse3BG.png" id="3_u1n6o"]
+[ext_resource type="PackedScene" uid="uid://chg7v3h278vxx" path="res://game/rooms/1_kitchen/props/table/prop_table.tscn" id="4_78gmd"]
+[ext_resource type="Texture2D" uid="uid://duvq4k2x24oc1" path="res://game/rooms/1_kitchen/props/table/pxArtTable.png" id="5_dtcuk"]
+[ext_resource type="PackedScene" uid="uid://ypkuwfjf7rcx" path="res://game/rooms/1_kitchen/props/stove/prop_stove.tscn" id="6_e1nw7"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="6_rine8"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="7_o45es"]
+[ext_resource type="Texture2D" uid="uid://botkxom2fk2hq" path="res://game/rooms/1_kitchen/props/stove/pxArtOvenSS.png" id="7_vn146"]
+[ext_resource type="PackedScene" uid="uid://dwhgxsh1e3vnd" path="res://game/rooms/1_kitchen/props/veggies/prop_veggies.tscn" id="8_cldy8"]
+[ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="8_yu48m"]
+[ext_resource type="Texture2D" uid="uid://cjgfnotdry2e6" path="res://game/rooms/1_kitchen/props/veggies/pxArtVegetables.png" id="9_jmkar"]
+[ext_resource type="PackedScene" uid="uid://q5yk0h70yddg" path="res://game/rooms/1_kitchen/props/clean_meat/prop_clean_meat.tscn" id="10_vqni0"]
+[ext_resource type="Texture2D" uid="uid://b1trhaq70vh21" path="res://game/rooms/1_kitchen/props/clean_meat/pxArtCleanMeat.png" id="11_sqka5"]
+[ext_resource type="PackedScene" uid="uid://bh823fnhgifqc" path="res://game/rooms/1_kitchen/props/healthy_bowl/prop_healthy_bowl.tscn" id="12_w2oj8"]
+[ext_resource type="Texture2D" uid="uid://c5e2s2r3a6dl6" path="res://game/rooms/1_kitchen/props/healthy_bowl/pxArtH1Bowl.png" id="13_swggj"]
+[ext_resource type="PackedScene" uid="uid://dpatwyetytcr4" path="res://game/rooms/1_kitchen/props/overlay/prop_overlay.tscn" id="14_qgw1s"]
+[ext_resource type="PackedScene" uid="uid://c01n0rbhflk5k" path="res://game/rooms/1_kitchen/hotspots/stove/hotspot_stove.tscn" id="14_yvm7w"]
+[ext_resource type="Texture2D" uid="uid://dold2g6ey4ex3" path="res://game/rooms/1_kitchen/props/overlay/house1Overlay.png" id="15_toua4"]
 
 [node name="Room1Kitchen" type="Node2D"]
 script = ExtResource("1_xocjx")
@@ -20,10 +36,87 @@ position = Vector2(960, 540)
 texture = ExtResource("3_u1n6o")
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
+[node name="Table" parent="Props" instance=ExtResource("4_78gmd")]
+position = Vector2(566, 767)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_dtcuk")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Stove" parent="Props" instance=ExtResource("6_e1nw7")]
+position = Vector2(1213, 773)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_vn146")
+frames = 3
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Veggies" parent="Props" instance=ExtResource("8_cldy8")]
+position = Vector2(420, 617)
+rotation = -1.58825
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_jmkar")
+link_to_item = "Veggies"
+interaction_polygon = PackedVector2Array(-98.0994, -109.729, -41.0608, -168.742, 58.9241, -166.997, 69.3164, -74.8016, 111.774, 13.9528, 106.588, 81.8727, 100.285, 213.783, 35.2476, 272.657, -28.5337, 259.542, -31.2065, 183.483, -91.1277, 178.437, -89.6616, 94.4496, -117.099, 61.9657, -107.844, -9.88367, -99.0767, -53.7373, -102.308, -97.8004)
+
+[node name="CleanMeat" parent="Props" instance=ExtResource("10_vqni0")]
+position = Vector2(549, 619)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("11_sqka5")
+link_to_item = "FreshMeat"
+description = "Fresh Meat"
+interaction_polygon = PackedVector2Array(-216, 20, -216, -96, 232, -88, 252, -4, 252, 24, 312, 32, 340, 40, 336, 92, 244, 160, -292, 88, -296, 36, -248, 24)
+
+[node name="HealthyBowl" parent="Props" instance=ExtResource("12_w2oj8")]
+position = Vector2(682, 611)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_swggj")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Overlay" parent="Props" instance=ExtResource("14_qgw1s")]
+top_level = true
+position = Vector2(960, 540)
+texture = ExtResource("15_toua4")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
 [node name="Hotspots" type="Node2D" parent="."]
+
+[node name="Stove" parent="Hotspots" node_paths=PackedStringArray("stove_prop") instance=ExtResource("14_yvm7w")]
+position = Vector2(960, 540)
+stove_prop = NodePath("../../Props/Stove")
+interaction_polygon = PackedVector2Array(266, 214, 254, 414, 602, 411, 605, 217)
 
 [node name="Regions" type="Node2D" parent="."]
 
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Characters" type="Node2D" parent="."]
+
+[node name="RightBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1770.0
+offset_top = 460.0
+offset_right = 1916.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("6_rine8")
+texture_hover = ExtResource("7_o45es")
+flip_h = true
+script = ExtResource("8_yu48m")
+room_name = "1Sewing"
+
+[node name="LeftBtn" type="TextureButton" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 460.0
+offset_right = 146.0
+offset_bottom = 620.0
+grow_vertical = 2
+texture_normal = ExtResource("6_rine8")
+texture_hover = ExtResource("7_o45es")
+script = ExtResource("8_yu48m")
+room_name = "1Bedroom"
+
+[connection signal="pressed" from="RightBtn" to="RightBtn" method="_on_pressed"]
+[connection signal="pressed" from="LeftBtn" to="LeftBtn" method="_on_pressed"]

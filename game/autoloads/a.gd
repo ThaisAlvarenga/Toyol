@@ -31,4 +31,5 @@ var sfx_portrait: AudioCueSound = load("res://game/rooms/3_altar/props/portrait/
 var sfx_burning: AudioCueSound = load("res://game/rooms/3_kitchen/hotspots/stove/sfx_burning.tres")
 var sfx_dooropen: AudioCueSound = load("res://game/rooms/3_altar/sfx_doorOpen.tres")
 var sfx_enterhouse: AudioCueSound = load("res://game/rooms/neighborhood/sfx_enterhouse.tres")
+var sfx_gasstovestart: AudioCueSound = load("res://game/rooms/5_kitchen/hotspots/stove/sfx_gasStoveStart.tres")
 # ---- cues
