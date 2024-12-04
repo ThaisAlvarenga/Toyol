@@ -25,5 +25,35 @@ War is cruel, and survival becomes the sole priority. Violence, betrayal, cannib
 War is complex, and so are the people caught in it."
 
 # 11/03/2024
+All the conflicts were finally resolved, and I’ve taken on responsibility for the narrative and interaction design aspects of the game. For this week’s meeting, I had all the character settings and the background story completed, as outlined in the [Story Bible](../Bible.pdf).
+
+The game draws inspiration from Chinese history and centers on the complex relationship between a woman and a ghost (you, the player). The woman raised and fed you, but she was also the one who killed you and turned you into a ghost. Meanwhile, your biological father, when you were a human baby, was a general of the invaders who murdered the woman’s entire family, including her child. This setup creates the key tension in the game’s narrative: layers of betrayal, revenge, and survival.
+
+For the puzzle design, my ideas were still somewhat vague, with only rough, unintelligible sketches in my notebook. However, a few core concepts are already clear:
+
+The game will feature five houses, each representing a specific point on the timeline. These houses share similar structures but differ in appearance both inside and outside.
+Players will spend most of their time inside the houses but will have opportunities to explore the neighborhood, gather clues, and unlock new houses with keys they find.
+Each house will include five key scenes:
+Kitchen
+Bedroom
+Small Room (Sewing Machine Room)
+Front Door
+Altar
+
+Players will need a visual or narrative representation to track their progress and a medium to observe changes over time—in this case, transitions between different houses, as each represents a different time period.
+
+Our current plan is to focus on creating three of the five houses and prioritize development on the third house.
+
+As for potential interactable items, here’s a preliminary list:
+
+Keys
+Nail
+Blood
+Meat
+Bowl
+Incense
+Matches
+Notes related to the Toyol ritual
+
 <img src="Images/sketch1.jpg">
 <img src="Images/sketch2.jpg">
