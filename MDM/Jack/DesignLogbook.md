@@ -64,7 +64,7 @@ These questions remain unresolved, and I’m still exploring the narrative possi
 
 # 11/22/2024
 
-I created a [checklist](../Jack/Arts_Checklist.pdf) of all the art assets for Savannah to work on — there’s a lot to tackle! I’ve also started searching for sound effects and background music for the game to bring the atmosphere to life.
+I created a [checklist](../Jack/Arts Checklist.pdf) of all the art assets for Savannah to work on — there’s a lot to tackle! I’ve also started searching for sound effects and background music for the game to bring the atmosphere to life.
 
 # 11/27/2024
 
