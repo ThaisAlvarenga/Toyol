@@ -1,13 +1,21 @@
 12/04/2024
 
-this is my final MDM/journal entry for this project. i will admit i didn't do the best job at documenting my process + journey. i sorta used the github push messages as random little blurbs of my very unorganized mind and work flow. it is very unprofessional, but very personal. i think i would have had a lot less fun with this project if i tried super hard to make the MDM journal entries as academic and organized as they should be for a portfolio piece. 
+this is my final MDM/journal entry for this project. i will admit i didn't do the best job at documenting my process + journey. i sorta used the github push messages as random little blurbs of my very unorganized mind and work flow. <br>
+it is very unprofessional, but very personal. i think i would have had a lot less fun with this project if i tried super hard to make the MDM journal entries as academic and organized as they should be for a portfolio piece. 
+<br>
+<br>
 
-regardless, i had fun and im proud of what i did the sheer amount of work i put into this project. i learned a shocking amount (which usually doesn't happen when i take on the artist role (i know how to draw, for the most part)). i not only got a good few portfolio pieces out of the project (toyol concept art, the game as a whole, and the experience with github, godot, and art asset creation for video games), but i got nice memories, memes, and work flow that allows me to crank out 120+ art assets in a small time frame ;-D
-
+regardless, i had fun and im proud of what i did the sheer amount of work i put into this project. i learned a shocking amount (which usually doesn't happen when i take on the artist role (i know how to draw, for the most part)). <br>
+i not only got a good few portfolio pieces out of the project (toyol concept art, the game as a whole, and the experience with github, godot, and art asset creation for video games),
+<br> but i got nice memories, memes, and work flow that allows me to crank out 120+ art assets in a small time frame ;-D
+<br>
+<br>
 it's kinda crazy that this class allowed me to do silly stuff like stream a portion of my work process on twitch for a portion of the MDM/dissemination plan. i also got to ramble about zombies, 10/10 
-
-i learned what sprite sheets are and how to do them the quick way (sprite sheet converter . com (tm)) or the correct way (two transparent imgs on one file but the img themselves and the borders are equidistant apart). i learned how to "sketch" in blender with various sculpting brushes and tools (mirror/symmetry tool my beloved). i also learned that chaos is bound to happen and learning to roll with the punches is the quickest and easiest way to get through conflict and hiccups in the journey. i didn't overwork myself (too much) by setting boundaries where needed, taking ample rest days when possible (keeping saturdays clear w/ no work), and finding a way to do my work as quickly and efficiently as possible while still being happy with the end result.
-
+<br>
+i learned what sprite sheets are and how to do them the quick way (sprite sheet converter . com (tm)) or the correct way (two transparent imgs on one file but the img themselves and the borders are equidistant apart). <br>
+i learned how to "sketch" in blender with various sculpting brushes and tools (mirror/symmetry tool my beloved). i also learned that chaos is bound to happen and learning to roll with the punches is the quickest and easiest way to get through conflict and hiccups in the journey. <br>
+i didn't overwork myself (too much) by setting boundaries where needed, taking ample rest days when possible (keeping saturdays clear w/ no work), and finding a way to do my work as quickly and efficiently as possible while still being happy with the end result.<br>
+<br>
 i am excited to get this all together and replace my freshman video game project with this one on my resume/portfolio :)
-
+<br>
  - savannah mosley / zhertva (she/her)
