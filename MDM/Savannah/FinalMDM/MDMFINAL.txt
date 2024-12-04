@@ -19,4 +19,41 @@ i am excited to get this all together and replace my freshman video game project
 the chaos that is my mdm throughout the semester + with each art asset upload can be found here:
 https://github.com/ThaisAlvarenga/Toyol/commits?author=Zhertvah
 
+a few of my favorites are:
+
+"a gamer's rite of passage is spamming the fuck out of any open/close toggle
+the colors are very different but if you squint and don't look at it, it's fine"
+
+- https://github.com/ThaisAlvarenga/Toyol/commit/69aedd43f9d2b66d8b07b88352758081c53c54d0
+
+"I realized I'm not about to draw/animate a walk cycle so my offering is this bum ass kid looking 4 different faces.  i kind of have grown attached to this character. in my head she is an absolute nuisance that would put gum in my hair. her name is Mimi (mee-mee) 
+
+https://www.youtube.com/watch?v=m6gb4U_Gsvg&ab_channel=TamaDragonFyre
+^ this is mimi
+
+ft. monster form of bum ass kid"
+
+- https://github.com/ThaisAlvarenga/Toyol/commit/cdf72d180adb6327defe928369760ea1105525d9
+
+"my hand hurts
+I have created short cuts for my short cuts. There are *so* many instances that I had to just kind of ignore due to the lack of time to polish. (ie, see sweatercloset. I wish I had time to draw out threads, alas...) 
+The colors are also *all* over the place. I lost my groove a bit and fucked up the filter I was slapping over all of my 3d renders and can't get it to look the exact same. If I had time, or was being paid, I'd go back and adjust the raw files so everything is the same color before turning it into pixel art. 
+i am trying my very best to finish all of the assets required of house 3. the other houses will magically furnish themselves, I just know it. the cut scenes? backgrounds? pah, not to worry. those will also magically appear-- with enough caffeine and metal covers of disney villain songs, just about anything can magically appear.
+i also am making Thais's life extremely difficult with these scuffed asset formats so I will need to fix this for her later"
+
+- https://github.com/ThaisAlvarenga/Toyol/commit/ea14bb213879823c809b38131099465a52522ff7
+
+here are my fav meme-y photos from this project:
+
+https://github.com/ThaisAlvarenga/Toyol/blob/main/MDM/Savannah/FinalMDM/funnyprocesspic.png (goofy progress pic bc i was too lazy to draw an arm)
+https://github.com/ThaisAlvarenga/Toyol/blob/main/MDM/Savannah/FinalMDM/funnygif.gif (i thought the toyol was the funniest thing ever and found 'convert img to gif' thing and went wild)
+https://github.com/ThaisAlvarenga/Toyol/blob/main/MDM/Savannah/FinalMDM/MDM3.png (this baby doll thing haunts me)
+
+and some portfoli-y pieces:
+https://github.com/ThaisAlvarenga/Toyol/blob/main/MDM/Savannah/FinalMDM/MDM2.png (concept art)
+https://github.com/ThaisAlvarenga/Toyol/blob/main/MDM/Savannah/FinalMDM/pxArtFamilyPortrait.png (portrait of the family)
+https://github.com/ThaisAlvarenga/Toyol/blob/main/MDM/Savannah/FinalMDM/logo.png (logo for our game studio)
+
+that's all. my hand hurts and imma take a nap
+
  - savannah mosley / zhertva (she/her)
