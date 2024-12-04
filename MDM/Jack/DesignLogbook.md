@@ -34,11 +34,8 @@ For the puzzle design, my ideas were still somewhat vague, with only rough, unin
 The game will feature five houses, each representing a specific point on the timeline. These houses share similar structures but differ in appearance both inside and outside.
 Players will spend most of their time inside the houses but will have opportunities to explore the neighborhood, gather clues, and unlock new houses with keys they find.
 Each house will include five key scenes:
-Kitchen
-Bedroom
-Small Room (Sewing Machine Room)
-Front Door
-Altar
+
+Kitchen, Bedroom, Small Room (Sewing Machine Room), Front Door, Altar
 
 Players will need a visual or narrative representation to track their progress and a medium to observe changes over time—in this case, transitions between different houses, as each represents a different time period.
 
@@ -46,14 +43,7 @@ Our current plan is to focus on creating three of the five houses and prioritize
 
 As for potential interactable items, here’s a preliminary list:
 
-Keys
-Nail
-Blood
-Meat
-Bowl
-Incense
-Matches
-Notes related to the Toyol ritual
+Keys, Nail, Blood, Meat, Bowl, Incense, Matches, Notes related to the Toyol ritual
 
 <img src="Images/sketch1.jpg">
 <img src="Images/sketch2.jpg">
