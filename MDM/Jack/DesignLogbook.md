@@ -50,7 +50,7 @@ Keys, Nail, Blood, Meat, Bowl, Incense, Matches, Notes related to the Toyol ritu
 
 # 11/14/2024
 
-I’ve completed almost all the puzzle designs for the game, as outlined in the second part of the [Story Bible](../Toyol_Bible.pdf). The pellet drum will serve as a subtle representation of time within the game, while a sweater—which the player will be tasked with knitting in each house—will act as a more explicit marker of time. Additionally, a wardrobe will function as the medium for time travel. Essentially, if the player finds an item in House 1 and places it in the wardrobe, the item will appear in House 2.
+I’ve completed almost all the puzzle designs for the game, as outlined in the second part of the [Story Bible](../Jack/Toyol_Bible.pdf). The pellet drum will serve as a subtle representation of time within the game, while a sweater—which the player will be tasked with knitting in each house—will act as a more explicit marker of time. Additionally, a wardrobe will function as the medium for time travel. Essentially, if the player finds an item in House 1 and places it in the wardrobe, the item will appear in House 2.
 
 However, there’s one thing I’ve been grappling with: the significance of the number five. We currently have five scenes in each house, but the number doesn’t hold any specific meaning. Would four scenes make more sense, since a house is more like a cube with four horizontal faces? This is something I’m still debating.
 
@@ -61,3 +61,7 @@ If the player chooses to kill the woman, what would the consequences be?
 If the player chooses to forgive the woman, would the woman forgive the player in return? What if she doesn’t? What if the woman transfers her hatred of the invaders to the player instead?
 
 These questions remain unresolved, and I’m still exploring the narrative possibilities they could open up.
+
+# 11/22/2024
+
+I created a [checklist](../Jack/Arts_Checklist.pdf) of all the art assets for Savannah to work on — there’s a lot to tackle! I’ve also started searching for sound effects and background music for the game to bring the atmosphere to life.
