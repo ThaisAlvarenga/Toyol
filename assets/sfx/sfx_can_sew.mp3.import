@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d1eh0ohg0iu1m"
-path="res://.godot/imported/sfx_can_sew.mp3-456928e821a4fd5e32cbbd5cf8daa336.mp3str"
+path="res://.godot/imported/sfx_can_sew.mp3-dfa8188a499117f989063b76a2a7b7dc.mp3str"
 
 [deps]
 
-source_file="res://assets/sfx/sfx_can_sew.mp3"
-dest_files=["res://.godot/imported/sfx_can_sew.mp3-456928e821a4fd5e32cbbd5cf8daa336.mp3str"]
+source_file="res://Assets/sfx/sfx_can_sew.mp3"
+dest_files=["res://.godot/imported/sfx_can_sew.mp3-dfa8188a499117f989063b76a2a7b7dc.mp3str"]
 
 [params]
 

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://dbrwukpv5d5yr"]
 
-[ext_resource type="AudioStream" uid="uid://cosxfhxd2ygct" path="res://game/rooms/3_entrance/props/wood/sfx_wood_pickUp.wav" id="1_wfxuy"]
+[ext_resource type="AudioStream" uid="uid://cosxfhxd2ygct" path="res://game/rooms/3_entrance/props/wood/sfx_wood_pickUp.wav" id="1_cwj1r"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_dq2y4"]
 
 [resource]
 resource_name = "sfx_wood_pickup"
 script = ExtResource("2_dq2y4")
-audio = ExtResource("1_wfxuy")
+audio = ExtResource("1_cwj1r")
 loop = false
 is_2d = false
 can_play_simultaneous = true

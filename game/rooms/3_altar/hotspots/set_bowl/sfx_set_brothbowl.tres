@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://bdaiw4i72bwt5"]
 
-[ext_resource type="AudioStream" uid="uid://baweuuxn64o7e" path="res://game/rooms/3_altar/hotspots/set_bowl/sfx_set_brothbowl.wav" id="1_0vng3"]
+[ext_resource type="AudioStream" uid="uid://baweuuxn64o7e" path="res://game/rooms/3_altar/hotspots/set_bowl/sfx_set_brothbowl.wav" id="1_n3qr6"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_aotdh"]
 
 [resource]
 resource_name = "sfx_set_brothbowl"
 script = ExtResource("2_aotdh")
-audio = ExtResource("1_0vng3")
+audio = ExtResource("1_n3qr6")
 loop = false
 is_2d = false
 can_play_simultaneous = true

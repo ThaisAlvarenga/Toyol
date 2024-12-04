@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://bcwqekgihsn1a"]
 
-[ext_resource type="AudioStream" uid="uid://bks3xfb05a1qw" path="res://game/rooms/3_kitchen/props/meat/sfx_meat_pickUp.wav" id="1_mpmw4"]
+[ext_resource type="AudioStream" uid="uid://bks3xfb05a1qw" path="res://game/rooms/3_kitchen/props/meat/sfx_meat_pickUp.wav" id="1_jqcrp"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_mvggr"]
 
 [resource]
 resource_name = "sfx_meat_pickup"
 script = ExtResource("2_mvggr")
-audio = ExtResource("1_mpmw4")
+audio = ExtResource("1_jqcrp")
 loop = false
 is_2d = false
 can_play_simultaneous = true

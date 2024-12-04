@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://ckw8d3jl4w0ux"]
 
-[ext_resource type="AudioStream" uid="uid://cbdmnv4nkolpq" path="res://game/rooms/3_kitchen/props/key_house_5/sfx_key_pickUp.wav" id="1_lo7r6"]
+[ext_resource type="AudioStream" uid="uid://cbdmnv4nkolpq" path="res://game/rooms/3_kitchen/props/key_house_5/sfx_key_pickUp.wav" id="1_j3t7y"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_v2m77"]
 
 [resource]
 resource_name = "sfx_key_pickup"
 script = ExtResource("2_v2m77")
-audio = ExtResource("1_lo7r6")
+audio = ExtResource("1_j3t7y")
 loop = false
 is_2d = false
 can_play_simultaneous = true

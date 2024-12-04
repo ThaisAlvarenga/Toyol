@@ -13,7 +13,8 @@ config_version=5
 config/name="toyol"
 run/main_scene="res://game/rooms/main_menu/room_main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://HBLogo.png"
+config/icon="res://Logo.png"
+config/windows_native_icon="res://HBIcon.ico"
 
 [autoload]
 

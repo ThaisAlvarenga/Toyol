@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://btrac016t4x6d" path="res://game/rooms/5_altar/props/background/pxArtAltarBG.png" id="3_1wbrn"]
 [ext_resource type="PackedScene" uid="uid://d3tvn0k221ro4" path="res://game/rooms/5_altar/props/portrait/prop_portrait.tscn" id="4_0a1d2"]
 [ext_resource type="Texture2D" uid="uid://cp3mxpl6s117w" path="res://game/rooms/5_altar/props/portrait/pxArtModernArt.png" id="5_67rym"]
-[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="6_ks4yk"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://Assets/Scene_Assets/arrow_normal.PNG" id="6_ks4yk"]
 [ext_resource type="PackedScene" uid="uid://lyvlvq5xun37" path="res://game/rooms/5_altar/props/overlay/prop_overlay.tscn" id="6_thyki"]
 [ext_resource type="PackedScene" uid="uid://bjusxsoxih0wf" path="res://game/rooms/5_altar/props/filter/prop_filter.tscn" id="7_825tw"]
-[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="7_cuaf8"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://Assets/Scene_Assets/arrow_selected.PNG" id="7_cuaf8"]
 [ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="8_6o1p7"]
 [ext_resource type="PackedScene" uid="uid://wjwek5np8k24" path="res://game/rooms/5_altar/props/table/prop_table.tscn" id="8_j7wbk"]
 [ext_resource type="Texture2D" uid="uid://b0ckuuyqj5g5n" path="res://game/rooms/5_altar/props/table/pxArtAltar.png" id="9_km24i"]
@@ -74,8 +74,9 @@ interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]
 
-[node name="Incense" parent="Hotspots" instance=ExtResource("14_l4m0r")]
+[node name="Incense" parent="Hotspots" node_paths=PackedStringArray("incense_prop") instance=ExtResource("14_l4m0r")]
 position = Vector2(960, 540)
+incense_prop = NodePath("../../Props/Incense")
 interaction_polygon = PackedVector2Array(-81, 183, -91, 165, -101, 140, -101, 110, -99, 88, -68, 93, -55, 92, -51, 68, -51, 47, -47, 29, -19, 27, 11, 28, 9, 88, 9, 103, 26, 98, 46, 95, 69, 97, 68, 128, 62, 161, 51, 177, 33, 186)
 
 [node name="Regions" type="Node2D" parent="."]

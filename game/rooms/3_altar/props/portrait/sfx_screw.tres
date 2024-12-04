@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://b3l01wnx86wf2"]
 
-[ext_resource type="AudioStream" uid="uid://c6sb1vxec0j1b" path="res://game/rooms/3_altar/props/portrait/sfx_screw.mp3" id="1_et8wo"]
+[ext_resource type="AudioStream" uid="uid://c6sb1vxec0j1b" path="res://game/rooms/3_altar/props/portrait/sfx_screw.mp3" id="1_leyl5"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_qf3ly"]
 
 [resource]
 resource_name = "sfx_screw"
 script = ExtResource("2_qf3ly")
-audio = ExtResource("1_et8wo")
+audio = ExtResource("1_leyl5")
 loop = false
 is_2d = false
 can_play_simultaneous = true

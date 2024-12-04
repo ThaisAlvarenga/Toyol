@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://epiawmilp808"
-path="res://.godot/imported/sfx_drop_on_liquid.wav-ca34a4ca36a77665297d6e67e0359450.sample"
+path="res://.godot/imported/sfx_drop_on_liquid.wav-b4f9dc6da106734a425aa1204544cabb.sample"
 
 [deps]
 
-source_file="res://assets/sfx/sfx_drop_on_liquid.wav"
-dest_files=["res://.godot/imported/sfx_drop_on_liquid.wav-ca34a4ca36a77665297d6e67e0359450.sample"]
+source_file="res://Assets/sfx/sfx_drop_on_liquid.wav"
+dest_files=["res://.godot/imported/sfx_drop_on_liquid.wav-b4f9dc6da106734a425aa1204544cabb.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bqvtqpsw4pafl"
-path="res://.godot/imported/sfx_enterhouse.wav-586050eb02336705d76cc4dc64108dc1.sample"
+path="res://.godot/imported/sfx_enterhouse.wav-ea98a9c954fd9f31b00b83f884e601ad.sample"
 
 [deps]
 
-source_file="res://assets/sfx/sfx_enterhouse.wav"
-dest_files=["res://.godot/imported/sfx_enterhouse.wav-586050eb02336705d76cc4dc64108dc1.sample"]
+source_file="res://Assets/sfx/sfx_enterhouse.wav"
+dest_files=["res://.godot/imported/sfx_enterhouse.wav-ea98a9c954fd9f31b00b83f884e601ad.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bnnnstco08id3"
-path="res://.godot/imported/sfx_doorLocked.wav-259eec00182b5d6f5ee3a0df136a3df7.sample"
+path="res://.godot/imported/sfx_doorLocked.wav-d0ad56bb72d12387c531778f955a2b4b.sample"
 
 [deps]
 
-source_file="res://assets/sfx/sfx_doorLocked.wav"
-dest_files=["res://.godot/imported/sfx_doorLocked.wav-259eec00182b5d6f5ee3a0df136a3df7.sample"]
+source_file="res://Assets/sfx/sfx_doorLocked.wav"
+dest_files=["res://.godot/imported/sfx_doorLocked.wav-d0ad56bb72d12387c531778f955a2b4b.sample"]
 
 [params]
 

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://bteakh5lveqjp"]
 
-[ext_resource type="AudioStream" uid="uid://0lkyf7sswbl1" path="res://game/rooms/3_sewing/hotspots/sewing_machine/sfx_can_sew.mp3" id="1_4e2cx"]
+[ext_resource type="AudioStream" uid="uid://0lkyf7sswbl1" path="res://game/rooms/3_sewing/hotspots/sewing_machine/sfx_can_sew.mp3" id="1_losll"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_q0vhd"]
 
 [resource]
 resource_name = "sfx_can_sew"
 script = ExtResource("2_q0vhd")
-audio = ExtResource("1_4e2cx")
+audio = ExtResource("1_losll")
 loop = false
 is_2d = false
 can_play_simultaneous = true

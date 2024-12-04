@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://y1b1nh6wpv86"]
 
-[ext_resource type="AudioStream" uid="uid://c27gklltmwu1l" path="res://game/rooms/3_entrance/hotspots/door/sfx_knockingDoor.wav" id="1_j2a2h"]
+[ext_resource type="AudioStream" uid="uid://c27gklltmwu1l" path="res://game/rooms/3_entrance/hotspots/door/sfx_knockingDoor.wav" id="1_n0dod"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_hpqa0"]
 
 [resource]
 resource_name = "sfx_knockingdoor"
 script = ExtResource("2_hpqa0")
-audio = ExtResource("1_j2a2h")
+audio = ExtResource("1_n0dod")
 loop = false
 is_2d = false
 can_play_simultaneous = true

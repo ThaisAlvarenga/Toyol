@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dmoujpmhqotog"
-path="res://.godot/imported/sfx_gasStoveStart.mp3-2f6abfeea562caa2bb8ac33a2ba489ec.mp3str"
+path="res://.godot/imported/sfx_gasStoveStart.mp3-b791267f77316da48982d3ac0e959941.mp3str"
 
 [deps]
 
-source_file="res://assets/sfx/sfx_gasStoveStart.mp3"
-dest_files=["res://.godot/imported/sfx_gasStoveStart.mp3-2f6abfeea562caa2bb8ac33a2ba489ec.mp3str"]
+source_file="res://Assets/sfx/sfx_gasStoveStart.mp3"
+dest_files=["res://.godot/imported/sfx_gasStoveStart.mp3-b791267f77316da48982d3ac0e959941.mp3str"]
 
 [params]
 

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://cil6t6fagp54f"]
 
-[ext_resource type="AudioStream" uid="uid://dftjqgeqhm0tw" path="res://game/rooms/3_kitchen/hotspots/pot/sfx_drop_on_liquid.wav" id="1_7nnnd"]
+[ext_resource type="AudioStream" uid="uid://dftjqgeqhm0tw" path="res://game/rooms/3_kitchen/hotspots/pot/sfx_drop_on_liquid.wav" id="1_bn5rx"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_u5qis"]
 
 [resource]
 resource_name = "sfx_drop_on_liquid"
 script = ExtResource("2_u5qis")
-audio = ExtResource("1_7nnnd")
+audio = ExtResource("1_bn5rx")
 loop = false
 is_2d = false
 can_play_simultaneous = true

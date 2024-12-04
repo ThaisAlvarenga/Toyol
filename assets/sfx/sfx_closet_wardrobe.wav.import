@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://rysbl255coy1"
-path="res://.godot/imported/sfx_closet_wardrobe.wav-5ef798d4d20a7cee0b4fd70c29f9afb8.sample"
+path="res://.godot/imported/sfx_closet_wardrobe.wav-18ae9d91835714da620c3ebb56c4a623.sample"
 
 [deps]
 
-source_file="res://assets/sfx/sfx_closet_wardrobe.wav"
-dest_files=["res://.godot/imported/sfx_closet_wardrobe.wav-5ef798d4d20a7cee0b4fd70c29f9afb8.sample"]
+source_file="res://Assets/sfx/sfx_closet_wardrobe.wav"
+dest_files=["res://.godot/imported/sfx_closet_wardrobe.wav-18ae9d91835714da620c3ebb56c4a623.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://oqvaeugk2alt"
-path="res://.godot/imported/sfx_set_bowl_down.wav-b4d946d3e7dfa189d7f6862f5d5c8244.sample"
+path="res://.godot/imported/sfx_set_bowl_down.wav-7a5c1216d840cc4b1db587c28622bc00.sample"
 
 [deps]
 
-source_file="res://assets/sfx/sfx_set_bowl_down.wav"
-dest_files=["res://.godot/imported/sfx_set_bowl_down.wav-b4d946d3e7dfa189d7f6862f5d5c8244.sample"]
+source_file="res://Assets/sfx/sfx_set_bowl_down.wav"
+dest_files=["res://.godot/imported/sfx_set_bowl_down.wav-7a5c1216d840cc4b1db587c28622bc00.sample"]
 
 [params]
 

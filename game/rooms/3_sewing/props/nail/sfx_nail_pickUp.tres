@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://cyswovqoddilp"]
 
-[ext_resource type="AudioStream" uid="uid://deljne20r1a3n" path="res://game/rooms/3_sewing/props/nail/sfx_nail_pickUp.wav" id="1_2ugrl"]
+[ext_resource type="AudioStream" uid="uid://deljne20r1a3n" path="res://game/rooms/3_sewing/props/nail/sfx_nail_pickUp.wav" id="1_iu1u5"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_xnx4m"]
 
 [resource]
 resource_name = "sfx_nail_pickup"
 script = ExtResource("2_xnx4m")
-audio = ExtResource("1_2ugrl")
+audio = ExtResource("1_iu1u5")
 loop = false
 is_2d = false
 can_play_simultaneous = true

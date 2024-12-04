@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://hncgvun8ktd" path="res://game/rooms/1_entrance/props/window/pxArtWindowOpen.png" id="7_xgc08"]
 [ext_resource type="PackedScene" uid="uid://81j8rn2mgajm" path="res://game/rooms/1_entrance/props/overlay/prop_overlay.tscn" id="8_ykgd3"]
 [ext_resource type="Texture2D" uid="uid://de13xagms1kid" path="res://game/rooms/1_entrance/props/overlay/house1Overlay.png" id="9_lb2fq"]
-[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://assets/Scene_Assets/arrow_normal.PNG" id="10_k8uka"]
-[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://assets/Scene_Assets/arrow_selected.PNG" id="11_sf0f3"]
+[ext_resource type="Texture2D" uid="uid://cbyjnsysi0wuv" path="res://Assets/Scene_Assets/arrow_normal.PNG" id="10_k8uka"]
+[ext_resource type="Texture2D" uid="uid://bdpegplv4blcc" path="res://Assets/Scene_Assets/arrow_selected.PNG" id="11_sf0f3"]
 [ext_resource type="Script" path="res://game/rooms/3_altar/texture_button.gd" id="12_6g6in"]
 
 [node name="Room1Entrance" type="Node2D"]

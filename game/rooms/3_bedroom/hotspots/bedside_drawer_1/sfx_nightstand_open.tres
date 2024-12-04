@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://bskc8rl0jw457"]
 
-[ext_resource type="AudioStream" uid="uid://b4evhw0v7u4dj" path="res://game/rooms/3_bedroom/hotspots/bedside_drawer_1/sfx_nightstand_open.wav" id="1_jlwbv"]
+[ext_resource type="AudioStream" uid="uid://b4evhw0v7u4dj" path="res://game/rooms/3_bedroom/hotspots/bedside_drawer_1/sfx_nightstand_open.wav" id="1_7cyii"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_8rgan"]
 
 [resource]
 resource_name = "sfx_nightstand_open"
 script = ExtResource("2_8rgan")
-audio = ExtResource("1_jlwbv")
+audio = ExtResource("1_7cyii")
 loop = false
 is_2d = false
 can_play_simultaneous = true

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://dwc0ing34vre5"]
 
-[ext_resource type="AudioStream" uid="uid://q21sssyx3227" path="res://game/rooms/3_kitchen/props/broth_bowl/sfx_broth_pickUp.wav" id="1_dvv26"]
+[ext_resource type="AudioStream" uid="uid://q21sssyx3227" path="res://game/rooms/3_kitchen/props/broth_bowl/sfx_broth_pickUp.wav" id="1_17rcn"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_q0413"]
 
 [resource]
 resource_name = "sfx_broth_pickup"
 script = ExtResource("2_q0413")
-audio = ExtResource("1_dvv26")
+audio = ExtResource("1_17rcn")
 loop = false
 is_2d = false
 can_play_simultaneous = true

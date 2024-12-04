@@ -53,6 +53,7 @@ func toggle_open_close():
 	if isOpen:
 		wardrobe_prop.is_toyol = false
 		wardrobe_prop.change_frame(3)
+		
 		if Globals.house_1:
 			sweater.show()
 		else:

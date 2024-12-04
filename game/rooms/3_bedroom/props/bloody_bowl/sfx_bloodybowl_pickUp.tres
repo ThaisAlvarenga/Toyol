@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://dveqt43wewqb0"]
 
-[ext_resource type="AudioStream" uid="uid://bh41vbpqu3vkc" path="res://game/rooms/3_bedroom/props/bloody_bowl/sfx_bloodybowl_pickUp.wav" id="1_5loph"]
+[ext_resource type="AudioStream" uid="uid://bh41vbpqu3vkc" path="res://game/rooms/3_bedroom/props/bloody_bowl/sfx_bloodybowl_pickUp.wav" id="1_kyjmf"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_qocfn"]
 
 [resource]
 resource_name = "sfx_bloodybowl_pickup"
 script = ExtResource("2_qocfn")
-audio = ExtResource("1_5loph")
+audio = ExtResource("1_kyjmf")
 loop = false
 is_2d = false
 can_play_simultaneous = true

@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://6r1oxmwku6lt"]
 
-[ext_resource type="AudioStream" uid="uid://dralfg373xdhr" path="res://game/rooms/3_altar/props/toy/sfx_Toy_pelletDrum.wav" id="1_woshv"]
+[ext_resource type="AudioStream" uid="uid://dralfg373xdhr" path="res://game/rooms/3_altar/props/toy/sfx_Toy_pelletDrum.wav" id="1_6kh0h"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_6kiov"]
 
 [resource]
 resource_name = "sfx_toy_pelletdrum"
 script = ExtResource("2_6kiov")
-audio = ExtResource("1_woshv")
+audio = ExtResource("1_6kh0h")
 loop = false
 is_2d = false
 can_play_simultaneous = true

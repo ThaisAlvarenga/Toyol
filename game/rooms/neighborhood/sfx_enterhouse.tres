@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="AudioCueSound" load_steps=3 format=3 uid="uid://xpt375meh10n"]
 
-[ext_resource type="AudioStream" uid="uid://b6erb01788uu4" path="res://game/rooms/neighborhood/sfx_enterhouse.wav" id="1_jo4or"]
+[ext_resource type="AudioStream" uid="uid://b6erb01788uu4" path="res://game/rooms/neighborhood/sfx_enterhouse.wav" id="1_uwfv4"]
 [ext_resource type="Script" path="res://addons/popochiu/engine/audio_manager/audio_cue_sound.gd" id="2_st50w"]
 
 [resource]
 resource_name = "sfx_enterhouse"
 script = ExtResource("2_st50w")
-audio = ExtResource("1_jo4or")
+audio = ExtResource("1_uwfv4")
 loop = false
 is_2d = false
 can_play_simultaneous = true
