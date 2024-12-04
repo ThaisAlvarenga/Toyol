@@ -24,3 +24,4 @@ Something interesting happened within the team recently. I had some conflicts wi
 War is cruel, and survival becomes the sole priority. Violence, betrayal, cannibalism, and rape were rampant during that period—not only perpetrated by Japanese invaders against Chinese people, but also among the Chinese themselves. It's like the classic dilemma in This War of Mine: being a victim doesn't mean you're free from committing crimes. Killing the invader's baby doesn't justify the invasion. Victims can be extremely aggressive. If they ever get a chance for revenge, they will desperately take it.
 War is complex, and so are the people caught in it."
 
+# 11/03/2024
