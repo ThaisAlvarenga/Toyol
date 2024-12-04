@@ -65,3 +65,7 @@ These questions remain unresolved, and I’m still exploring the narrative possi
 # 11/22/2024
 
 I created a [checklist](../Jack/Arts_Checklist.pdf) of all the art assets for Savannah to work on — there’s a lot to tackle! I’ve also started searching for sound effects and background music for the game to bring the atmosphere to life.
+
+# 11/27/2024
+
+I finished creating the outside neighborhood scene in Godot. It’s nothing too complex — just some simple coding. I’ve also gathered all the basic sound effects we need. For the background music, I actually played it myself on a virtual piano, lol. Super proud of that!
