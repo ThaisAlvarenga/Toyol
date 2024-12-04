@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bplas7und0my"
-path="res://.godot/imported/sfx_knockingDoor.wav-ac0ddcfa8abe8a23922e9cd8607661ae.sample"
+path="res://.godot/imported/sfx_knockingDoor.wav-835732afdd5f16f34263e7e885a3ea06.sample"
 
 [deps]
 
-source_file="res://Assets/sfx/sfx_knockingDoor.wav"
-dest_files=["res://.godot/imported/sfx_knockingDoor.wav-ac0ddcfa8abe8a23922e9cd8607661ae.sample"]
+source_file="res://assets/sfx/sfx_knockingDoor.wav"
+dest_files=["res://.godot/imported/sfx_knockingDoor.wav-835732afdd5f16f34263e7e885a3ea06.sample"]
 
 [params]
 

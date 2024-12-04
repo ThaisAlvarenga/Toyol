@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cycuy3yqbm67d"
-path="res://.godot/imported/sfx_screw.mp3-2b7ab61f2df492539a0fdc1bb281996a.mp3str"
+path="res://.godot/imported/sfx_screw.mp3-6ad26fed97a44088189a8ef5fd74bf5c.mp3str"
 
 [deps]
 
-source_file="res://Assets/sfx/sfx_screw.mp3"
-dest_files=["res://.godot/imported/sfx_screw.mp3-2b7ab61f2df492539a0fdc1bb281996a.mp3str"]
+source_file="res://assets/sfx/sfx_screw.mp3"
+dest_files=["res://.godot/imported/sfx_screw.mp3-6ad26fed97a44088189a8ef5fd74bf5c.mp3str"]
 
 [params]
 

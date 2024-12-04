@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dxgcnfberltyr"
-path="res://.godot/imported/sfx_stoveFire.mp3-00a66c81d00bb5c6850c4e6278dd5f9e.mp3str"
+path="res://.godot/imported/sfx_stoveFire.mp3-debab62add20bcb208f042f20f9d5da5.mp3str"
 
 [deps]
 
-source_file="res://Assets/sfx/sfx_stoveFire.mp3"
-dest_files=["res://.godot/imported/sfx_stoveFire.mp3-00a66c81d00bb5c6850c4e6278dd5f9e.mp3str"]
+source_file="res://assets/sfx/sfx_stoveFire.mp3"
+dest_files=["res://.godot/imported/sfx_stoveFire.mp3-debab62add20bcb208f042f20f9d5da5.mp3str"]
 
 [params]
 

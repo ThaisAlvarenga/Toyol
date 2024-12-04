@@ -31,9 +31,8 @@ position = Vector2(960, 540)
 texture = ExtResource("3_jvr0n")
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
-[node name="Wardrobe" parent="Props" node_paths=PackedStringArray("wardrobe_hotspot") instance=ExtResource("4_3vm02")]
+[node name="Wardrobe" parent="Props" instance=ExtResource("4_3vm02")]
 position = Vector2(716, 580)
-wardrobe_hotspot = NodePath("")
 texture = ExtResource("5_581ls")
 frames = 5
 current_frame = 2

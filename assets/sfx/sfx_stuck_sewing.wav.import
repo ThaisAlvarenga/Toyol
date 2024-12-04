@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d1gahyy048ase"
-path="res://.godot/imported/sfx_stuck_sewing.wav-1826a360cf8da335aaf0ab74a9743300.sample"
+path="res://.godot/imported/sfx_stuck_sewing.wav-abef816c52b1a47f51dac5932b3225dc.sample"
 
 [deps]
 
-source_file="res://Assets/sfx/sfx_stuck_sewing.wav"
-dest_files=["res://.godot/imported/sfx_stuck_sewing.wav-1826a360cf8da335aaf0ab74a9743300.sample"]
+source_file="res://assets/sfx/sfx_stuck_sewing.wav"
+dest_files=["res://.godot/imported/sfx_stuck_sewing.wav-abef816c52b1a47f51dac5932b3225dc.sample"]
 
 [params]
 

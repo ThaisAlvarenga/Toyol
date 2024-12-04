@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bnaa4nlgjoxkj"
-path="res://.godot/imported/sfx_wardrobe_nightstand_open.wav-fda2db9b9e5eff6f5cbd2bb33734dac4.sample"
+path="res://.godot/imported/sfx_wardrobe_nightstand_open.wav-ae5715bae5a5710e94a570474b55f19d.sample"
 
 [deps]
 
-source_file="res://Assets/sfx/sfx_wardrobe_nightstand_open.wav"
-dest_files=["res://.godot/imported/sfx_wardrobe_nightstand_open.wav-fda2db9b9e5eff6f5cbd2bb33734dac4.sample"]
+source_file="res://assets/sfx/sfx_wardrobe_nightstand_open.wav"
+dest_files=["res://.godot/imported/sfx_wardrobe_nightstand_open.wav-ae5715bae5a5710e94a570474b55f19d.sample"]
 
 [params]
 

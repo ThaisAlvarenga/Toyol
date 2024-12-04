@@ -21,6 +21,7 @@ popochiu_placeholder = null
 position = Vector2(960, 540)
 texture = ExtResource("3_04sli")
 frames = 3
+current_frame = 2
 interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
 
 [node name="Hotspots" type="Node2D" parent="."]

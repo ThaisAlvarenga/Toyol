@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cx1828qd5ituo"
-path="res://.godot/imported/sfx_gasStoveKeep.mp3-e7ddcb940705ecd8bc64501b6ad86f77.mp3str"
+path="res://.godot/imported/sfx_gasStoveKeep.mp3-3431473c7fedb01024dfd62624f9510f.mp3str"
 
 [deps]
 
-source_file="res://Assets/sfx/sfx_gasStoveKeep.mp3"
-dest_files=["res://.godot/imported/sfx_gasStoveKeep.mp3-e7ddcb940705ecd8bc64501b6ad86f77.mp3str"]
+source_file="res://assets/sfx/sfx_gasStoveKeep.mp3"
+dest_files=["res://.godot/imported/sfx_gasStoveKeep.mp3-3431473c7fedb01024dfd62624f9510f.mp3str"]
 
 [params]
 

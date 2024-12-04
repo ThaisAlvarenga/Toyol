@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://debiqbchmguih"
-path="res://.godot/imported/oven_fire.png-57c375affb7eb1b287ddf973887f5249.ctex"
+path="res://.godot/imported/oven_fire.png-df824010d5ac06116b7b28992588451c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Scene_Assets/kitchen/oven_fire.png"
-dest_files=["res://.godot/imported/oven_fire.png-57c375affb7eb1b287ddf973887f5249.ctex"]
+source_file="res://assets/Scene_Assets/kitchen/oven_fire.png"
+dest_files=["res://.godot/imported/oven_fire.png-df824010d5ac06116b7b28992588451c.ctex"]
 
 [params]
 
