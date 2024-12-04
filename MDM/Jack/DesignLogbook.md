@@ -25,3 +25,5 @@ War is cruel, and survival becomes the sole priority. Violence, betrayal, cannib
 War is complex, and so are the people caught in it."
 
 # 11/03/2024
+<img src="Images/sketch1.jpg">
+<img src="Images/sketch2.jpg">
