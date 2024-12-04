@@ -1,4 +1,4 @@
-# actually decent mdm/journal entry can be found here: https://github.com/ThaisAlvarenga/Toyol/blob/main/MDM/Savannah/FinalMDM/MDMFINAL.txt
+# actually decent mdm/journal entry can be found here: [https://github.com/ThaisAlvarenga/Toyol/blob/main/MDM/Savannah/FinalMDM/MDMFINAL.txt](https://github.com/ThaisAlvarenga/Toyol/blob/main/MDM/Savannah/FinalMDM/MDM.md)
 
 Assets that need to be drawn (To-Do List):
 - <s>Sewing Machine (animated) - pedal moving, wheel moves </s>
