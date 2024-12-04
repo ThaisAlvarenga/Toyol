@@ -25,7 +25,7 @@ War is cruel, and survival becomes the sole priority. Violence, betrayal, cannib
 War is complex, and so are the people caught in it."
 
 # 11/03/2024
-All the conflicts were finally resolved, and I’ve taken on responsibility for the narrative and interaction design aspects of the game. For this week’s meeting, I had all the character settings and the background story completed, as outlined in the [Story Bible](../Bible.pdf).
+All the conflicts were finally resolved, and I’ve taken on responsibility for the narrative and interaction design aspects of the game. For this week’s meeting, I had all the character settings and the background story completed, as outlined in the [Story Bible](../Toyol_Bible.pdf).
 
 The game draws inspiration from Chinese history and centers on the complex relationship between a woman and a ghost (you, the player). The woman raised and fed you, but she was also the one who killed you and turned you into a ghost. Meanwhile, your biological father, when you were a human baby, was a general of the invaders who murdered the woman’s entire family, including her child. This setup creates the key tension in the game’s narrative: layers of betrayal, revenge, and survival.
 
@@ -47,3 +47,17 @@ Keys, Nail, Blood, Meat, Bowl, Incense, Matches, Notes related to the Toyol ritu
 
 <img src="Images/sketch1.jpg">
 <img src="Images/sketch2.jpg">
+
+# 11/14/2024
+
+I’ve completed almost all the puzzle designs for the game, as outlined in the second part of the [Story Bible](../Toyol_Bible.pdf). The pellet drum will serve as a subtle representation of time within the game, while a sweater—which the player will be tasked with knitting in each house—will act as a more explicit marker of time. Additionally, a wardrobe will function as the medium for time travel. Essentially, if the player finds an item in House 1 and places it in the wardrobe, the item will appear in House 2.
+
+However, there’s one thing I’ve been grappling with: the significance of the number five. We currently have five scenes in each house, but the number doesn’t hold any specific meaning. Would four scenes make more sense, since a house is more like a cube with four horizontal faces? This is something I’m still debating.
+
+Another area of uncertainty is how the endings should play out. There are definitely two endings planned, based on the player’s previous behaviors, but I’m unsure whether to give players the option to forgive the woman.
+
+If the player chooses to kill the woman, what would the consequences be?
+
+If the player chooses to forgive the woman, would the woman forgive the player in return? What if she doesn’t? What if the woman transfers her hatred of the invaders to the player instead?
+
+These questions remain unresolved, and I’m still exploring the narrative possibilities they could open up.
